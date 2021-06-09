@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+}
+
+input, a {
+	color: #292A35;
+}
+
+body {
+	font-family: 'Open Sans','Oswald', sans-serif;
+	font-size: 16px;
+	color: #292A35;
+	line-height: 24px;
+}
+
+.slick-slider .slick-dots {
+	bottom: 25px;
+}
+
+.slick-dots li button{
+	width: 12px;
+	height: 12px;
+}
+
+.slick-slider .slick-dots li.slick-active button:before {
+	color: transparent;
+	opacity: 1;
+	background: #FFFFFF;
+}
+
+.slick-slider .slick-dots li button:before {
+	background: none;
+	border-radius: 50px;
+	opacity: 1;
+	width: 12px;
+	height: 12px;
+	border: 2px solid #FFFFFF;
+	font-size: 0px;
+}
+
+.slick-slider .slick-dots li button:before {
+	border-radius: 50px;
+	width: 8px;
+	height: 8px;
+}
+
+.slick-dots li button:before {
+  width: 12px;
+  height: 12px;
+ background: #FFFFFF;
+ border: 2px solid #FFFFFF;
+}
+
+.slick-dots li.slick-active button:before {
+	opacity: 1;
+}
+
+.slick-slide img {
+	max-width: 100%;
+}
