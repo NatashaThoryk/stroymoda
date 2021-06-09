@@ -3,8 +3,6 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import classes from "../../index.module.scss";
 import toVal from "../../../helpers/clsx";
-import Slider from "components/Slider";
-
 
 export default () => {
 	return (
