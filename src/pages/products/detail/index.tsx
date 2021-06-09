@@ -6,8 +6,6 @@ import toVal from "../../../helpers/clsx";
 import Slider from "components/Slider";
 
 
-
-
 export default () => {
 	return (
 		<>

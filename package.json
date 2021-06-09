@@ -11,6 +11,7 @@
     "tslint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "dependencies": {
+    "@types/react-slick": "^0.23.4",
     "browser-or-node": "^1.2.1",
     "cross-fetch": "^3.0.4",
     "http-proxy-middleware": "^1.0.5",
