@@ -199,7 +199,7 @@ export default () => {
 					<div className={classes.slider_wrap}>
 						<div className={classes.container}>
 							<div className={classes.section_slide}>
-								<Slider list={sliderList1 as any} isVideo/>
+								{/*<Slider list={sliderList1 as any} isVideo/>*/}
 							</div>
 							<div className={classes.section_text}>
 								<h3 className={classes.title}>Rotation system</h3>
