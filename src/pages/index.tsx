@@ -140,7 +140,7 @@ const IndexPage = () => {
 					<div className={classes.section_content}>
 						<div className={classes.container}>
 							<div className={classes.section_slide}>
-								<Slider list={sliderList1}/>
+								<Slider list={sliderList1 as any}/>
 							</div>
 							<div className={classes.section_text}>
 								<h3 className={classes.title}>Venue Transformation Systems </h3>
@@ -200,7 +200,7 @@ const IndexPage = () => {
 							</a>
 						</div>
 						<div className={classes.section_slide}>
-							<Slider list={sliderList2}/>
+							<Slider list={sliderList2 as any}/>
 						</div>
 					</div>
 				</div>
@@ -208,7 +208,7 @@ const IndexPage = () => {
 					<div className={classes.section_content}>
 						<div className={classes.container}>
 							<div className={classes.section_slide}>
-								<Slider list={sliderList3}/>
+								<Slider list={sliderList3 as any}/>
 							</div>
 							<div className={classes.section_text}>
 								<h3 className={classes.title}>Automatic vertical retractable walls</h3>
@@ -270,7 +270,7 @@ const IndexPage = () => {
 							</a>
 						</div>
 						<div className={classes.section_slide}>
-							<Slider list={sliderList4}/>
+							<Slider list={sliderList4 as any}/>
 						</div>
 					</div>
 				</div>
@@ -278,7 +278,7 @@ const IndexPage = () => {
 					<div className={classes.section_content}>
 						<div className={classes.container}>
 							<div className={classes.section_slide}>
-								<Slider list={sliderList5}/>
+								<Slider list={sliderList5 as any}/>
 							</div>
 							<div className={classes.section_text}>
 								<h3 className={classes.title}>Movable Pool Floor Systems</h3>

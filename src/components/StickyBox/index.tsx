@@ -4,8 +4,8 @@ import classes from "../../pages/index.module.scss";
 export default () => {
 	const [isSticky, setIsSticky]  = useState(false);
 	const [offsetTop, setOffsetTop]  = useState(0);
-	const myRef = useRef();
-	const handleScroll = useCallback((event: any) => {
+	const myRef = useRef<any>();
+	const handleScroll = useCallback(() => {
 		if (window.scrollY >= offsetTop) {
 			console.log(222222, offsetTop)
 			!isSticky && setIsSticky(true)

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import classes from "./styles.module.scss";
 
-export default ({links = [], title = '', logo = '', img = '', href = '#'}) => {
+export default ({links = [], title = '', logo = '', img = '', href = '#'}: any) => {
 	const [isShowLogo, setIsShowLogo] = useState(false);
 	const [hoveredItemIndex, setHoveredItemIndex] = useState<number | boolean>(false);
 	const isLink = links && links.length > 0;
@@ -9,7 +9,7 @@ export default ({links = [], title = '', logo = '', img = '', href = '#'}) => {
 	return (
 		<div className={classes.main_item}>
 			<a className={classes.image_list} href={href}>
-				<img src={hoveredItemIndex ? links[(hoveredItemIndex - 1) as number]?.logo : img} alt=""/>
+				<img src={typeof hoveredItemIndex === 'number' ? links[(hoveredItemIndex - 1) as number]?.logo : img} alt=""/>
 				{
 					isShowLogo && isLink && <span className={classes.main_item_logo}><img src={logo} alt=""/></span>
 				}
@@ -21,7 +21,7 @@ export default ({links = [], title = '', logo = '', img = '', href = '#'}) => {
 			{
 				isLink && (
 					<ul className={classes.nav_main_list}>
-						{links.map((item: any, index) => (
+						{links.map((item: any, index: any) => (
 							<li className={classes.nav_main_item}>
 								<a href={item.link}
 								   onMouseEnter={() => setHoveredItemIndex(index + 1)}
