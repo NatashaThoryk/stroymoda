@@ -6,7 +6,7 @@ import toVal from "../../../helpers/clsx";
 import Slider from "components/Slider";
 
 
-const sliderList1 = ['https://www.youtube.com/embed/1PUdOImqTCo', 'https://www.youtube.com/embed/1PUdOImqTCo'];
+
 
 export default () => {
 	return (
