@@ -6,14 +6,14 @@ import classesMain from "styles/main.module.scss";
 import Info from "components/TopInfo"
 import InfoContent from "components/InfoContent"
 import AdvantagesBlock from "components/AdvantagesBlock"
-import StepList from "components/StepList"
+// import StepList from "components/StepList"
 import BlockWidthSliderRight from "components/BlockWithSliderRight"
 import BlockWithSliderLeft from "components/BlockWithSliderLeft"
 import SectionBlockLeft from "components/SectionBlockLeft"
 import SectionBlockRight from "components/SectionBlockRight"
 import toVal from "../../../helpers/clsx";
 
-const sliderList1 = ['https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo'];
+// const sliderList1 = ['https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo'];
 
 const itemAdvantages = [
 	{

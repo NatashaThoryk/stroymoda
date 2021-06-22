@@ -8,7 +8,7 @@ import TextSection from "components/TextSection";
 import Button from "components/Button";
 import AdvantagesMainSection from "components/AdvantagesMainSection";
 import PartnersSection from "components/PartnersSection";
-import SliderLogo from "components/LogoSlider";
+// import SliderLogo from "components/LogoSlider";
 import CharitySection from "components/CharitySection";
 import SectionBlockLeft from "components/SectionBlockLeft";
 
@@ -52,33 +52,33 @@ const title = "Stroymoda has been a household name in the fit out of constructio
 
 const text = "Having our own manufacturing plants for doors and partitions (1997) gives us the flexibility to offer project specific solutions for fulfilling most client’s wishes. An Individual approach and a dedicated project management team allows for a smooth integration of technical solutions while maintaining a high level of service. Upon the start of a project we offer full design and technical support throughout each stage of project implementation. During project execution our aim is to act environmentally aware and responsible throughout the process. We consciously decide on building materials used and find suppliers that comply with and share our working ethos.\n"
 
-const listLogo = [
-	{
-		img: '/img/logoSlider/1.svg'
-	},{
-		img: '/img/logoSlider/2.svg'
-	},{
-		img: '/img/logoSlider/3.svg'
-	},{
-		img: '/img/logoSlider/4.svg'
-	},{
-		img: '/img/logoSlider/5.svg'
-	},{
-		img: '/img/logoSlider/6.svg'
-	},{
-		img: '/img/logoSlider/7.svg'
-	},{
-		img: '/img/logoSlider/8.svg'
-	}, {
-		img: '/img/logoSlider/9.svg'
-	},{
-		img: '/img/logoSlider/4.svg'
-	},{
-		img: '/img/logoSlider/5.svg'
-	},{
-		img: '/img/logoSlider/6.svg'
-	}
-]
+// const listLogo = [
+// 	{
+// 		img: '/img/logoSlider/1.svg'
+// 	},{
+// 		img: '/img/logoSlider/2.svg'
+// 	},{
+// 		img: '/img/logoSlider/3.svg'
+// 	},{
+// 		img: '/img/logoSlider/4.svg'
+// 	},{
+// 		img: '/img/logoSlider/5.svg'
+// 	},{
+// 		img: '/img/logoSlider/6.svg'
+// 	},{
+// 		img: '/img/logoSlider/7.svg'
+// 	},{
+// 		img: '/img/logoSlider/8.svg'
+// 	}, {
+// 		img: '/img/logoSlider/9.svg'
+// 	},{
+// 		img: '/img/logoSlider/4.svg'
+// 	},{
+// 		img: '/img/logoSlider/5.svg'
+// 	},{
+// 		img: '/img/logoSlider/6.svg'
+// 	}
+// ]
 
 const charityList = [
 	{

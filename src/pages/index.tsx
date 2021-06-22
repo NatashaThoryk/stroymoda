@@ -4,19 +4,19 @@ import {IExtendedAppContext} from 'store/with-redux-store';
 import classes from './index.module.scss';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import Slider from 'components/Slider';
+// import Slider from 'components/Slider';
 import MainIfoBlock from 'components/MainIfoBlock';
 import BlockCenter from 'components/BlockCenter';
 import SectionBlockRight from 'components/SectionBlockRight';
 import SectionBlockLeft from 'components/SectionBlockLeft';
 import AdvantagesMainSection from 'components/AdvantagesMainSection';
-import {classBody} from "@babel/types";
+// import {classBody} from "@babel/types";
 
-const sliderList1 = ['1.jpg', '1.jpg', '1.jpg', '1.jpg', '1.jpg'];
-const sliderList2 = ['2.jpg', '2.jpg', '2.jpg', '2.jpg', '2.jpg'];
-const sliderList3 = ['3.jpg', '3.jpg', '3.jpg', '3.jpg', '3.jpg'];
-const sliderList4 = ['4.jpg', '4.jpg', '4.jpg', '4.jpg', '4.jpg'];
-const sliderList5 = ['5.jpg', '5.jpg', '5.jpg', '5.jpg', '5.jpg'];
+// const sliderList1 = ['1.jpg', '1.jpg', '1.jpg', '1.jpg', '1.jpg'];
+// const sliderList2 = ['2.jpg', '2.jpg', '2.jpg', '2.jpg', '2.jpg'];
+// const sliderList3 = ['3.jpg', '3.jpg', '3.jpg', '3.jpg', '3.jpg'];
+// const sliderList4 = ['4.jpg', '4.jpg', '4.jpg', '4.jpg', '4.jpg'];
+// const sliderList5 = ['5.jpg', '5.jpg', '5.jpg', '5.jpg', '5.jpg'];
 const listAdvantagesTop = [
 	{
 		src: './img/adva1.svg',

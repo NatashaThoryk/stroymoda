@@ -2,26 +2,26 @@ import React, {useEffect, useRef, useState, useCallback} from "react";
 import classes from './styles.module.scss';
 import classesMain from 'styles/main.module.scss';
 import CheckListBlock from 'components/CheckListBlock';
-import SocialBlock from 'components/SocialBlock';
+// import SocialBlock from 'components/SocialBlock';
 
-const socialList = [
-	{
-		link: '',
-		src: '/img/instagram.svg'
-	},
-	{
-		link: '',
-		src: '/img/instagram.svg'
-	},
-	{
-		link: '',
-		src: '/img/instagram.svg'
-	},
-	{
-		link: '',
-		src: '/img/instagram.svg'
-	}
-]
+// const socialList = [
+// 	{
+// 		link: '',
+// 		src: '/img/instagram.svg'
+// 	},
+// 	{
+// 		link: '',
+// 		src: '/img/instagram.svg'
+// 	},
+// 	{
+// 		link: '',
+// 		src: '/img/instagram.svg'
+// 	},
+// 	{
+// 		link: '',
+// 		src: '/img/instagram.svg'
+// 	}
+// ]
 
 export default () => {
 	const [isSticky, setIsSticky]  = useState(false);
