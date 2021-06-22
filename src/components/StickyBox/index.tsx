@@ -1,5 +1,27 @@
 import React, {useEffect, useRef, useState, useCallback} from "react";
-import classes from "../../pages/index.module.scss";
+import classes from './styles.module.scss';
+import classesMain from 'styles/main.module.scss';
+import CheckListBlock from 'components/CheckListBlock';
+import SocialBlock from 'components/SocialBlock';
+
+const socialList = [
+	{
+		link: '',
+		src: '/img/instagram.svg'
+	},
+	{
+		link: '',
+		src: '/img/instagram.svg'
+	},
+	{
+		link: '',
+		src: '/img/instagram.svg'
+	},
+	{
+		link: '',
+		src: '/img/instagram.svg'
+	}
+]
 
 export default () => {
 	const [isSticky, setIsSticky]  = useState(false);
@@ -21,7 +43,7 @@ export default () => {
 	return (
 <div className={classes.fixed_block} ref={myRef} style={{position: isSticky? 'fixed' : 'relative', right: 0}}>
 	<div className={classes.top}>
-		<h2 className={classes.title_cap}>Glass cladding</h2>
+		<h2 className={classesMain.title_cap}>Glass cladding</h2>
 		<a href="" >Back to Products <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g clip-path="url(#clip0)">
 				<path d="M8.12931 7.56102L0.741146 0.172852C0.496557 -0.0633678 0.106803 -0.0565857 -0.129416 0.188003C-0.359864 0.426603 -0.359864 0.80485 -0.129416 1.04341L6.82347 7.9963L-0.129416 14.9492C-0.369784 15.1896 -0.369784 15.5793 -0.129416 15.8197C0.111024 16.0601 0.500742 16.0601 0.741146 15.8197L8.12931 8.43158C8.36968 8.19114 8.36968 7.80142 8.12931 7.56102Z" fill="#BBBBC2"/>
@@ -35,37 +57,7 @@ export default () => {
 	</div>
 	<p className={classes.prev_text}>This product range offers a broad range of reative
 		possibilities in glass to designers and architects for:</p>
-	<div className={classes.list_check}>
-		<div className={classes.item}>
-			<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M7.3057 13.0338L18.7591 0.893977C19.1289 0.502102 19.7426 0.473563 20.147 0.829433L20.2441 0.914838C20.669 1.28865 20.6993 1.94025 20.3109 2.35187L7.41665 16.0188L0.762863 9.91081C0.345925 9.52807 0.329436 8.87589 0.7265 8.47257L0.813652 8.38405C1.19159 8.00016 1.8057 7.98464 2.20253 8.34895L7.3057 13.0338Z" fill="#646677"/>
-			</svg>
-			<p>Cladding.</p></div>
-		<div className={classes.item}>
-			<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M7.3057 13.0338L18.7591 0.893977C19.1289 0.502102 19.7426 0.473563 20.147 0.829433L20.2441 0.914838C20.669 1.28865 20.6993 1.94025 20.3109 2.35187L7.41665 16.0188L0.762863 9.91081C0.345925 9.52807 0.329436 8.87589 0.7265 8.47257L0.813652 8.38405C1.19159 8.00016 1.8057 7.98464 2.20253 8.34895L7.3057 13.0338Z" fill="#646677"/>
-			</svg>
-			<p>Staircases.</p>
-		</div>
-		<div className={classes.item}>
-			<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M7.3057 13.0338L18.7591 0.893977C19.1289 0.502102 19.7426 0.473563 20.147 0.829433L20.2441 0.914838C20.669 1.28865 20.6993 1.94025 20.3109 2.35187L7.41665 16.0188L0.762863 9.91081C0.345925 9.52807 0.329436 8.87589 0.7265 8.47257L0.813652 8.38405C1.19159 8.00016 1.8057 7.98464 2.20253 8.34895L7.3057 13.0338Z" fill="#646677"/>
-			</svg>
-			<p>Balustrades.</p>
-		</div>
-		<div className={classes.item}>
-			<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M7.3057 13.0338L18.7591 0.893977C19.1289 0.502102 19.7426 0.473563 20.147 0.829433L20.2441 0.914838C20.669 1.28865 20.6993 1.94025 20.3109 2.35187L7.41665 16.0188L0.762863 9.91081C0.345925 9.52807 0.329436 8.87589 0.7265 8.47257L0.813652 8.38405C1.19159 8.00016 1.8057 7.98464 2.20253 8.34895L7.3057 13.0338Z" fill="#646677"/>
-			</svg>
-			<p>Floors.</p>
-		</div>
-		<div className={classes.item}>
-			<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M7.3057 13.0338L18.7591 0.893977C19.1289 0.502102 19.7426 0.473563 20.147 0.829433L20.2441 0.914838C20.669 1.28865 20.6993 1.94025 20.3109 2.35187L7.41665 16.0188L0.762863 9.91081C0.345925 9.52807 0.329436 8.87589 0.7265 8.47257L0.813652 8.38405C1.19159 8.00016 1.8057 7.98464 2.20253 8.34895L7.3057 13.0338Z" fill="#646677"/>
-			</svg>
-			<p>Special constructions.</p>
-		</div>
-	</div>
+	<CheckListBlock />
 	<a href="" className={classes.product_view}>Open Product sheet
 		<svg width="39" height="48" viewBox="0 0 39 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g>
@@ -84,6 +76,7 @@ export default () => {
 			</defs>
 		</svg>
 	</a>
+	{/*<SocialBlock socialList={socialList as any}/>*/}
 	<div className={classes.social_media}>
 		<p>Share on social media</p>
 		<div>

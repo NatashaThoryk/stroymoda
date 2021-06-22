@@ -1,0 +1,16 @@
+.wrapper {
+	padding-bottom: 60px;
+	max-width: 980px;
+	margin: 0 auto;
+	h4 {
+		font-size: 18px;
+		font-family: 'Oswald', sans-serif;
+		padding-bottom: 20px;
+	}
+	.prev_text {
+		color: #646677;
+		&:nth-child(odd) {
+			padding-top: 30px;
+		}
+	}
+}

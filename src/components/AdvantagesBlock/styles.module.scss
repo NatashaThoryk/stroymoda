@@ -1,0 +1,27 @@
+.section_bg {
+	background: #E8E8EA;
+	margin-top: 60px;
+
+	.advantages_detail {
+		padding: 70px 0 15px;
+		.list {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			padding-top: 50px;
+		}
+		.item_advantages {
+			display: flex;
+			align-items: center;
+			padding-bottom: 60px;
+			img {
+				margin-right: 20px;
+			}
+			p {
+				max-width: 443px;
+				line-height: 26px;
+			}
+		}
+	}
+
+}

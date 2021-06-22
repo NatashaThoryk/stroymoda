@@ -1,0 +1,99 @@
+.section {
+	.section_content {
+		padding-top: 40px;
+	}
+
+}
+
+.container, .about_wrapper {
+	max-width: 1940px;
+	padding: 0 10px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.section_text {
+		max-width: 517px;
+
+		.title {
+			font-size: 24px;
+			color: #292A35;
+			font-family: 'Oswald', sans-serif;
+			text-align: start;
+			padding-bottom: 29px;
+			text-transform: capitalize;
+		}
+
+		.prev_text {
+			color: #646677;
+
+			&:nth-child(odd) {
+				padding-top: 25px;
+			}
+		}
+	}
+}
+
+.about_wrapper {
+	justify-content: flex-end;
+	overflow-x: hidden;
+	margin: 77px 0 88px;
+	position: relative;
+	z-index: 2;
+	&:after {
+		content: '';
+		position: absolute;
+		max-width: 522px;
+		max-height: 666px;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		background: url("/img/about/Hip.svg") no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
+	a {
+		display: none;
+	}
+	.prev_text {
+		max-width: 372px;
+	}
+	.section_text {
+		margin-right: 128px;
+	}
+}
+
+.section_slide {
+	overflow-x: hidden;
+	position: relative;
+	padding: 40px 0;
+	max-width: 990px;
+	width: 100%;
+	text-align: center;
+
+	@media only screen and (max-width: 1920px) {
+		width: 990px;
+	}
+	@media (min-width: 1200px) and (max-width: 1390px) {
+		width: 650px;
+	}
+
+	&:after {
+		content: "";
+		z-index: -3;
+		background: #E8E8EA;
+		width: calc(100% + 400px);
+		height: 100%;
+		position: absolute;
+		left: 120px;
+		top: 0;
+	}
+
+	.carousel {
+		width: 100%;
+	}
+}
+
+

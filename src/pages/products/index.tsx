@@ -2,6 +2,7 @@ import React from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import classes from "../index.module.scss";
+import classesMain from 'styles/main.module.scss';
 import toVal from "../../helpers/clsx";
 import ImgBlock from 'components/ImgBlock';
 
@@ -254,7 +255,7 @@ export default () => {
 							<meta itemProp="position" content="2"/>
 						</li>
 					</ul>
-					<h2 className={classes.title_cap}>Transformation Systems</h2>
+					<h2 className={classesMain.title_cap}>Transformation Systems</h2>
 					<div className={classes.main_list}>
 						<div className={toVal(classes.in_list, classes.top_list)}>
 							<ImgBlock links={imgBlock1} title="Venue Transformation Systems" logo={'/img/products/galaSystems.svg'} img={'/img/slider/1.jpg'} />
@@ -266,7 +267,7 @@ export default () => {
 							<ImgBlock links={imgBlock5} title="Movable Pool Floor Systems " logo={'/img/products/poolfloor.svg'} img={'/img/slider/5.jpg'} />
 						</div>
 					</div>
-					<h2 className={classes.title_cap}>Partitions and Doors</h2>
+					<h2 className={toVal(classesMain.title_cap, classes.pd_top)}>Partitions and Doors</h2>
 					<div className={classes.main_list}>
 						<div className={toVal(classes.in_list, classes.top_list)}>
 							<ImgBlock links={imgBlock6} title="Office partitions" logo={'/img/Logo.svg'} img={'/img/products/office.jpg'} />

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import classes from "../../../index.module.scss";
+import classesMain from 'styles/main.module.scss';
 import toVal from "../../../../helpers/clsx";
 import ImgBlock from 'components/ImgBlock';
 
@@ -41,7 +42,7 @@ export default () => {
 							<meta itemProp="position" content="4"/>
 						</li>
 					</ul>
-					<h2 className={classes.title_cap}>Wall Cladding</h2>
+					<h2 className={classesMain.title_cap}>Wall Cladding</h2>
 					<div className={classes.main_list}>
 						<div className={toVal(classes.in_list, classes.top_list)}>
 							<ImgBlock title="Venue Transformation Systems" img={'/img/products/columnCladding.jpg'} />

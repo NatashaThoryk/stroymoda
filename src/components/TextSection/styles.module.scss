@@ -1,0 +1,23 @@
+.wrapper, .about_wrap {
+	max-width: 980px;
+	margin: 0 auto;
+	.prev_text {
+		padding: 40px 0 60px;
+		color: #646677;
+		letter-spacing: .1px;
+	}
+}
+
+.about_wrap {
+	h3 {
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: .2px;
+		max-width: 780px;
+		margin: 0 auto;
+	}
+	.prev_text {
+		padding: 35px 0 40px;
+		text-align: center;
+	}
+}

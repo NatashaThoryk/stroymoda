@@ -1,0 +1,30 @@
+.step_list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding-bottom: 80px;
+	.list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.top {
+			display: flex;
+			align-items: center;
+			padding-bottom: 30px;
+			.circle {
+				padding: 14px 21px;
+				border: 1px solid #BBBBC2;
+				border-radius: 50px;
+				font-family: 'Oswald', sans-serif;
+				color: #292A35;
+				margin-right:18px;
+			}
+			p {
+				color: #646677;
+				font-size: 14px;
+				text-transform: uppercase;
+				max-width: 238px;
+			}
+		}
+	}
+}

@@ -20,7 +20,7 @@ export default ({list = [], isVideo = false}) => {
 			{list.map(item => <div>
 				{
 					isVideo ? (
-						<iframe width="560" height="315" src={item}
+						<iframe width="890" height="500" src={item}
 								title="YouTube video player" frameBorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowFullScreen></iframe>

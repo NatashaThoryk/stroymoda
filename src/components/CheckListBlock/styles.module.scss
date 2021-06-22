@@ -1,0 +1,14 @@
+.list_check {
+	padding-top: 15px;
+
+	.item {
+		display: flex;
+		align-items: center;
+		color: #646677;
+		padding-bottom: 27px;
+
+		svg {
+			margin-right: 17px;
+		}
+	}
+}

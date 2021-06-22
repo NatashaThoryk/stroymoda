@@ -1,0 +1,31 @@
+.subtitle {
+	text-align: center;
+	padding-top: 40px;
+	color: #404149;
+}
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 40px 0 85px;
+	.item {
+		display: flex;
+		flex-direction: column;
+		max-width: 280px;
+		width: 100%;
+		img {
+			filter: drop-shadow(0px 6px 16px rgba(100, 102, 119, 0.2));
+		}
+		h4 {
+			color: #404149;
+			font-size: 24px;
+			font-family: 'Oswald', sans-serif;
+			font-weight: 500;
+			padding: 20px 0 15px;
+		}
+		span {
+			color: #404149;
+		}
+	}
+}
