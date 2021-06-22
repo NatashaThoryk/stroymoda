@@ -3,7 +3,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import classes from "../../index.module.scss";
 import classesMain from 'styles/main.module.scss';
-import Slider from "components/Slider";
+// import Slider from "components/Slider";
 import Info from "components/TopInfo"
 import InfoContent from "components/InfoContent"
 import AdvantagesBlock from "components/AdvantagesBlock"
@@ -12,7 +12,7 @@ import BlockWidthSliderRight from "components/BlockWithSliderRight"
 import BlockWithSliderLeft from "components/BlockWithSliderLeft"
 
 
-const sliderList1 = ['https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo'];
+// const sliderList1 = ['https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo'];
 
 const itemAdvantages = [
 	{
