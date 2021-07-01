@@ -1,5 +1,6 @@
 .sustainability_block {
-	padding: 60px 0;
+	padding-top: 60px;
+	padding-bottom: 60px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -18,8 +19,8 @@
 	.prev_text{
 		color: #646677;
 		max-width: 980px;
-		&:nth-child(odd) {
-			padding-bottom: 25px;
+		&:nth-child(even) {
+			padding-top: 25px;
 		}
 	}
 }

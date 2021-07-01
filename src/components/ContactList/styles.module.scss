@@ -1,0 +1,31 @@
+.title_cap {
+	font-size: 24px;
+	font-family: "Oswald", sans-serif;
+	text-align: center;
+	text-transform: capitalize;
+	color: #404149;
+	padding-top: 44px;
+}
+
+.list {
+	padding: 40px 0 25px;
+	display: flex;
+	justify-content: space-between;
+	.item {
+		display: flex;
+		align-items: flex-start;
+		max-width: 300px;
+		color: #646677;
+		min-width: 245px;
+		img {
+			width: 26px;
+			margin-right: 15px;
+		}
+		a {
+			color: #646677;
+		}
+		.street {
+			max-width: 222px;
+		}
+	}
+}

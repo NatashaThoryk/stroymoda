@@ -1,9 +1,7 @@
 $mainColor: #292A35;
 $bgColor: #E8E8EA;
 
-.footer {
-	//padding-top: 70px;
-
+.footer, .is_margin {
 	.content_wrapper {
 		max-width: 1200px;
 		padding: 0 10px;
@@ -13,23 +11,33 @@ $bgColor: #E8E8EA;
 		justify-content: space-between;
 	}
 
-	.footer_top {
-		height: 213px;
-		background: url("/img/footer1920.png") no-repeat center;
+	@mixin footer_styles {
 		justify-content: center;
 		align-items: center;
 		display: flex;
 		position: relative;
+		height: 213px;
 
-		.logotype_footer {
+		a {
 			position: absolute;
 			bottom: 45px;
 		}
 	}
 
+	.footer_top_bg {
+		@include footer_styles;
+		background: url("/img/footer1920.png") no-repeat center;
+
+	}
+	.list_footer_all {
+		@include footer_styles;
+		background: url("/img/1.png") no-repeat center;
+		height: 83px;
+	}
+
 	.list_footer {
 		background: $bgColor;
-		padding-top: 25px;
+		padding: 25px 0;
 
 		.in_item {
 			display: flex;
@@ -63,4 +71,8 @@ $bgColor: #E8E8EA;
 			}
 		}
 	}
+}
+
+.is_margin {
+	padding-top: 70px;
 }

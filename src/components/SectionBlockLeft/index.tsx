@@ -1,11 +1,10 @@
 import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from 'styles/main.module.scss';
+import classesMain from "pages/index.module.scss";
 import Slider from "components/Slider";
 
-const sliderList2 = ['2.jpg', '2.jpg', '2.jpg'];
 
-export default ({title = '', text1 = '', text2 = '', link = '', btnName = '', customClass = ''}) => {
+export default ({title = '', text1 = '', text2 = '', link = '', btnName = '', customClass = '', slides = [], dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
 	return (
 		<div className={classes[customClass]}>
 			<div className={classes.section_text}>
@@ -29,7 +28,7 @@ export default ({title = '', text1 = '', text2 = '', link = '', btnName = '', cu
 				</a>
 			</div>
 			<div className={classes.section_slide}>
-				<Slider list={sliderList2 as any}/>
+				<Slider dotsClassItem={dotsClassItem} dotsClass={dotsClass} list={slides as any}/>
 			</div>
 		</div>
 	)

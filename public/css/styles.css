@@ -18,15 +18,35 @@ body {
 	font-size: 16px;
 	color: #292A35;
 	line-height: 24px;
+	background: #FAFAFA;
 }
 
-.slick-slider .slick-dots {
-	bottom: 25px;
+
+
+.react-tabs__tab-list {
+	border-bottom: none !important;
 }
 
-.btm_dots .slick-slider .slick-dots {
-	bottom: 0 !important;
+.react-tabs__tab {
+	border: none;
 }
+
+.react-tabs__tab--selected {
+	border-color: transparent !important;
+}
+
+.react-tabs__tab--selected span {
+	color: #DC3143 !important;
+}
+
+.react-tabs__tab--selected span svg path {
+	fill: #DC3143;
+}
+
+
+
+
+
 
 .slick-dots li button{
 	width: 12px;
@@ -58,8 +78,8 @@ body {
 .slick-dots li button:before {
   width: 12px;
   height: 12px;
- background: #FFFFFF;
- border: 2px solid #FFFFFF;
+ background: red;
+ border: 2px solid red;
 }
 
 .slick-dots li.slick-active button:before {
@@ -69,4 +89,6 @@ body {
 .slick-slide img, .slick-list iframe {
 	max-width: 100%;
 }
+
+
 

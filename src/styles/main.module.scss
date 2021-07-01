@@ -7,60 +7,87 @@ $bgColor: #E8E8EA;
 $subtextProduct: #404149;
 $socialHover: #CB091E;
 
-.content_wrapper {
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 10px;
-}
+//.content_wrapper {
+//	max-width: 1200px;
+//	width: 100%;
+//	margin: 0 auto;
+//	padding: 0 10px;
+//}
+//
+//.container {
+//	max-width: 1940px;
+//	padding: 0 10px;
+//	width: 100%;
+//	margin: 0 auto;
+//}
 
-.container {
-	max-width: 1940px;
-	padding: 0 10px;
-	width: 100%;
-	margin: 0 auto;
-}
 
+//.title_cap, .title {
+//	font-family: 'Oswald', sans-serif;
+//	text-align: center;
+//	font-size: 36px;
+//	text-transform: capitalize;
+//}
 
-.title_cap, .title {
-	font-family: 'Oswald', sans-serif;
-	text-align: center;
-	font-size: 36px;
-	text-transform: capitalize;
-}
+//.title {
+//	font-size: 24px;
+//	color: #292A35;
+//}
 
-.title {
-	font-size: 24px;
-	color: #292A35;
-}
+//.btn_learn {
+//	padding: 11px 0;
+//	width: 180px;
+//	display: flex;
+//	align-items: center;
+//	justify-content: center;
+//	border: 2px solid #E71F34;
+//	text-transform: uppercase;
+//	color: #DC3143;
+//	font-family: 'Oswald', sans-serif;
+//	margin-top: 29px;
+//	transition: .3s ease;
+//
+//	&:hover {
+//		transition: .3s ease;
+//		background-color: #DC3143;
+//		color: #FFFFFF;
+//
+//		svg {
+//			path {
+//				fill: #FFFFFF;
+//			}
+//		}
+//	}
+//
+//	svg {
+//		margin-left: 10px;
+//	}
+//}
+//
+//.select_text {
+//	background: #E8E8EA;
+//	border-radius: 4px;
+//	font-size: 14px;
+//	color: #404149;
+//	text-transform: uppercase;
+//	padding: 4px 8px;
+//}
 
-.btn_learn {
-	padding: 11px 0;
-	width: 180px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 2px solid #E71F34;
-	text-transform: uppercase;
-	color: #DC3143;
-	font-family: 'Oswald', sans-serif;
-	margin-top: 29px;
-	transition: .3s ease;
+//.in_list, .in_list_tabs {
+//	display: flex;
+//}
+//
+//.in_list_tabs {
+//	justify-content: space-between;
+//	margin-top: 40px;
+//}
+//
+//.tabs {
+//	margin: 40px 0 50px;
+//}
+//
+//.tab1 {
+//	margin: 40px 0 0;
+//}
 
-	&:hover {
-		transition: .3s ease;
-		background-color: #DC3143;
-		color: #FFFFFF;
-
-		svg {
-			path {
-				fill: #FFFFFF;
-			}
-		}
-	}
-
-	svg {
-		margin-left: 10px;
-	}
-}
 

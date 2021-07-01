@@ -1,9 +1,10 @@
 .section {
+	padding-top: 60px;
 	.section_content {
-		padding-top: 40px;
+		//padding-top: 40px;
 		.container {
-			max-width: 1940px;
-			padding: 0 10px;
+			max-width: 2040px;
+			padding: 0 60px;
 			width: 100%;
 			margin: 0 auto;
 			display: flex;
@@ -43,9 +44,13 @@
 	}
 }
 
+//.slick-dots{
+//	bottom: 25px !important;
+//}
+
 .section_text {
 	max-width: 517px;
-	margin-left: 120px;
+	margin-left: 95px;
 
 	.title {
 		font-size: 24px;

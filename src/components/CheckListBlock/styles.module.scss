@@ -7,8 +7,11 @@
 		color: #646677;
 		padding-bottom: 27px;
 
-		svg {
+		img {
 			margin-right: 17px;
+		}
+		&:last-child {
+			padding-bottom: 0;
 		}
 	}
 }

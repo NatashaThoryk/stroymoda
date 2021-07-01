@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from "react-slick";
+import classesMain from "pages/index.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import classes from "../../pages/index.module.scss";
 
-export default ({list = [], isVideo = false}) => {
+export default ({list = [], isVideo = false, dotsClass = '', dotsClassItem = 'slideRightDotsItem'}) => {
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -13,14 +13,19 @@ export default ({list = [], isVideo = false}) => {
 		slidesToScroll: 1,
 		// autoplay: true,
 		arrows: false,
+		dotsClass: `slick-dots ${classesMain[dotsClass]}`,
+		appendDots: (dots: any) => <ul>{dots}</ul>,
+		customPaging: () => (
+			<div className={classesMain[dotsClassItem]}/>
+		)
 	};
 
 	return (
-		<Slider className={classes.carousel} {...settings}>
+		<Slider className={classesMain.carousel} {...settings}>
 			{list.map(item => <div>
 				{
 					isVideo ? (
-						<iframe width="890" height="500" src={item}
+						<iframe width="100" height="100" src={item}
 								title="YouTube video player" frameBorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowFullScreen></iframe>

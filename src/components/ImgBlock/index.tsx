@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Link from 'next/link'
 import classes from "./styles.module.scss";
 
 export default ({links = [], title = '', logo = '', img = '', href = '#'}: any) => {
@@ -23,13 +24,18 @@ export default ({links = [], title = '', logo = '', img = '', href = '#'}: any) 
 					<ul className={classes.nav_main_list}>
 						{links.map((item: any, index: any) => (
 							<li className={classes.nav_main_item}>
-								<a href={item.link}
-								   onMouseEnter={() => setHoveredItemIndex(index + 1)}
-								   onMouseLeave={() => setHoveredItemIndex(false)}
-								>{item.title}</a>
+								<Link
+									href={{
+										pathname: `${item.link}#${item.hash}`,
+									}}
+								>
+									<a
+										onMouseEnter={() => setHoveredItemIndex(index + 1)}
+										onMouseLeave={() => setHoveredItemIndex(false)}
+									>{item.title}</a>
+								</Link>
 							</li>
-						))
-						}
+						))}
 					</ul>
 				)
 			}

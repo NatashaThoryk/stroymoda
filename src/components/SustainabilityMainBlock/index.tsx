@@ -12,7 +12,11 @@ export default ({src = '', text = '', text1 = ''}) => {
 					</div>
 					<div>
 						<p className={classes.prev_text}>{text}</p>
-						<p className={classes.prev_text}>{text1}</p>
+						{
+							text1 && text1.length && (
+								<p className={classes.prev_text}>{text1}</p>
+							)
+						}
 					</div>
 				</div>
 	)

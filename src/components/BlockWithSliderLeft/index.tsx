@@ -1,14 +1,15 @@
 import React from 'react';
 import classes from './styles.module.scss';
+import Slider from "components/Slider";
 
 
-export default ({title = '', list = []}) => {
+export default ({title = '', listItem = [], slides = [], isVideo = false, dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
 	return (
 		<div className={classes.container}>
 			<div className={classes.section_text}>
 				<h3 className={classes.title}>{title}</h3>
 				<ul className={classes.list_check}>
-					{list.map((item: any) => (
+					{listItem.map((item: any) => (
 						<li className={classes.item}>
 							<svg width="22" height="17" viewBox="0 0 22 17" fill="none"
 								 xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +23,7 @@ export default ({title = '', list = []}) => {
 				</ul>
 			</div>
 			<div className={classes.section_slide}>
-				<img src="/img/slider/1.jpg" alt=""/>
+				<Slider dotsClassItem={dotsClassItem} dotsClass={dotsClass} list={slides as any} isVideo={isVideo}/>
 			</div>
 		</div>
 	)

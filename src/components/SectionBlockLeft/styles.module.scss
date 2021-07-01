@@ -6,8 +6,8 @@
 }
 
 .container, .about_wrapper {
-	max-width: 1940px;
-	padding: 0 10px;
+	max-width: 2040px;
+	padding: 0 60px;
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
@@ -42,6 +42,7 @@
 	margin: 77px 0 88px;
 	position: relative;
 	z-index: 2;
+	padding: 0;
 	&:after {
 		content: '';
 		position: absolute;
@@ -68,8 +69,8 @@
 .section_slide {
 	overflow-x: hidden;
 	position: relative;
-	padding: 40px 0;
-	max-width: 990px;
+	padding: 60px 0;
+	max-width: 890px;
 	width: 100%;
 	text-align: center;
 
@@ -96,4 +97,6 @@
 	}
 }
 
-
+//.section_slide_wrap {
+//	overflow-x: inherit;
+//}

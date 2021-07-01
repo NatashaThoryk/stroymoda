@@ -1,20 +1,20 @@
 import React from 'react';
 import classes from './styles.module.scss';
 import toVal from "../../helpers/clsx";
+import Slider from "components/Slider";
 
 
-export default ({title = '', list = []}) => {
+export default ({title = '', listItem = [], slides = [], customClass = '', isVideo = false, dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
 	return (
-		<div className={classes.slider_wrap}>
+		<div className={classes[customClass]}>
 			<div className={classes.container}>
 				<div className={toVal(classes.section_slide, classes.btm_dots)}>
-					<img src="/img/slider/1.jpg" alt=""/>
-					{/*<Slider list={sliderList1 as any} isVideo/>*/}
+					<Slider dotsClassItem={dotsClassItem} dotsClass={dotsClass} list={slides as any} isVideo={isVideo}/>
 				</div>
 				<div className={classes.section_text}>
 					<h3 className={classes.title}>{title}</h3>
 					<ul className={classes.list_check}>
-						{list.map((item: any) => (
+						{listItem.map((item: any) => (
 							<li className={classes.item}>
 								<svg width="22" height="17" viewBox="0 0 22 17" fill="none"
 									 xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from 'styles/main.module.scss';
+import classesMain from "pages/index.module.scss";
 
 export default ({list = []}) => {
 	return (

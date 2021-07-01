@@ -1,0 +1,15 @@
+.list {
+	padding-top: 40px;
+	.item {
+		display: flex;
+		p {
+			text-transform: uppercase;
+			color: #646677;
+			padding-bottom: 10px;
+		}
+		.param {
+			text-transform: none;
+			margin-left: 5px;
+		}
+	}
+}

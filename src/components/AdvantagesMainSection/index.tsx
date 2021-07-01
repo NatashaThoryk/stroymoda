@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from 'styles/main.module.scss';
+import classesMain from "pages/index.module.scss";
 import toVal from "../../helpers/clsx";
 
 
@@ -14,7 +14,7 @@ export default ({title = '', list = [], list1 = [], customClass = ''}) => {
 							{list.map((item: any) => (
 								<li className={classes.item_advantages}>
 									<div className={classes.bg}>
-										<img src={item.src} alt=""/>
+										<img src={item.src} alt="icon"/>
 									</div>
 									<p>{item.text}</p>
 								</li>
@@ -24,7 +24,7 @@ export default ({title = '', list = [], list1 = [], customClass = ''}) => {
 							{list1.map((item: any) => (
 								<li className={classes.item_advantages}>
 									<div className={classes.bg}>
-										<img src={item.src} alt=""/>
+										<img src={item.src} alt="icon"/>
 									</div>
 									<p>{item.text}</p>
 								</li>

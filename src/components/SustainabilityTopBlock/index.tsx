@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "styles/main.module.scss";
+import classesMain from "pages/index.module.scss";
 import toVal from "../../helpers/clsx";
 
 
-export default ({text = ''}) => {
+export default ({text = '', customClass = ''}) => {
 	return (
-		<div className={classes.info}>
+		<div className={classes[customClass]}>
 			<div className={classesMain.content_wrapper}>
 				<div className={classes.info_content}>
 					<div className={toVal(classes.in_content, classes.in_content_image)}>

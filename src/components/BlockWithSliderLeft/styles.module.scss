@@ -2,8 +2,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 1940px;
-	padding: 0 10px;
+	max-width: 2040px;
+	padding: 0 60px;
 	width: 100%;
 	margin: 0 auto;
 	.section_slide {
@@ -30,12 +30,16 @@
 			right: 100px;
 			top: 0;
 		}
-
-		.carousel {
+		img, .carousel {
 			width: 100%;
 		}
-		img {
-			width: 100%;
+		iframe {
+			width: 890px;
+			height: 500px;
+			@media (min-width: 1200px) and (max-width: 1390px) {
+				width: 650px;
+				height: 350px;
+			}
 		}
 
 	}

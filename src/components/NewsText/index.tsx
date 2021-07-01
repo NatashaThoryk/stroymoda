@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "styles/main.module.scss";
+import classesMain from "pages/index.module.scss";
 
 export default ({title = '', text = '', text1 = ''}) => {
 	return (
@@ -8,7 +8,11 @@ export default ({title = '', text = '', text1 = ''}) => {
 			<div className={classes.wrapper}>
 				<h4>{title}</h4>
 				<p className={classes.prev_text}>{text}</p>
-				<p className={classes.prev_text}>{text1}</p>
+				{
+					text1 && text1.length && (
+						<p className={classes.prev_text}>{text1}</p>
+					)
+				}
 			</div>
 		</div>
 	)

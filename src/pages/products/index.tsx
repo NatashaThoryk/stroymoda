@@ -2,27 +2,32 @@ import React from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import classes from "../index.module.scss";
-import classesMain from 'styles/main.module.scss';
 import toVal from "../../helpers/clsx";
 import ImgBlock from 'components/ImgBlock';
+import BreadCrumbs from 'components/BreadCrumbs';
 
-
+const title1 = 'Transformation Systems'
+const title2 = 'Partitions and Doors'
 const imgBlock1 = [
 	{
 		title: 'Rotation system',
-		link: '#',
+		link: '/detail',
+		hash: 'block',
 		logo: '/img/products/Rotation_system.jpg'
 	},{
 		title: 'Translation system',
 		link: '#',
+		hash: '/#block',
 		logo: '/img/products/Translation_system.jpg'
 	},{
 		title: 'Wagon system',
 		link: '#',
+		hash: '/#block',
 		logo: '/img/products/Wagon_system.jpg'
 	},{
 		title: 'Under stage systems',
 		link: '#',
+		hash: '/#block',
 		logo: '/img/products/Under_stage_systems.jpg'
 	},
 ]
@@ -239,23 +244,8 @@ export default () => {
 			<Header />
 			<main className={toVal(classes.main, classes.main_wrapper)}>
 				<div className={classes.content_wrapper}>
-					<ul className={classes.breadcrumb_nav} itemScope itemType="http://schema.org/BreadcrumbList">
-						<li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
-							<a itemProp="item" href="https://www.stroymoda.ru/eng/" title="home">
-								<span itemProp="name">Home</span>
-								<meta itemProp="name" content="home"/>
-							</a>
-							<meta itemProp="position" content="1"/>
-						</li>
-						<li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
-							<a className={classes.breadcrumb_active} itemProp="item" href="https://www.stroymoda.ru/eng/products/" title="Products">
-								<span itemProp="name">Products</span>
-								<meta itemProp="name" content="Products"/>
-							</a>
-							<meta itemProp="position" content="2"/>
-						</li>
-					</ul>
-					<h2 className={classesMain.title_cap}>Transformation Systems</h2>
+					<BreadCrumbs />
+					<h2 className={classes.title_cap}>{title1}</h2>
 					<div className={classes.main_list}>
 						<div className={toVal(classes.in_list, classes.top_list)}>
 							<ImgBlock links={imgBlock1} title="Venue Transformation Systems" logo={'/img/products/galaSystems.svg'} img={'/img/slider/1.jpg'} />
@@ -267,7 +257,7 @@ export default () => {
 							<ImgBlock links={imgBlock5} title="Movable Pool Floor Systems " logo={'/img/products/poolfloor.svg'} img={'/img/slider/5.jpg'} />
 						</div>
 					</div>
-					<h2 className={toVal(classesMain.title_cap, classes.pd_top)}>Partitions and Doors</h2>
+					<h2 className={toVal(classes.title_cap, classes.pd_top)}>{title2}</h2>
 					<div className={classes.main_list}>
 						<div className={toVal(classes.in_list, classes.top_list)}>
 							<ImgBlock links={imgBlock6} title="Office partitions" logo={'/img/Logo.svg'} img={'/img/products/office.jpg'} />
@@ -281,7 +271,7 @@ export default () => {
 					</div>
 				</div>
 			</main>
-			<Footer />
+			<Footer isBg={false} customClass="is_margin"/>
 		</>
 	)
 }

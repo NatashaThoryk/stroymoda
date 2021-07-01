@@ -1,30 +1,39 @@
-.step_list {
+.newsPage, .leftText {
 	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	padding-bottom: 80px;
-	.list {
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	p {
+		padding-bottom: 20px;
+	}
+
+	div {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		.top {
-			display: flex;
-			align-items: center;
-			padding-bottom: 30px;
-			.circle {
-				padding: 14px 21px;
-				border: 1px solid #BBBBC2;
-				border-radius: 50px;
-				font-family: 'Oswald', sans-serif;
-				color: #292A35;
-				margin-right:18px;
+
+		a {
+			margin-right: 20px;
+
+			svg {
+				transition: .3s;
+				&:hover {
+					cursor: pointer;
+					transition: .3s;
+
+					path {
+						fill: #CB091E;
+					}
+				}
 			}
-			p {
-				color: #646677;
-				font-size: 14px;
-				text-transform: uppercase;
-				max-width: 238px;
+			&:last-child {
+				margin-right: 0;
 			}
 		}
+
 	}
+
+}
+
+.leftText {
+	align-items: flex-start;
 }

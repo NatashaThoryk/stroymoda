@@ -1,0 +1,15 @@
+.new_blog {
+	margin-bottom: 65px;
+	img {
+		width: 100%;
+	}
+	.detail {
+		display: inline-flex;
+		justify-content: space-between;
+		width: 100%;
+		padding: 25px 20px 0;
+	}
+	h3 {
+		color: #404149;
+	}
+}

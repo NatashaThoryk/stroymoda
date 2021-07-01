@@ -1,17 +1,15 @@
 import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from 'styles/main.module.scss';
+import classesMain from "pages/index.module.scss";
 import Slider from "components/Slider";
 
-const sliderList1 = ['1.jpg', '1.jpg', '1.jpg', '1.jpg', '1.jpg'];
-
-export default ({title = '', text1 = '', text2 = '', link = '', btnName = ''}) => {
+export default ({title = '', text1 = '', text2 = '', link = '', btnName = '', slides = [], dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
 	return (
 		<div className={classes.section}>
 			<div className={classes.section_content}>
 				<div className={classes.container}>
 					<div className={classes.section_slide}>
-						<Slider list={sliderList1 as any}/>
+						<Slider dotsClassItem={dotsClassItem} dotsClass={dotsClass} list={slides as any}/>
 					</div>
 					<div className={classes.section_text}>
 						<h3 className={classes.title}>{title}</h3>

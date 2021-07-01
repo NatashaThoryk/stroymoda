@@ -8,16 +8,21 @@
 	}
 }
 
-.about_wrap {
-	h3 {
-		font-size: 18px;
-		line-height: 27px;
-		letter-spacing: .2px;
-		max-width: 780px;
-		margin: 0 auto;
-	}
+.about_wrap, .partners_wrap {
 	.prev_text {
 		padding: 35px 0 40px;
 		text-align: center;
+	}
+	h3 {
+		font-size: 18px;
+		max-width: 780px;
+		margin: 0 auto;
+		line-height: 27px;
+	}
+}
+
+.partners_wrap {
+	h3 {
+		font-size: 24px;
 	}
 }
