@@ -1,10 +1,10 @@
-import React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import classes from "../../../index.module.scss";
-import StickyBox from 'components/StickyBox';
-import ImageDetailBlock from 'components/ImageDetailBlock';
 import BreadCrumbs from 'components/BreadCrumbs';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import ImageDetailBlock from 'components/ImageDetailBlock';
+import StickyBox from 'components/StickyBox';
+import React from 'react';
+import classes from '../../../index.module.scss';
 
 const imgList = [
 	{
@@ -22,7 +22,7 @@ const imgList = [
 	{
 		src: '/img/products/detail/detail6.jpg'
 	}
-]
+];
 
 export default () => {
 	return (
@@ -41,5 +41,5 @@ export default () => {
 			</main>
 			<Footer isBg customClass="is_margin"/>
 		</>
-	)
-}
+	);
+};
