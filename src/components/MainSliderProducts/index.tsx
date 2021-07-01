@@ -1,27 +1,28 @@
 import React, {useEffect, useState} from 'react';
-import classes from './styles.module.scss';
+import classes from './MainSliderProducts.module.scss';
 
 
-export default ({imageTop = '', imageBottom = ''}) => {
+const MainSliderProducts = ({imageTop = '', imageBottom = ''}) => {
 	const [slideWidth, setSlideWidth] = useState(0);
+
 	useEffect(() => {
 		setSlideWidth(window.innerWidth / 2);
-		console.log(222, window.innerWidth)
-	}, [])
+	}, []);
+
 	const handleMouseMove = (e: any) => {
-		console.log(3333, window.innerWidth, e.screenX)
-		setSlideWidth(-e.screenX);
-	}
+		const w = e.target.clientWidth;
+		setSlideWidth(w - e.screenX);
+	};
+
 	return (
 		<div className={classes.full_bg_slider} onMouseMove={handleMouseMove}>
-			<div  style={{right: `${slideWidth}px`}} className={classes.full_bg_slider_hand}/>
-			<img src="/img/flat_service-empty.gif" alt="image"/>
-			<div className={classes.full_bg_slider_before}>
+			<div className={classes.full_bg_slider_hand} style={{ right: slideWidth }}/>
+			<img src={imageBottom} alt="image" className={classes.full_bg_slider_before} />
+			<div  style={{width: slideWidth}} className={classes.full_bg_slider_after}>
 				<img src={imageTop} alt="image"/>
 			</div>
-			<div  style={{width: `${slideWidth}px`}} className={classes.full_bg_slider_after}>
-				<img src={imageBottom} alt="image"/>
-			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default MainSliderProducts;
