@@ -1,7 +1,8 @@
 import React from 'react';
-import classes from "./styles.module.scss";
+import classes from './styles.module.scss';
+import { IProps } from './types';
 
-export default ({isBg = false, customClass = '', isLogo = true}) => (
+const Footer: React.FC<IProps> = ({isBg = false, customClass = '', isLogo = true}) => (
 	<footer className={classes[customClass]}>
 		<div className={isBg ? classes.footer_top_bg :  classes.list_footer_all}>
 			{
@@ -176,4 +177,6 @@ export default ({isBg = false, customClass = '', isLogo = true}) => (
 			</div>
 		</div>
 	</footer>
-)
+);
+
+export default Footer;
