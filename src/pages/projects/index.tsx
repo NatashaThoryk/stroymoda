@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
 import classes from "../index.module.scss";
 import ProjectsImg from 'components/ProjectsImg';
 import BreadCrumbs from 'components/BreadCrumbs';
