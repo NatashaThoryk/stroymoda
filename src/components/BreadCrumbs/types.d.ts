@@ -2,7 +2,7 @@
 export interface IProps {
 	items: {
 		text: string;
-		link: string;
+		pathname: string;
 		hash?: string;
 	}[];
 }

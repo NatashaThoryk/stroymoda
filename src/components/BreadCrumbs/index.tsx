@@ -15,7 +15,7 @@ const BreadCrumbs: React.FC<IProps> = ({items = []}) => {
 		},
 		...items,
 	];
-	console.log(router.pathname);
+
 	return (
 		<ul className={classes.breadcrumb_nav} itemScope itemType="http://schema.org/BreadcrumbList">
 			{items.map(({ text, pathname, hash }) => {

@@ -1,5 +1,5 @@
-import Footer from 'containers/Footer';
-import Header from 'containers/Header';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
 import clsx from 'helpers/clsx';
 import Head from 'next/head';
 import React from 'react';
@@ -7,7 +7,7 @@ import classes from './layout.main.module.scss';
 import { IProps } from './types';
 
 const Layout: React.FunctionComponent<IProps> = (props) => {
-	const { children, title, rootClassName } = props;
+	const { children, title, mainClassName } = props;
 
 	return (
 		<>
@@ -22,12 +22,10 @@ const Layout: React.FunctionComponent<IProps> = (props) => {
 				<meta property="og:country-name" content="Россия"/>
 			</Head>
 			<Header />
-			<div className={clsx(classes.root, rootClassName)} id="page">
-				<div className={classes.content}>
-					{children}
-				</div>
-				<Footer />
-			</div>
+			<main className={clsx(classes.main, mainClassName)}>
+				{children}
+			</main>
+			<Footer />
 		</>
 	);
 };

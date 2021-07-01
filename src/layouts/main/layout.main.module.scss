@@ -1,39 +1,5 @@
 @import 'src/styles/theme';
-$header-height-desktop: 145px;
-$header-height-mobile: 60px;
-$header-height-mobile-with-banner: 96px;
 
-.root {
-	min-height: calc(100% - #{$header-height-desktop});
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.content {
-	overflow: hidden;
-	max-width: $desktopBreakPoint;
-	width: 100%;
-	margin: 0 auto;
-}
-
-.fullWidth {
-	max-width: 100%;
-}
-
-@media (max-width: $preTabletBreakPoint) {
-	.root {
-		min-height: calc(100% - #{$header-height-mobile});
-		position: relative;
-	}
-	.rootWithBanner {
-		min-height: calc(100% - #{$header-height-mobile-with-banner});
-	}
-}
-
-@media (max-width: $mobileBreakPoint) {
-	.main {
-		width: 100vw;
-	}
+.main {
+	margin-top: 91px;
 }
