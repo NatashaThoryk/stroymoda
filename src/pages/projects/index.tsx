@@ -62,17 +62,23 @@ const list8 = {
 	architect: 'Internal',
 	loc: 'St. Petersburg',
 	size: '42 000 square meters'
-}
+};
 
+const breadCrumbs = [
+	{
+		text: 'Projects',
+		pathname: '/projects',
+	}
+];
 
-export default () => {
+const Projects = () => {
 
 	return (
 		<>
 			<Header/>
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
-					<BreadCrumbs />
+					<BreadCrumbs items={breadCrumbs} />
 					<h2 className={classes.title_cap}>{title}</h2>
 				</div>
 				<div className={classes.container}>
@@ -106,5 +112,7 @@ export default () => {
 			</main>
 			<Footer isBg={true} customClass="is_margin"/>
 			</>
-	)
-}
+	);
+};
+
+export default Projects;
