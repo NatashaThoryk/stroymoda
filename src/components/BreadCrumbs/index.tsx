@@ -1,9 +1,9 @@
-import clsx from 'helpers/clsx';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React from 'react';
 import classes from './styles.module.scss';
 import { IProps } from './types';
+import clsx from 'helpers/clsx';
+import Link from 'next/link';
+import React from 'react';
+import { useRouter } from 'next/router';
 
 const BreadCrumbs: React.FC<IProps> = ({items = []}) => {
 	const router = useRouter();

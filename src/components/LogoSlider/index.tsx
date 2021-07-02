@@ -1,9 +1,11 @@
-import React from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
 
 function SampleNextArrow(props: any) {
 	const {onClick } = props;
@@ -20,7 +22,7 @@ function SamplePrevArrow(props: any) {
 }
 
 
-export default ({list = [], title = ''}) => {
+const LogoSlider = ({list = [], title = ''}) => {
 
 		const settings = {
 			dots: false,
@@ -53,4 +55,6 @@ export default ({list = [], title = ''}) => {
 				</div>
 			</div>
 		);
-}
+};
+
+export default LogoSlider;

@@ -1,9 +1,8 @@
+import classes from './styles.module.scss';
+import classesMain from 'pages/index.module.scss';
 import React from 'react';
-import classes from "./styles.module.scss";
-import classesMain from "pages/index.module.scss";
 
-export default ({title = '', src = '', link = ''}) => {
-
+const NewsItemsFb = ({title = '', src = '', link = ''}) => {
 	return (
 		<div className={classes.main_item}>
 			<a href={link} className={classes.image_list}>
@@ -14,5 +13,7 @@ export default ({title = '', src = '', link = ''}) => {
 				<span className={classesMain.select_text}>Facebook</span></a>
 		</div>
 	)
-}
+};
+
+export default NewsItemsFb;
 

@@ -1,10 +1,10 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
-import Slider from "components/Slider";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
+import Slider from 'components/Slider';
 
 
-export default ({title = '', text1 = '', text2 = '', link = '', btnName = '', customClass = '', slides = [], dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
+const SectionBlockLeft = ({title = '', text1 = '', text2 = '', link = '', btnName = '', customClass = '', slides = [], dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
 	return (
 		<div className={classes[customClass]}>
 			<div className={classes.section_text}>
@@ -32,4 +32,6 @@ export default ({title = '', text1 = '', text2 = '', link = '', btnName = '', cu
 			</div>
 		</div>
 	)
-}
+};
+
+export default SectionBlockLeft;

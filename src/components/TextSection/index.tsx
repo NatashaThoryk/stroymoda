@@ -1,9 +1,9 @@
-import React from 'react';
 import classes from './styles.module.scss';
 import classesMain from "pages/index.module.scss";
+import React from 'react';
 
 
-export default ({title = '', text = '', customClass = ''}) => {
+const TextSection = ({title = '', text = '', customClass = ''}) => {
 	return (
 		<div className={classesMain.content_wrapper}>
 			<div className={classes[customClass]}>
@@ -12,4 +12,6 @@ export default ({title = '', text = '', customClass = ''}) => {
 			</div>
 		</div>
 	)
-}
+};
+
+export default TextSection;

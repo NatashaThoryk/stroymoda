@@ -1,8 +1,7 @@
+import classes from './styles.module.scss';
 import React from 'react';
-import classes from "./styles.module.scss";
 
-export default ({link = ''}) => {
-
+const YouTubeLarge = ({link = ''}) => {
 	return (
 		<div className={classes.main_item}>
 				<iframe width="100%" height="100" src={link}
@@ -11,5 +10,7 @@ export default ({link = ''}) => {
 						allowFullScreen></iframe>
 		</div>
 	)
-}
+};
+
+export default YouTubeLarge;
 

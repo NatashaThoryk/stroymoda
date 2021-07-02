@@ -1,10 +1,10 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
-import toVal from "../../helpers/clsx";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
+import toVal from '../../helpers/clsx';
 
 
-export default ({text = '', customClass = ''}) => {
+const SustainabilityTopBlock = ({text = '', customClass = ''}) => {
 	return (
 		<div className={classes[customClass]}>
 			<div className={classesMain.content_wrapper}>
@@ -33,4 +33,7 @@ export default ({text = '', customClass = ''}) => {
 			</div>
 		</div>
 	)
-}
+};
+
+
+export default SustainabilityTopBlock;

@@ -1,8 +1,8 @@
+import classes from './styles.module.scss';
+import classesMain from 'pages/index.module.scss';
 import React from 'react';
-import classes from "./styles.module.scss";
-import classesMain from "pages/index.module.scss";
 
-export default ({title = '', src = '', link = ''}) => {
+const NewsItemsBlog = ({title = '', src = '', link = ''}) => {
 
 	return (
 		<div className={classes.main_item}>
@@ -14,5 +14,7 @@ export default ({title = '', src = '', link = ''}) => {
 				<span className={classesMain.select_text}>Blog</span></a>
 		</div>
 	)
-}
+};
+
+export default NewsItemsBlog;
 

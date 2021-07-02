@@ -1,7 +1,7 @@
+import classes from './styles.module.scss';
 import React from 'react';
-import classes from "./styles.module.scss";
 
-export default ({src = '', link = '', textInside = '', count = '', onHandler = () => {}}) => {
+const NewsItemsInst = ({src = '', link = '', textInside = '', count = '', onHandler = () => {}}) => {
 
 	return (
 		<div className={classes.main_item} onClick={onHandler}>
@@ -21,5 +21,7 @@ export default ({src = '', link = '', textInside = '', count = '', onHandler = (
 			</div>
 		</div>
 	)
-}
+};
+
+export default NewsItemsInst;
 

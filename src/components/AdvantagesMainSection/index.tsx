@@ -1,10 +1,10 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
-import toVal from "../../helpers/clsx";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
+import toVal from '../../helpers/clsx';
 
 
-export default ({title = '', list = [], list1 = [], customClass = ''}) => {
+const AdvantagesMainSection = ({title = '', list = [], list1 = [], customClass = ''}) => {
 	return (
 		<div className={classes[customClass]}>
 			<div className={classesMain.content_wrapper}>
@@ -34,4 +34,6 @@ export default ({title = '', list = [], list1 = [], customClass = ''}) => {
 			</div>
 		</div>
 	)
-}
+};
+
+export default AdvantagesMainSection;

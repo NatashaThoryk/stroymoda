@@ -1,9 +1,8 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
 
-
-export default ({src = '', link = '', title = ''}) => {
+const NewsBlog = ({src = '', link = '', title = ''}) => {
 	return (
 		<div className={classesMain.content_wrapper}>
 			<div className={classes.new_blog}>
@@ -14,4 +13,6 @@ export default ({src = '', link = '', title = ''}) => {
 			</div>
 		</div>
 	)
-}
+};
+
+export default NewsBlog;

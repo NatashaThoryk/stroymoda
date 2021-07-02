@@ -1,9 +1,9 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
 
 
-export default ({title = '', place = '', mail = '',hrefMail = '', phone = '', hrefPhone = ''}) => {
+const ContactList = ({title = '', place = '', mail = '',hrefMail = '', phone = '', hrefPhone = ''}) => {
 	return (
 		<div className={classesMain.content_wrapper}>
 			<h2 className={classes.title_cap}>{title}</h2>
@@ -23,4 +23,6 @@ export default ({title = '', place = '', mail = '',hrefMail = '', phone = '', hr
 			</div>
 		</div>
 	)
-}
+};
+
+export default ContactList;

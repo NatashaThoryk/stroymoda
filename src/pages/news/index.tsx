@@ -1,24 +1,33 @@
-import React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import SearchSocial from "components/SearchSocial";
-import BreadCrumbs from "components/BreadCrumbs";
+import BreadCrumbs from 'components/BreadCrumbs';
 import classes from '../index.module.scss';
+import Layout from 'layouts/main';
+import React from 'react';
+import SearchSocial from 'components/SearchSocial';
 
-const title = 'News'
 
-export default () => {
+const title = 'News';
+const breadCrumbs = [
+	{
+		text: 'News',
+		pathname: '/news',
+	}
+];
+
+const News = () => {
 	return (
-		<>
-			<Header/>
+		<Layout footerProps={{
+			isBg: true,
+			customClass: 'footer'
+		}}>
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
-					<BreadCrumbs />
+					<BreadCrumbs items={breadCrumbs}/>
 					<h2 className={classes.title_cap}>{title}</h2>
 				</div>
 				<SearchSocial />
 			</main>
-			<Footer isBg={true} customClass="footer"/>
-		</>
+		</Layout>
 	)
-}
+};
+
+export default News;

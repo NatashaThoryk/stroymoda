@@ -1,8 +1,8 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
 
-export default ({src = ''}) => {
+const Map = ({src = ''}) => {
 	return (
 		<div className={classesMain.container}>
 			<div className={classes.wrap_map}>
@@ -10,4 +10,6 @@ export default ({src = ''}) => {
 			</div>
 		</div>
 	)
-}
+};
+
+export default Map;

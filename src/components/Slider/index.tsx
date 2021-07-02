@@ -1,10 +1,10 @@
+import classesMain from 'pages/index.module.scss';
 import React from 'react';
-import Slider from "react-slick";
-import classesMain from "pages/index.module.scss";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-export default ({list = [], isVideo = false, dotsClass = '', dotsClassItem = 'slideRightDotsItem'}) => {
+const SliderMain = ({list = [], isVideo = false, dotsClass = '', dotsClassItem = 'slideRightDotsItem'}) => {
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -36,4 +36,6 @@ export default ({list = [], isVideo = false, dotsClass = '', dotsClassItem = 'sl
 			</div>)}
 		</Slider>
 	)
-}
+};
+
+export default SliderMain;

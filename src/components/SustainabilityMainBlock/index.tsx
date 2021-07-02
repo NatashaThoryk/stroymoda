@@ -1,9 +1,9 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import toVal from "../../helpers/clsx";
+import React from 'react';
+import toVal from '../../helpers/clsx';
 
 
-export default ({src = '', text = '', text1 = ''}) => {
+const SustainabilityMainBlock = ({src = '', text = '', text1 = ''}) => {
 	return (
 
 				<div className={classes.sustainability_block}>
@@ -20,4 +20,6 @@ export default ({src = '', text = '', text1 = ''}) => {
 					</div>
 				</div>
 	)
-}
+};
+
+export default SustainabilityMainBlock;

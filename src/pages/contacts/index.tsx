@@ -1,39 +1,44 @@
-import React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import ContactList from 'components/ContactList';
-import Map from 'components/Map';
-import ContactForm from 'components/ContactForm';
 import BreadCrumbs from 'components/BreadCrumbs';
 import classes from "../index.module.scss";
-import classesMain from "pages/index.module.scss";
+import classesMain from 'pages/index.module.scss';
+import ContactForm from 'components/ContactForm';
+import ContactList from 'components/ContactList';
+import Layout from 'layouts/main';
+import Map from 'components/Map';
+import React from 'react';
 
+const title = 'We’d love to hear from you';
+const contactsTitle1 = 'Stroymoda Mosow';
+const contactPlace1 = '127473 Russia, Moscow, 16/1, Krasnoproletarskaya Street';
+const contactsMail1 = 'moscow@stroymoda.ru';
+const contactPhone1 = '+7 (495) 246-57-41';
+const contactHrefPhone1 = 'tel:+7495465741';
+const contactHrefMail1 = 'mailto:moscow@stroymoda.ru';
+const mapImage = '/img/map.jpg';
 
-const title = 'We’d love to hear from you'
-const contactsTitle1 = 'Stroymoda Mosow'
-const contactPlace1 = '127473 Russia, Moscow, 16/1, Krasnoproletarskaya Street'
-const contactsMail1 = 'moscow@stroymoda.ru'
-const contactPhone1 = '+7 (495) 246-57-41'
-const contactHrefPhone1 = 'tel:+7495465741'
-const contactHrefMail1 = 'mailto:moscow@stroymoda.ru'
-const mapImage = '/img/map.jpg'
+const contactsTitle2 = 'Stroymoda Saint Petersburg';
+const contactPlace2 = '199406 Russia, Saint-Petersburg Nalichnaya street, 22';
+const contactsMail2 = 'office@stroymoda.ru';
+const contactPhone2 = '+7 (812) 438-80-03';
+const contactHrefPhone2 = 'tel:+78124388003';
+const contactHrefMail2 = 'mailto:office@stroymoda.ru';
+const breadCrumbs = [
+	{
+		text: 'Contacts',
+		pathname: '/contacts',
+	}
+];
 
-const contactsTitle2 = 'Stroymoda Saint Petersburg'
-const contactPlace2 = '199406 Russia, Saint-Petersburg Nalichnaya street, 22'
-const contactsMail2 = 'office@stroymoda.ru'
-const contactPhone2 = '+7 (812) 438-80-03'
-const contactHrefPhone2 = 'tel:+78124388003'
-const contactHrefMail2 = 'mailto:office@stroymoda.ru'
-
-
-export default () => {
+const Contacts = () => {
 
 	return (
-		<>
-			<Header/>
+		<Layout footerProps={{
+			isBg: false,
+			customClass: 'is_margin'
+		}}>
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
-					<BreadCrumbs/>
+					<BreadCrumbs items={breadCrumbs}/>
 					<h2 className={classesMain.title_cap}>{title}</h2>
 				</div>
 				<ContactList title={contactsTitle1} place={contactPlace1} mail={contactsMail1} phone={contactPhone1}
@@ -48,7 +53,8 @@ export default () => {
 				</div>
 				<ContactForm/>
 			</main>
-			<Footer isBg={false} customClass="is_margin"/>
-		</>
+		</Layout>
 	)
-}
+};
+
+export default Contacts;

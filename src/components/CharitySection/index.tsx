@@ -1,8 +1,8 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
 
-export default ({list = []}) => {
+const CharitySection = ({list = []}) => {
 	return (
 			<div className={classesMain.content_wrapper}>
 				<h3 className={classesMain.title}>Charity and sponsorship</h3>
@@ -17,4 +17,6 @@ export default ({list = []}) => {
 				</div>
 			</div>
 	)
-}
+};
+
+export default CharitySection;

@@ -1,128 +1,122 @@
+import classes from './styles.module.scss';
+import classesMain from 'pages/index.module.scss';
+import NewsBlog from 'components/NewsBlog';
+import NewsItemsFb from 'components/NewsItemsFb';
+import NewsItemsBlog from 'components/NewsItemsBlog';
+import NewsItemsInst from 'components/NewsItemsInst';
+import NewsItemsYouTube from 'components/NewsItemsYouTube';
+import NewsItemsYouTubeLarge from 'components/NewsItemsYouTubeLarge';
 import React, {useState} from 'react';
-import classes from "./styles.module.scss";
-import classesMain from "pages/index.module.scss";
-import NewsBlog from "components/NewsBlog";
-import NewsItemsFb from "components/NewsItemsFb";
-import NewsItemsYouTubeLarge from "components/NewsItemsYouTubeLarge";
-import NewsItemsYouTube from "components/NewsItemsYouTube";
-import NewsItmesInst from "components/NewsItmesInst";
-import NewsItemsBlog from "components/NewsItemsBlog";
-import toVal from "../../helpers/clsx";
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
+import toVal from '../../helpers/clsx';
 
-const titleNew = 'Navigating the COVID-19 situation through flexibility (AIPC COMMUNIQUÉ ARTICLE)'
-
+const titleNew = 'Navigating the COVID-19 situation through flexibility (AIPC COMMUNIQUÉ ARTICLE)';
 const itemFb1 = {
 	title: 'В понедельник мы показали кабинет из новой концепции офиса, сегодня - коридор: пространство выглядит',
 	link: '/news',
 	src: '/img/newsMain.png',
 
-}
+};
 const itemFb2 = {
 	title: 'Еще одна иллюстрация из конкурсного проекта, который наше бюро делало',
 	link: '/news',
 	src: '/img/newsMain.png',
 
-}
+};
 const itemFb3 = {
 	title: 'Новая концепция офиса: шпонированные декоративные панели и мебель по нашим эскизам, дополненная креслами.',
 	link: '/news',
 	src: '/img/newsMain.png',
 
-}
-
+};
 const itemIns1 = {
 	link: '',
 	src: '/img/news/inst/News_inst.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
-}
+};
 const itemIns2 = {
 	link: '',
 	src: '/img/news/inst/News_inst1.jpg',
 	textInside: 'stroymoda.ru',
 	count: '312'
-}
+};
 const itemIns3 = {
 	link: '',
 	src: '/img/news/inst/News_inst2.jpg',
 	textInside: 'stroymoda.ru',
 	count: '532'
-}
+};
 const itemIns4 = {
 	link: '',
 	src: '/img/news/inst/News_inst3.jpg',
 	textInside: 'stroymoda.ru',
 	count: '522'
-}
+};
 const itemIns5 = {
 	link: '',
 	src: '/img/news/inst/News_inst4.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
-}
+};
 const itemIns6 = {
 	link: '',
 	src: '/img/news/inst/News_inst5.jpg',
 	textInside: 'stroymoda.ru',
 	count: '112'
-}
+};
 const itemIns7 = {
 	link: '',
 	src: '/img/news/inst/News_inst6.jpg',
 	textInside: 'stroymoda.ru',
 	count: '12'
-}
+};
 const itemIns8 = {
 	link: '',
 	src: '/img/news/inst/News_inst7.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
-}
+};
 const itemIns9 = {
 	link: '',
 	src: '/img/news/inst/News_inst8.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
-}
+};
 const itemIns10 = {
 	link: '',
 	src: '/img/news/inst/News_inst9.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
-}
+};
 const itemIns11 = {
 	link: '',
 	src: '/img/news/inst/News_inst10.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
-}
-
+};
 const itemBlog1 = {
 	title: 'DESIGNING TRANSFORMABLE VENUES WITH CURVED-ROW',
 	src: '/img/news/blog1.jpg',
 	link: '/news/id',
-}
-
+};
 const itemBlog2 = {
 	title: 'A Gala Venue in a Modern Mixed-Used Office Tower in São Paulo is Ready to Open',
 	src: '/img/news/blog2.jpg',
 	link: '/news/id',
-}
-
+};
 const itemBlog3 = {
 	title: 'Flexible Convention Centres Now in Emerging Countries ',
 	src: '/img/news/blog3.jpg',
 	link: '/news/id',
-}
+};
 
-export default () => {
+const SearchSocial = () => {
 	const [isModal, setIsModal] = useState(false)
 
 	return (
 		<div className={classesMain.content_wrapper}>
-
 			<div className={classes.section_slide}>
 				<form>
 					<input type="search" placeholder="Search news by keywords..."/>
@@ -200,7 +194,7 @@ export default () => {
 					</TabList>
 					<TabPanel>
 						<div className={toVal(classesMain.tabs, classesMain.tab1)}>
-							<NewsBlog title={titleNew} link='/news/id' src='/img/newsMain.png'/>
+							<NewsBlog title={titleNew} link="/news/id" src="/img/newsMain.png"/>
 							<div className={classesMain.in_list}>
 								<NewsItemsBlog link={itemBlog1.link} title={itemBlog1.title} src={itemBlog1.src}/>
 								<NewsItemsBlog link={itemBlog2.link} title={itemBlog2.title} src={itemBlog2.src}/>
@@ -221,49 +215,49 @@ export default () => {
 					<TabPanel>
 						<div className={classesMain.tabs}>
 							<div className={classes.in_list}>
-								<NewsItmesInst onHandler={() => setIsModal(true)} src={itemIns1.src}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
 											   textInside={itemIns1.textInside} count={itemIns1.count}/>
-								<NewsItmesInst src={itemIns2.src} textInside={itemIns2.textInside}
+								<NewsItemsInst src={itemIns2.src} textInside={itemIns2.textInside}
 											   count={itemIns2.count}/>
-								<NewsItmesInst src={itemIns3.src} textInside={itemIns3.textInside}
+								<NewsItemsInst src={itemIns3.src} textInside={itemIns3.textInside}
 											   count={itemIns3.count}/></div>
 							<div className={classes.in_list}>
-								<NewsItmesInst src={itemIns4.src} textInside={itemIns4.textInside}
+								<NewsItemsInst src={itemIns4.src} textInside={itemIns4.textInside}
 											   count={itemIns4.count}/>
-								<NewsItmesInst src={itemIns5.src} textInside={itemIns5.textInside}
+								<NewsItemsInst src={itemIns5.src} textInside={itemIns5.textInside}
 											   count={itemIns5.count}/>
-								<NewsItmesInst src={itemIns6.src} textInside={itemIns6.textInside}
+								<NewsItemsInst src={itemIns6.src} textInside={itemIns6.textInside}
 											   count={itemIns6.count}/></div>
 							<div className={classes.in_list}>
-								<NewsItmesInst src={itemIns7.src} textInside={itemIns7.textInside}
+								<NewsItemsInst src={itemIns7.src} textInside={itemIns7.textInside}
 											   count={itemIns7.count}/>
-								<NewsItmesInst src={itemIns8.src} textInside={itemIns8.textInside}
+								<NewsItemsInst src={itemIns8.src} textInside={itemIns8.textInside}
 											   count={itemIns8.count}/>
-								<NewsItmesInst src={itemIns9.src} textInside={itemIns9.textInside}
+								<NewsItemsInst src={itemIns9.src} textInside={itemIns9.textInside}
 											   count={itemIns9.count}/></div>
 							<div className={classes.in_list}>
-								<NewsItmesInst src={itemIns10.src} textInside={itemIns10.textInside}
+								<NewsItemsInst src={itemIns10.src} textInside={itemIns10.textInside}
 											   count={itemIns10.count}/>
-								<NewsItmesInst src={itemIns11.src} textInside={itemIns11.textInside}
+								<NewsItemsInst src={itemIns11.src} textInside={itemIns11.textInside}
 											   count={itemIns11.count}/>
-								<NewsItmesInst src={itemIns1.src} textInside={itemIns1.textInside}
+								<NewsItemsInst src={itemIns1.src} textInside={itemIns1.textInside}
 											   count={itemIns1.count}/></div>
 						</div>
 					</TabPanel>
 					<TabPanel>
 						<div className={classesMain.tabs}>
-							<NewsItemsYouTubeLarge link='https://www.youtube.com/embed/XBPjVzSoepo'/>
+							<NewsItemsYouTubeLarge link="https://www.youtube.com/embed/XBPjVzSoepo"/>
 							<div className={classesMain.in_list_tabs}>
-								<NewsItemsYouTube link='https://www.youtube.com/embed/XBPjVzSoepo'/>
-								<NewsItemsYouTube link='https://www.youtube.com/embed/XBPjVzSoepo'/>
+								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
 							</div>
 							<div className={classesMain.in_list_tabs}>
-								<NewsItemsYouTube link='https://www.youtube.com/embed/XBPjVzSoepo'/>
-								<NewsItemsYouTube link='https://www.youtube.com/embed/XBPjVzSoepo'/>
+								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
 							</div>
 							<div className={classesMain.in_list_tabs}>
-								<NewsItemsYouTube link='https://www.youtube.com/embed/XBPjVzSoepo'/>
-								<NewsItemsYouTube link='https://www.youtube.com/embed/XBPjVzSoepo'/>
+								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
 							</div>
 						</div>
 					</TabPanel>
@@ -303,7 +297,7 @@ export default () => {
 								</div>
 								<div className={classes.info_wrap}>
 									<div className={classes.top}>
-										<img src="/img/modal_logo.svg" alt=""/>
+										<img src="/img/modal_logo.svg" alt="logo"/>
 										<p className={classes.title}>stroymoda.ru</p>
 									</div>
 									<span onClick={() => setIsModal(false)}>close</span>
@@ -316,4 +310,6 @@ export default () => {
 
 		</div>
 	)
-}
+};
+
+export default SearchSocial;

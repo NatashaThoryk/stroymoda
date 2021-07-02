@@ -1,8 +1,8 @@
-import React from 'react';
 import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
+import classesMain from 'pages/index.module.scss';
+import React from 'react';
 
-export default ({link = '', btnName = '', customClass = ''}) => {
+const Button = ({link = '', btnName = '', customClass = ''}) => {
 	return (
 		<div className={classes[customClass]}>
 			<a href={link} className={classesMain.btn_learn}>{btnName}
@@ -22,4 +22,6 @@ export default ({link = '', btnName = '', customClass = ''}) => {
 			</a>
 		</div>
 	)
-}
+};
+
+export default Button;

@@ -1,7 +1,7 @@
+import classes from './styles.module.scss';
 import React from 'react';
-import classes from "./styles.module.scss";
 
-export default ({link = ''}) => {
+const NewsItemsYouTube = ({link = ''}) => {
 
 	return (
 		<div className={classes.main_item}>
@@ -11,5 +11,7 @@ export default ({link = ''}) => {
 						allowFullScreen></iframe>
 		</div>
 	)
-}
+};
+
+export default NewsItemsYouTube;
 
