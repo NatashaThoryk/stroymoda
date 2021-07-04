@@ -1,10 +1,11 @@
 import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const SliderMain = ({list = [], isVideo = false, dotsClass = '', dotsClassItem = 'slideRightDotsItem'}) => {
+const SliderMain: React.FC<IProps> = ({list = [], isVideo = false, dotsClass = '', dotsClassItem = 'slideRightDotsItem'}) => {
 	const settings = {
 		dots: true,
 		infinite: true,

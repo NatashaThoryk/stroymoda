@@ -45,7 +45,9 @@ body {
 
 
 
-
+.slick-slider {
+	height: 100% !important;
+}
 
 
 .slick-dots li button{

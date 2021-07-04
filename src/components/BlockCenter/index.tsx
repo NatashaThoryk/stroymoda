@@ -1,10 +1,10 @@
+import classes from './blockCenter.module.scss';
+import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
-import toVal from "../../helpers/clsx";
+import toVal from '../../helpers/clsx';
 
-
-export default ({title = '', text = ''}) => {
+const BlockCenter: React.FC<IProps> = ({title = '', text = ''}) => {
 	return (
 		<div className={classes.article_block}>
 			<div className={classesMain.content_wrapper}>
@@ -14,5 +14,7 @@ export default ({title = '', text = ''}) => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default BlockCenter;

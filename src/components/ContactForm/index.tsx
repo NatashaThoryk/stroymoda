@@ -1,4 +1,4 @@
-import classes from './styles.module.scss';
+import classes from './contactForm.module.scss';
 import classesMain from "pages/index.module.scss";
 import React from 'react';
 

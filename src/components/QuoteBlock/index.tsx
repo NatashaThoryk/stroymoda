@@ -1,8 +1,11 @@
-import React from 'react';
-import classes from './styles.module.scss';
+import classes from './quoteBlock.module.scss';
 import classesMain from "pages/index.module.scss";
+import { IProps } from './types';
+import React from 'react';
 
-export default ({text = ''}) => {
+
+
+const QuoteBlock: React.FC<IProps> = ({text = ''}) => {
 	return (
 		<div className={classes.quote}>
 			<div className={classesMain.content_wrapper}>
@@ -11,5 +14,7 @@ export default ({text = ''}) => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default QuoteBlock;

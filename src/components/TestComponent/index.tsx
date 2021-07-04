@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './TestComponent.module.scss';
+import classes from './testComponent.module.scss';
 import { IProps } from './types';
 
 const TestComponent: React.FC<IProps> = ({value}) => {

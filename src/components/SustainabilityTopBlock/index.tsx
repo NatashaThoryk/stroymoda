@@ -1,10 +1,11 @@
-import classes from './styles.module.scss';
+import classes from './sustainabilityTopBlock.module.scss';
 import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
 import toVal from '../../helpers/clsx';
 
 
-const SustainabilityTopBlock = ({text = '', customClass = ''}) => {
+const SustainabilityTopBlock: React.FC<IProps> = ({text = '', customClass = ''}) => {
 	return (
 		<div className={classes[customClass]}>
 			<div className={classesMain.content_wrapper}>
@@ -32,7 +33,7 @@ const SustainabilityTopBlock = ({text = '', customClass = ''}) => {
 				</div>
 			</div>
 		</div>
-	)
+	);
 };
 
 

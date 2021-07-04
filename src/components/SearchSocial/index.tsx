@@ -1,4 +1,4 @@
-import classes from './styles.module.scss';
+import classes from './searchSocial.module.scss';
 import classesMain from 'pages/index.module.scss';
 import NewsBlog from 'components/NewsBlog';
 import NewsItemsFb from 'components/NewsItemsFb';
@@ -8,6 +8,7 @@ import NewsItemsYouTube from 'components/NewsItemsYouTube';
 import NewsItemsYouTubeLarge from 'components/NewsItemsYouTubeLarge';
 import React, {useState} from 'react';
 import 'react-tabs/style/react-tabs.css';
+import Slider from 'components/Slider';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import toVal from '../../helpers/clsx';
 
@@ -112,6 +113,8 @@ const itemBlog3 = {
 	link: '/news/id',
 };
 
+
+const slides = ['modal.jpg', 'modal.jpg', 'modal.jpg'];
 const SearchSocial = () => {
 	const [isModal, setIsModal] = useState(false)
 
@@ -217,30 +220,41 @@ const SearchSocial = () => {
 							<div className={classes.in_list}>
 								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
 											   textInside={itemIns1.textInside} count={itemIns1.count}/>
-								<NewsItemsInst src={itemIns2.src} textInside={itemIns2.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns2.src}
+											   textInside={itemIns2.textInside}
 											   count={itemIns2.count}/>
-								<NewsItemsInst src={itemIns3.src} textInside={itemIns3.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns3.src}
+											   textInside={itemIns3.textInside}
 											   count={itemIns3.count}/></div>
 							<div className={classes.in_list}>
-								<NewsItemsInst src={itemIns4.src} textInside={itemIns4.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns4.src}
+											   textInside={itemIns4.textInside}
 											   count={itemIns4.count}/>
-								<NewsItemsInst src={itemIns5.src} textInside={itemIns5.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns5.src}
+											   textInside={itemIns5.textInside}
 											   count={itemIns5.count}/>
-								<NewsItemsInst src={itemIns6.src} textInside={itemIns6.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns6.src}
+											   textInside={itemIns6.textInside}
 											   count={itemIns6.count}/></div>
 							<div className={classes.in_list}>
-								<NewsItemsInst src={itemIns7.src} textInside={itemIns7.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns7.src}
+											   textInside={itemIns7.textInside}
 											   count={itemIns7.count}/>
-								<NewsItemsInst src={itemIns8.src} textInside={itemIns8.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns8.src}
+											   textInside={itemIns8.textInside}
 											   count={itemIns8.count}/>
-								<NewsItemsInst src={itemIns9.src} textInside={itemIns9.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns9.src}
+											   textInside={itemIns9.textInside}
 											   count={itemIns9.count}/></div>
 							<div className={classes.in_list}>
-								<NewsItemsInst src={itemIns10.src} textInside={itemIns10.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns10.src}
+											   textInside={itemIns10.textInside}
 											   count={itemIns10.count}/>
-								<NewsItemsInst src={itemIns11.src} textInside={itemIns11.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns11.src}
+											   textInside={itemIns11.textInside}
 											   count={itemIns11.count}/>
-								<NewsItemsInst src={itemIns1.src} textInside={itemIns1.textInside}
+								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
+											   textInside={itemIns1.textInside}
 											   count={itemIns1.count}/></div>
 						</div>
 					</TabPanel>
@@ -293,14 +307,33 @@ const SearchSocial = () => {
 						<div className={classes.modal}>
 							<div className={classes.modal_container}>
 								<div className={classes.image_wrap}>
-									<img src="/img/modal.jpg" alt="image"/>
+									<Slider dotsClass="slideDotsWhite" dotsClassItem="slideLeftDotsItem" list={slides as any}/>
+									{/*<img src="/img/modal.jpg" alt="image"/>*/}
 								</div>
 								<div className={classes.info_wrap}>
-									<div className={classes.top}>
-										<img src="/img/modal_logo.svg" alt="logo"/>
-										<p className={classes.title}>stroymoda.ru</p>
+									<div className={classes.title}>
+										<div className={classes.top}>
+											<div className={classes.wrapper}>
+												<img src="/img/modal_logo.svg" alt="logo"/>
+											</div>
+											<p className={classes.title}>stroymoda.ru</p>
+										</div>
+										<span className={classes.close} onClick={() => setIsModal(false)}><svg
+											width="23" height="22"
+											viewBox="0 0 23 22" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+<rect x="1.73633" width="28.6581" height="2.45458" transform="rotate(45 1.73633 0)" fill="#BBBBC2"/>
+<rect width="28.6581" height="2.45458" transform="matrix(-0.707107 0.707107 0.707107 0.707107 20.7754 0)"
+	  fill="#BBBBC2"/>
+</svg></span>
 									</div>
-									<span onClick={() => setIsModal(false)}>close</span>
+									<div className={classes.content}>
+										<p>На ответственных проектах предъявляются повышенные требования к пожарной
+											безопасности. #hpl #fundermax обеспечивает эти требования, а наше
+											оборудование и золотые руки монтажников обеспечивают качество и
+											точность.</p>
+										<p>Система облицовки #walline с рустиком 2 мм и 4 мм</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -309,7 +342,7 @@ const SearchSocial = () => {
 			}
 
 		</div>
-	)
+	);
 };
 
 export default SearchSocial;

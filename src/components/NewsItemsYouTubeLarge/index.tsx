@@ -1,7 +1,8 @@
-import classes from './styles.module.scss';
+import classes from './NewsItemsYouTubeLarge.module.scss';
+import { IProps } from './types';
 import React from 'react';
 
-const YouTubeLarge = ({link = ''}) => {
+const YouTubeLarge: React.FC<IProps> = ({link = ''}) => {
 	return (
 		<div className={classes.main_item}>
 				<iframe width="100%" height="100" src={link}

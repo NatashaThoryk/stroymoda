@@ -1,10 +1,11 @@
-import classes from './styles.module.scss';
+import classes from './advantagesMainSection.module.scss';
 import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
 import toVal from '../../helpers/clsx';
 
 
-const AdvantagesMainSection = ({title = '', list = [], list1 = [], customClass = ''}) => {
+const AdvantagesMainSection: React.FC<IProps> = ({title = '', list = [], list1 = [], customClass = ''}) => {
 	return (
 		<div className={classes[customClass]}>
 			<div className={classesMain.content_wrapper}>
@@ -33,7 +34,7 @@ const AdvantagesMainSection = ({title = '', list = [], list1 = [], customClass =
 				</div>
 			</div>
 		</div>
-	)
+	);
 };
 
 export default AdvantagesMainSection;

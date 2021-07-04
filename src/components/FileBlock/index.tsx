@@ -1,8 +1,8 @@
+import classes from './fileBlock.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
 
-
-export default ({link = ''}) => {
+const FileBlock: React.FC<IProps> = ({link = ''}) => {
 	return (
 		<a href={link} className={classes.product_view}>Open Product sheet
 			<svg width="39" height="48" viewBox="0 0 39 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,5 +22,7 @@ export default ({link = ''}) => {
 				</defs>
 			</svg>
 		</a>
-	)
-}
+	);
+};
+
+export default FileBlock;

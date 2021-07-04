@@ -1,9 +1,9 @@
+import classes from './BlockWithSliderLeft.module.scss';
 import React from 'react';
-import classes from './styles.module.scss';
-import Slider from "components/Slider";
+import Slider from 'components/Slider';
 
 
-export default ({title = '', listItem = [], slides = [], isVideo = false, dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
+const BlockWithSliderLeft = ({title = '', listItem = [], slides = [], isVideo = false, dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
 	return (
 		<div className={classes.container}>
 			<div className={classes.section_text}>
@@ -26,5 +26,7 @@ export default ({title = '', listItem = [], slides = [], isVideo = false, dotsCl
 				<Slider dotsClassItem={dotsClassItem} dotsClass={dotsClass} list={slides as any} isVideo={isVideo}/>
 			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default BlockWithSliderLeft;

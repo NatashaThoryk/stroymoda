@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import classes from './header.module.scss';
 import {useRouter} from 'next/router'
-import classes from "./styles.module.scss";
+import React, {useEffect, useState} from 'react';
 
 const menu = [
 	{
@@ -24,7 +24,7 @@ const menu = [
 	},
 ]
 
-export default () => {
+const Header = () => {
 	const {asPath} = useRouter()
 	const [activeKeyItem, setActiveKeyItem] = useState(null);
 
@@ -79,5 +79,7 @@ export default () => {
 				</div>
 			</div>
 		</header>
-	)
-}
+	);
+};
+
+export default Header;

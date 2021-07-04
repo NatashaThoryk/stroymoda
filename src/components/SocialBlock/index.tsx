@@ -1,8 +1,8 @@
+import classes from './socialBlock.module.scss';
+import {IProps} from './types';
 import React from 'react';
-import classes from './styles.module.scss';
 
-
-export default ({customClass = '', linkIns = '', linkFb = '', linkTw = '', linkPnt = ''}) => {
+const SocialBlock: React.FC<IProps>  = ({customClass = '', linkIns = '', linkFb = '', linkTw = '', linkPnt = ''}) => {
 	return (
 			<div className={classes[customClass]}>
 				<p>Share on social media</p>
@@ -42,4 +42,6 @@ export default ({customClass = '', linkIns = '', linkFb = '', linkTw = '', linkP
 					</div>
 			</div>
 	)
-}
+};
+
+export default SocialBlock;

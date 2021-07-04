@@ -1,8 +1,8 @@
+import classes from './mainSliderProducts.module.scss';
+import { IProps } from './types';
 import React, {useEffect, useState} from 'react';
-import classes from './MainSliderProducts.module.scss';
 
-
-const MainSliderProducts = ({imageTop = '', imageBottom = ''}) => {
+const MainSliderProducts: React.FC<IProps> = ({imageTop = '', imageBottom = ''}) => {
 	const [slideWidth, setSlideWidth] = useState(0);
 
 	useEffect(() => {

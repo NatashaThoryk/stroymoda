@@ -1,7 +1,8 @@
-import classes from './styles.module.scss';
+import classes from './NewsItemsYouTube.module.scss';
+import { IProps } from './types';
 import React from 'react';
 
-const NewsItemsYouTube = ({link = ''}) => {
+const NewsItemsYouTube: React.FC<IProps> = ({link = ''}) => {
 
 	return (
 		<div className={classes.main_item}>

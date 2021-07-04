@@ -1,8 +1,9 @@
-import classes from './styles.module.scss';
+import classes from './charitySection.module.scss';
 import classesMain from 'pages/index.module.scss';
 import React from 'react';
+import { IProps } from './types';
 
-const CharitySection = ({list = []}) => {
+const CharitySection: React.FC<IProps> = ({list = []}) => {
 	return (
 			<div className={classesMain.content_wrapper}>
 				<h3 className={classesMain.title}>Charity and sponsorship</h3>
@@ -16,7 +17,7 @@ const CharitySection = ({list = []}) => {
 					</div>)}
 				</div>
 			</div>
-	)
+	);
 };
 
 export default CharitySection;

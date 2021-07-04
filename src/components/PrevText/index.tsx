@@ -1,8 +1,8 @@
+import classes from './prevText.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
 
-
-export default ({text1 = '', text2 = ''}) => {
+const PrevText: React.FC<IProps> = ({text1 = '', text2 = ''}) => {
 	return (
 		<>
 			<p className={classes.prev_text}>{text1}</p>
@@ -12,5 +12,7 @@ export default ({text1 = '', text2 = ''}) => {
 				)
 			}
 		</>
-	)
-}
+	);
+};
+
+export default PrevText;

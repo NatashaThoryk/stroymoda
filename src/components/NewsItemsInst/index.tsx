@@ -1,7 +1,8 @@
-import classes from './styles.module.scss';
+import classes from './newsItemsInst.module.scss';
+import { IProps } from './types';
 import React from 'react';
 
-const NewsItemsInst = ({src = '', link = '', textInside = '', count = '', onHandler = () => {}}) => {
+const NewsItemsInst: React.FC<IProps> = ({src = '', textInside = '', count = '', onHandler = () => {}}) => {
 
 	return (
 		<div className={classes.main_item} onClick={onHandler}>

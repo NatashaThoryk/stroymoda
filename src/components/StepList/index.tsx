@@ -1,8 +1,9 @@
+import classes from './stepList.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
 
 
-export default ({stepList = []}) => {
+const StepList: React.FC<IProps> = ({stepList = []}) => {
 	return (
 		<ul className={classes.step_list}>
 				{stepList.map((item: any) => (
@@ -20,5 +21,7 @@ export default ({stepList = []}) => {
 						</li>
 					))}
 		</ul>
-	)
-}
+	);
+};
+
+export default StepList;

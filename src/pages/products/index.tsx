@@ -1,36 +1,35 @@
-import React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import classes from "../index.module.scss";
-import toVal from "../../helpers/clsx";
-import ImgBlock from 'components/ImgBlock';
 import BreadCrumbs from 'components/BreadCrumbs';
+import classes from '../index.module.scss';
+import ImgBlock from 'components/ImgBlock';
+import Layout from 'layouts/main';
+import React from 'react';
+import toVal from '../../helpers/clsx';
 
-const title1 = 'Transformation Systems'
-const title2 = 'Partitions and Doors'
+const title1 = 'Transformation Systems';
+const title2 = 'Partitions and Doors';
 const imgBlock1 = [
 	{
 		title: 'Rotation system',
-		link: '/detail',
-		hash: 'block',
+		link: '#',
+		hash: '/',
 		logo: '/img/products/Rotation_system.jpg'
 	},{
 		title: 'Translation system',
 		link: '#',
-		hash: '/#block',
+		hash: '/',
 		logo: '/img/products/Translation_system.jpg'
 	},{
 		title: 'Wagon system',
 		link: '#',
-		hash: '/#block',
+		hash: '/',
 		logo: '/img/products/Wagon_system.jpg'
 	},{
 		title: 'Under stage systems',
 		link: '#',
-		hash: '/#block',
+		hash: '/',
 		logo: '/img/products/Under_stage_systems.jpg'
 	},
-]
+];
 const imgBlock2 = [
 	{
 		title: 'Straight tribunes',
@@ -53,7 +52,7 @@ const imgBlock2 = [
 		link: '#',
 		logo: '/img/products/Seat_models.jpg'
 	},
-]
+];
 const imgBlock3 = [
 	{
 		title: 'Zenith premium',
@@ -72,7 +71,7 @@ const imgBlock3 = [
 		link: '#',
 		logo: '/img/products/Mirage.jpg'
 	},
-]
+];
 const imgBlock4 = [
 	{
 		title: 'Sonico',
@@ -95,7 +94,7 @@ const imgBlock4 = [
 		link: '#',
 		logo: '/img/products/Flexio.jpg'
 	},
-]
+];
 const imgBlock5 = [
 	{
 		title: 'Residential pools',
@@ -106,7 +105,7 @@ const imgBlock5 = [
 		link: '#',
 		logo: '/img/products/Commercial_pools.jpg'
 	},
-]
+];
 const imgBlock6 = [
 	{
 		title: 'Express 2',
@@ -133,7 +132,7 @@ const imgBlock6 = [
 		link: '#',
 		logo: '/img/products/partitions/O_Fineline.jpg'
 	}
-]
+];
 const imgBlock7 = [
 	{
 		title: 'Full glazed doors in frame',
@@ -172,7 +171,7 @@ const imgBlock7 = [
 		link: '#',
 		logo: '/img/products/partitions/G_Fire_resistant.jpg'
 	}
-]
+];
 const imgBlock8 = [
 	{
 		title: 'Solid doors in partitions',
@@ -188,7 +187,7 @@ const imgBlock8 = [
 		link: '#',
 		logo: '/img/products/partitions/S_Fire_solid_doors.jpg'
 	},
-]
+];
 const imgBlock9 = [
 	{
 		title: 'Welcome area ',
@@ -212,7 +211,7 @@ const imgBlock9 = [
 		link: '#',
 		logo: '/img/products/partitions/Storage.jpg'
 	},
-]
+];
 const imgBlock10 = [
 	{
 		title: 'Wall and column cladding',
@@ -235,43 +234,52 @@ const imgBlock10 = [
 		link: '#',
 		logo: '/img/products/partitions/M_Decorative_ceilings.jpg'
 	},
-]
+];
+const breadCrumbs = [
+	{
+		text: 'Products',
+		pathname: '/products',
+	}
+];
 
-export default () => {
+const ProductItem = () => {
 
 	return (
-		<>
-			<Header />
+		<Layout footerProps={{
+			isBg: false,
+			customClass: 'is_margin'
+		}}>
 			<main className={toVal(classes.main, classes.main_wrapper)}>
 				<div className={classes.content_wrapper}>
-					<BreadCrumbs />
+					<BreadCrumbs items={breadCrumbs}/>
 					<h2 className={classes.title_cap}>{title1}</h2>
 					<div className={classes.main_list}>
 						<div className={toVal(classes.in_list, classes.top_list)}>
-							<ImgBlock links={imgBlock1} title="Venue Transformation Systems" logo={'/img/products/galaSystems.svg'} img={'/img/slider/1.jpg'} />
-							<ImgBlock links={imgBlock2} title="Retractable Tribune Systems" logo={'/img/products/jezet.svg'} img={'/img/slider/2.jpg'} />
-							<ImgBlock links={imgBlock3} title="Automatic Vertical Retractable Walls" logo={'/img/products/skyfold.svg'} img={'/img/slider/3.jpg'} />
+							<ImgBlock href="/products/detail" links={imgBlock1} title="Venue Transformation Systems" logo={"/img/products/galaSystems.svg"} img={"/img/slider/1.jpg"} />
+							<ImgBlock href="/products/detail_1" links={imgBlock2} title="Retractable Tribune Systems" logo={"/img/products/jezet.svg"} img={"/img/slider/2.jpg"} />
+							<ImgBlock href="/products/detail" links={imgBlock3} title="Automatic Vertical Retractable Walls" logo={"/img/products/skyfold.svg"} img={"/img/slider/3.jpg"} />
 						</div>
 						<div className={classes.in_list}>
-							<ImgBlock links={imgBlock4} title="Mobile Walls" logo={'/img/products/mobilewalls.svg'} img={'/img/slider/4.jpg'} />
-							<ImgBlock links={imgBlock5} title="Movable Pool Floor Systems " logo={'/img/products/poolfloor.svg'} img={'/img/slider/5.jpg'} />
+							<ImgBlock href="/products/detail" links={imgBlock4} title="Mobile Walls" logo={"/img/products/mobilewalls.svg"} img={"/img/slider/4.jpg"} />
+							<ImgBlock href="/products/detail" links={imgBlock5} title="Movable Pool Floor Systems " logo={"/img/products/poolfloor.svg"} img={"/img/slider/5.jpg"} />
 						</div>
 					</div>
 					<h2 className={toVal(classes.title_cap, classes.pd_top)}>{title2}</h2>
 					<div className={classes.main_list}>
 						<div className={toVal(classes.in_list, classes.top_list)}>
-							<ImgBlock links={imgBlock6} title="Office partitions" logo={'/img/Logo.svg'} img={'/img/products/office.jpg'} />
-							<ImgBlock links={imgBlock7} title="Glass Doors" logo="/img/Logo.svg" img={'/img/products/doors.jpg'}/>
-							<ImgBlock links={imgBlock8} title="Solid doors" logo="/img/Logo.svg" img={'/img/products/solid_dors.jpg'}/>
+							<ImgBlock href="/products/detail" links={imgBlock6} title="Office partitions" logo={"/img/Logo.svg"} img={"/img/products/office.jpg"} />
+							<ImgBlock href="/products/detail" links={imgBlock7} title="Glass Doors" logo="/img/Logo.svg" img={"/img/products/doors.jpg"}/>
+							<ImgBlock href="/products/detail" links={imgBlock8} title="Solid doors" logo="/img/Logo.svg" img={"/img/products/solid_dors.jpg"}/>
 						</div>
 						<div className={toVal(classes.in_list, classes.bottom_list)}>
-							<ImgBlock links={imgBlock9} title="Office Furniture" logo={'/img/Logo.svg'} img={'/img/products/furniture.jpg'} />
-							<ImgBlock links={imgBlock10} title="Miscellaneous" logo="/img/Logo.svg" img={'/img/products/miscellaneous.jpg'}/>
+							<ImgBlock href="/products/detail" links={imgBlock9} title="Office Furniture" logo={"/img/Logo.svg"} img={"/img/products/furniture.jpg"} />
+							<ImgBlock href="/products/detail" links={imgBlock10} title="Miscellaneous" logo="/img/Logo.svg" img={"/img/products/miscellaneous.jpg"}/>
 						</div>
 					</div>
 				</div>
 			</main>
-			<Footer isBg={false} customClass="is_margin"/>
-		</>
-	)
-}
+		</Layout>
+	);
+};
+
+export default ProductItem;

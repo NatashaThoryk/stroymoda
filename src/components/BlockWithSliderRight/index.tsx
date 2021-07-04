@@ -1,10 +1,11 @@
+import classes from './blockWithSliderRight.module.scss';
 import React from 'react';
-import classes from './styles.module.scss';
-import toVal from "../../helpers/clsx";
+import {IProps} from './types';
 import Slider from "components/Slider";
+import toVal from "../../helpers/clsx";
 
 
-export default ({title = '', listItem = [], slides = [], customClass = '', isVideo = false, dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
+const BlockWidthSliderRight: React.FC<IProps> = ({title = '', listItem = [], slides = [], customClass = '', isVideo = false, dotsClass = 'slideRightDots', dotsClassItem = 'slideRightDotsItem'}) => {
 	return (
 		<div className={classes[customClass]}>
 			<div className={classes.container}>
@@ -29,5 +30,7 @@ export default ({title = '', listItem = [], slides = [], customClass = '', isVid
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default BlockWidthSliderRight;

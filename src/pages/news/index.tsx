@@ -27,7 +27,7 @@ const News = () => {
 				<SearchSocial />
 			</main>
 		</Layout>
-	)
+	);
 };
 
 export default News;

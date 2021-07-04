@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './styles.module.scss';
+import classes from './footer.module.scss';
 import { IProps } from './types';
 
 const Footer: React.FC<IProps> = ({isBg = false, customClass = '', isLogo = true}) => (
@@ -171,8 +171,8 @@ const Footer: React.FC<IProps> = ({isBg = false, customClass = '', isLogo = true
 
 					</a>
 				</div>
-				<a href="">
-					<img src="/img/logo_atler.png" alt=""/>
+				<a href="https://alterego.digital/">
+					<img src="/img/logo_atler.png" alt="logo"/>
 				</a>
 			</div>
 		</div>

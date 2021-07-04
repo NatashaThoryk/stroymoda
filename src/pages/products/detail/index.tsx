@@ -1,18 +1,16 @@
+import AdvantagesBlock from 'components/AdvantagesBlock';
+import BlockWithSliderLeft from 'components/BlockWithSliderLeft';
+import BlockWidthSliderRight from 'components/BlockWithSliderRight';
+import BreadCrumbs from 'components/BreadCrumbs';
+import classes from 'pages/index.module.scss';
+import Info from 'components/TopInfo';
+import InfoContent from 'components/InfoContent';
+import Layout from 'layouts/main';
+import MainSliderProducts from 'components/MainSliderProducts';
 import React from 'react';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import classes from "pages/index.module.scss";
-import Info from "components/TopInfo"
-import InfoContent from "components/InfoContent"
-import AdvantagesBlock from "components/AdvantagesBlock"
-import StepList from "components/StepList"
-import BlockWidthSliderRight from "components/BlockWithSliderRight"
-import BlockWithSliderLeft from "components/BlockWithSliderLeft"
-import MainSliderProducts from "components/MainSliderProducts"
-import BreadCrumbs from "components/BreadCrumbs"
+import StepList from "components/StepList";
 
-
-const mainTitle = 'Multipurpose hall systems'
+const mainTitle = 'Multipurpose hall systems';
 const itemAdvantages = [
 	{
 		link: '/img/products/circle_check.svg',
@@ -26,7 +24,7 @@ const itemAdvantages = [
 		link: '/img/products/circle_check.svg',
 		text: 'Applicable to any type of venue: Conference centers, auditoriums, theaters, concert halls, etc'
 	}
-]
+];
 const itemAdvantages1 = [
 	{
 		link: '/img/products/circle_check.svg',
@@ -36,7 +34,7 @@ const itemAdvantages1 = [
 		link: '/img/products/circle_check.svg',
 		text: 'Gala Systems uses Spiralift technology, the world’s most compact venue lifting system'
 	}
-]
+];
 const stepList = [
 	{
 		number: '1.',
@@ -54,7 +52,7 @@ const stepList = [
 		title: 'MOVE DOWN FRONT ELEVATOR',
 		link: '/img/products/detail/st3.png'
 	}
-]
+];
 const stepList1 = [
 	{
 		number: '1.',
@@ -71,7 +69,7 @@ const stepList1 = [
 		title: "MOVE UP FRONT ELEVATOR TO PIN SEATS ON IT (RETRACT SEAT'S)",
 		link: '/img/products/detail/st1.3.png'
 	}
-]
+];
 const stepList2 = [
 	{
 		number: '1.',
@@ -89,33 +87,45 @@ const stepList2 = [
 		title: "RAISE LIFT TO STAGE LEVEL AND REMOVE RAILS",
 		link: '/img/products/detail/detail2.3.png'
 	}
-]
-const checkListRight = ["Automatic or semi-automatic seat wagon system\n", "Large tiered wagons with rows of seating are stored under the stage or adjacent audience area\n", "All seating row geometries possible\n", "Compatible with all audience seating manufacturers\n", "Conversion time within 30 minutes"]
+];
+const checkListRight = ['Automatic or semi-automatic seat wagon system\n', 'Large tiered wagons with rows of seating are stored under the stage or adjacent audience area\n', 'All seating row geometries possible\n', 'Compatible with all audience seating manufacturers\n', 'Conversion time within 30 minutes'];
 const checkListLeft = ["Stage Lift Systems", "Stage Lift", "Orchestra podiums", "Orchestra Lifts", "Turntable system"]
 const InfoContentText1 = 'The Spiralift is the world its most compact lifting system. It allows hall reconfiguration by using moving floor platforms. Gala Systems solutions enables automated under the floor storage of spectators seats that are used in multi purpose halls.'
-const InfoContentText2 = 'The Spiralift is used as main component in critically acclaimed platform lift  systems such as theater lifts , orchestra lifts and piano lifts . The spiralift uses two bands of intertwining stainless steel to form a strong and stable column. The Spiralift requires relative low-power electric motor drives thanks to its very high mechanical efficiency. Spiralifts are used easily in modular designs that suits any platform geometry in order to create truly flexible hall transformations.'
+const InfoContentText2 = 'The Spiralift is used as main component in critically acclaimed platform lift  systems such as theater lifts , orchestra lifts and piano lifts . The spiralift uses two bands of intertwining stainless steel to form a strong and stable column. The Spiralift requires relative low-power electric motor drives thanks to its very high mechanical efficiency. Spiralifts are used easily in modular designs that suits any platform geometry in order to create truly flexible hall transformations.';
 const slides1 = ['https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo',]
 
-export default () => {
+const breadCrumbs = [
+	{
+		text: 'Products',
+		pathname: '/products',
+	},{
+		text: 'Venue Transformation Systems',
+		pathname: '/products/detail',
+	}
+];
+
+const productsDetail = () => {
 	return (
-		<>
-			<Header/>
+		<Layout footerProps={{
+			isBg: true,
+			customClass: 'is_margin'
+		}}>
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
-					<BreadCrumbs />
-					<Info title="Venue Transformation Systems" link={'/img/products/galaSystems.svg'}/>
+					<BreadCrumbs items={breadCrumbs}/>
+					<Info title="Venue Transformation Systems" link={"/img/products/galaSystems.svg"} />
 				</div>
-				<MainSliderProducts imageTop='/img/products/background_detail.png' imageBottom='/img/products/bg_detail_top.png'/>
+				<MainSliderProducts imageTop="/img/products/background_detail.png" imageBottom="/img/products/bg_detail_top.png"/>
 				<InfoContent
 					text1={InfoContentText1}
 					text2={InfoContentText2}
-					linkFrame={'https://www.youtube.com/embed/XBPjVzSoepo'} linkImage={'/img/products/galaSystems.svg'}/>
+					linkFrame={"https://www.youtube.com/embed/XBPjVzSoepo"} linkImage={"/img/products/galaSystems.svg"}/>
 				<AdvantagesBlock title="Advantages" items={itemAdvantages as any} items1={itemAdvantages1 as any} />
 				<div className={classes.section_slider} id={"block"}>
 					<div className={classes.content_wrapper}>
 						<h2 className={classes.title_cap}>{mainTitle}</h2>
 					</div>
-					<BlockWidthSliderRight customClass='padding_top' isVideo={true} slides={slides1 as any} title="Rotation system" listItem={checkListRight as any}/>
+					<BlockWidthSliderRight customClass="padding_top" isVideo={true} slides={slides1 as any} title="Rotation system" listItem={checkListRight as any}/>
 					<div className={classes.content_wrapper}>
 						<StepList stepList={stepList as any} />
 					</div>
@@ -136,7 +146,8 @@ export default () => {
 					<BlockWithSliderLeft isVideo={true} slides={slides1 as any} title="Understage systems" listItem={checkListLeft as any}/>
 				</div>
 			</main>
-			<Footer isBg customClass="is_margin"/>
-		</>
-	)
-}
+		</Layout>
+	);
+};
+
+export default productsDetail;

@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from '../../index.module.scss';
-import classesMain from "pages/index.module.scss";
-import NewsImageBlock from "components/NewsImageBlock";
-import TextSection from "components/TextSection";
-import NewsText from "components/NewsText";
-import QuoteBlock from "components/QuoteBlock";
-import SocialBlock from "components/SocialBlock";
-import BreadCrumbs from "components/BreadCrumbs";
+import classesMain from 'pages/index.module.scss';
+import NewsImageBlock from 'components/NewsImageBlock';
+import TextSection from 'components/TextSection';
+import NewsText from 'components/NewsText';
+import QuoteBlock from 'components/QuoteBlock';
+import SocialBlock from 'components/SocialBlock';
+import BreadCrumbs from 'components/BreadCrumbs';
 import Layout from 'layouts/main';
 
 
@@ -30,12 +30,16 @@ const newsText3 = 'Events such as seminars, business meetings and concerts will 
 const newsText4 = 'The COVID-19 pandemic obliged convention centers around the world to explore new event formats and space layouts to ensure a safe client experience. The STCC was no exception. However, equipped with a Gala System, it was accustomed to space reconfiguration: breaking down the scale of its conference hall to suit smaller numbers of people or serve several simultaneous events was already part of its daily routine, just like last-minute changes in layout to accommodate clients’ needs. In response to COVID-19, the Gala System further proved its worth as an effective tool to balance the need to assemble and interact with the need to maintain safe distancing. The trend in the meeting industry for increased space versatility is likely to intensify in the years to come, while the current exercise highlights the need to support unpredictable demands.';
 const breadCrumbs = [
 	{
-		text: 'Navigating the COVID-19 situation...',
+		text: 'News',
+		pathname: '/news',
+	},
+	{
+		text: 'Navigating the COVID-19...',
 		pathname: '/news/id',
 	}
 ];
-export default () => {
 
+const NewsId = () => {
 	return (
 		<Layout footerProps={{
 			isBg: true,
@@ -46,9 +50,9 @@ export default () => {
 				<BreadCrumbs items={breadCrumbs}/>
 					<h2 className={classesMain.title_cap}>{title}</h2>
 				</div>
-				<NewsImageBlock src='/img/newsMain.png'/>
+				<NewsImageBlock src="/img/newsMain.png"/>
 				<TextSection title={textSectionTitle}
-							 customClass='wrapper'
+							 customClass="wrapper"
 							 text={textSectionText}/>
 				<NewsText title={newsTitle1} text={newsText1}/>
 				<NewsText title={newsTitle2}
@@ -58,8 +62,10 @@ export default () => {
 					text={newsText3}
 					text1={newsText4}
 				/>
-				<SocialBlock customClass='newsPage'/>
+				<SocialBlock customClass="newsPage"/>
 			</main>
 		</Layout>
 	)
-}
+};
+
+export default NewsId;

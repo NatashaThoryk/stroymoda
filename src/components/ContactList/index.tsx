@@ -1,9 +1,10 @@
-import classes from './styles.module.scss';
+import classes from './contactList.module.scss';
 import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
 
 
-const ContactList = ({title = '', place = '', mail = '',hrefMail = '', phone = '', hrefPhone = ''}) => {
+const ContactList: React.FC<IProps> = ({title = '', place = '', mail = '',hrefMail = '', phone = '', hrefPhone = ''}) => {
 	return (
 		<div className={classesMain.content_wrapper}>
 			<h2 className={classes.title_cap}>{title}</h2>

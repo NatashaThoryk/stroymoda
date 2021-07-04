@@ -1,9 +1,10 @@
-import classes from './styles.module.scss';
+import classes from './sustainabilityMainBlock.module.scss';
+import { IProps } from './types';
 import React from 'react';
 import toVal from '../../helpers/clsx';
 
 
-const SustainabilityMainBlock = ({src = '', text = '', text1 = ''}) => {
+const SustainabilityMainBlock: React.FC<IProps> = ({src = '', text = '', text1 = ''}) => {
 	return (
 
 				<div className={classes.sustainability_block}>
@@ -19,7 +20,7 @@ const SustainabilityMainBlock = ({src = '', text = '', text1 = ''}) => {
 						}
 					</div>
 				</div>
-	)
+	);
 };
 
 export default SustainabilityMainBlock;

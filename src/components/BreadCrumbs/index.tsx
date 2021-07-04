@@ -1,6 +1,6 @@
-import classes from './styles.module.scss';
-import { IProps } from './types';
+import classes from './breadCrumbs.module.scss';
 import clsx from 'helpers/clsx';
+import { IProps } from './types';
 import Link from 'next/link';
 import React from 'react';
 import { useRouter } from 'next/router';

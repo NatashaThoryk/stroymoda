@@ -1,8 +1,8 @@
+import classes from './intro.module.scss';
+import classesMain from 'pages/index.module.scss';
 import React from 'react';
-import classes from "./styles.module.scss";
-import classesMain from "pages/index.module.scss";
 
-export default () => {
+const Intro = () => {
 	return (
 		<div className={classes.intro}>
 			<div className={classes.video}>
@@ -63,5 +63,7 @@ export default () => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default Intro;

@@ -1,5 +1,6 @@
-import classes from './styles.module.scss';
+import classes from './logoSlider.module.scss';
 import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -22,7 +23,7 @@ function SamplePrevArrow(props: any) {
 }
 
 
-const LogoSlider = ({list = [], title = ''}) => {
+const LogoSlider: React.FC<IProps> = ({list = [], title = ''}) => {
 
 		const settings = {
 			dots: false,

@@ -1,8 +1,8 @@
+import classes from './paramFixBlock.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
 
-
-export default ({list = []}) => {
+const ParamBlock: React.FC<IProps> = ({list = []}) => {
 	return (
 		<ul className={classes.list}>
 			{list.map((item: any) => (
@@ -12,5 +12,7 @@ export default ({list = []}) => {
 				</li>
 			))}
 		</ul>
-	)
-}
+	);
+};
+
+export default ParamBlock;

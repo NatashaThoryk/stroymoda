@@ -1,8 +1,9 @@
+import classes from './advantagesBlock.module.scss';
+import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
 
-export default ({title = '', items = [], items1 = []}) => {
+const AdvantagesBlock: React.FC<IProps> = ({title = '', items = [], items1 = []}) => {
 	return (
 		<div className={classes.section_bg}>
 			<div className={classesMain.content_wrapper}>
@@ -12,7 +13,7 @@ export default ({title = '', items = [], items1 = []}) => {
 						<ul>
 							{items.map((item: any) => (
 								<li className={classes.item_advantages}>
-									<img src={item.link} alt=""/>
+									<img src={item.link} alt="icon"/>
 									<p className={classes.advanteges_text}>{item.text}</p>
 								</li>
 							))}
@@ -20,7 +21,7 @@ export default ({title = '', items = [], items1 = []}) => {
 						<ul>
 							{items1.map((item: any) => (
 								<li className={classes.item_advantages}>
-									<img src={item.link} alt=""/>
+									<img src={item.link} alt="icon"/>
 									<p className={classes.advanteges_text}>{item.text}</p>
 								</li>
 							))}
@@ -29,5 +30,7 @@ export default ({title = '', items = [], items1 = []}) => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default AdvantagesBlock;

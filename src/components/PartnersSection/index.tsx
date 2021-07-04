@@ -1,8 +1,9 @@
-import classes from './styles.module.scss';
+import classes from './partnersSection.module.scss';
 import classesMain from 'styles/main.module.scss';
+import { IProps } from './types';
 import React from 'react';
 
-const PartnersSection = ({img = [] }) => {
+const PartnersSection: React.FC<IProps> = ({img = [] }) => {
 	return (
 		<div className={classesMain.container}>
 			<ul className={classes.wrapper}>
@@ -13,7 +14,7 @@ const PartnersSection = ({img = [] }) => {
 				))}
 			</ul>
 		</div>
-	)
+	);
 };
 
 export default PartnersSection;

@@ -1,8 +1,8 @@
+import classes from './checkListBlock.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
 
-
-export default ({checkList = []}) => {
+const CheckList: React.FC<IProps> = ({checkList = []}) => {
 	return (
 		<ul className={classes.list_check}>
 			{checkList.map((item: any) => (
@@ -11,5 +11,7 @@ export default ({checkList = []}) => {
 					<p>{item.text}</p></li>
 			))}
 		</ul>
-	)
-}
+	);
+};
+
+export default CheckList;

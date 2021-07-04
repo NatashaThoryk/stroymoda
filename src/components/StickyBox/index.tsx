@@ -4,9 +4,9 @@ import PrevText from 'components/PrevText';
 import SocialBlock from 'components/SocialBlock';
 import TopFixedBlock from 'components/TopFixedBlock';
 import React from 'react';
-import classes from './styles.module.scss';
-// import ParamFixBlock from 'components/ParamFixBlock';
-// import ImgSideBar from "components/ImgSideBar";
+import classes from './stickyBox.module.scss';
+import ParamFixBlock from 'components/ParamFixBlock';
+import ImgSideBar from "components/ImgSideBar";
 
 const title = 'Glass cladding';
 const checkList = [
@@ -54,7 +54,7 @@ const textBlock = 'This product range offers a broad range of  reative possibili
 const StickyBox = () => {
 	return (
 		<div className={classes.fixed_block}>
-			<TopFixedBlock title={title}/>
+			<TopFixedBlock link='/products' title={title}/>
 			{/*<ParamFixBlock list={param as any}/>*/}
 			<PrevText text1={textBlock} />
 			<CheckListBlock checkList={checkList as any}/>

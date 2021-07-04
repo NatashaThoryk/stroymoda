@@ -1,10 +1,11 @@
+import classes from './infoContent.module.scss';
+import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
-import toVal from "../../helpers/clsx";
+import toVal from '../../helpers/clsx';
 
 
-export default ({linkImage = '', text1 = '', text2 = '', linkFrame = ''}) => {
+const InfoContent: React.FC<IProps> = ({linkImage = '', text1 = '', text2 = '', linkFrame = ''}) => {
 	return (
 		<div className={toVal(classes.info, classes.detail_info)}>
 			<div className={classesMain.content_wrapper}>
@@ -25,5 +26,7 @@ export default ({linkImage = '', text1 = '', text2 = '', linkFrame = ''}) => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
+
+export default InfoContent;

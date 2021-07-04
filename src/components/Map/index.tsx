@@ -1,8 +1,9 @@
-import classes from './styles.module.scss';
+import classes from './map.module.scss';
 import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
 
-const Map = ({src = ''}) => {
+const Map: React.FC<IProps> = ({src = ''}) => {
 	return (
 		<div className={classesMain.container}>
 			<div className={classes.wrap_map}>

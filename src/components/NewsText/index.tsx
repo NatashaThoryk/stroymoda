@@ -1,8 +1,9 @@
+import classes from './newsText.module.scss';
+import classesMain from 'pages/index.module.scss';
+import { IProps } from './types';
 import React from 'react';
-import classes from './styles.module.scss';
-import classesMain from "pages/index.module.scss";
 
-export default ({title = '', text = '', text1 = ''}) => {
+const NewsText: React.FC<IProps> =({title = '', text = '', text1 = ''}) => {
 	return (
 		<div className={classesMain.content_wrapper}>
 			<div className={classes.wrapper}>
@@ -16,4 +17,6 @@ export default ({title = '', text = '', text1 = ''}) => {
 			</div>
 		</div>
 	)
-}
+};
+
+export default NewsText;
