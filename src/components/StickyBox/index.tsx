@@ -5,8 +5,8 @@ import SocialBlock from 'components/SocialBlock';
 import TopFixedBlock from 'components/TopFixedBlock';
 import React from 'react';
 import classes from './stickyBox.module.scss';
-import ParamFixBlock from 'components/ParamFixBlock';
-import ImgSideBar from "components/ImgSideBar";
+// import ParamFixBlock from 'components/ParamFixBlock';
+// import ImgSideBar from "components/ImgSideBar";
 
 const title = 'Glass cladding';
 const checkList = [
