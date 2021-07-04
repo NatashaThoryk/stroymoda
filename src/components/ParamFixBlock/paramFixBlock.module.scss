@@ -1,5 +1,5 @@
 .list {
-	padding-top: 40px;
+	padding: 40px 0 30px;
 	.item {
 		display: flex;
 		p {
@@ -10,6 +10,9 @@
 		.param {
 			text-transform: none;
 			margin-left: 5px;
+			span {
+				text-decoration: underline;
+			}
 		}
 	}
 }

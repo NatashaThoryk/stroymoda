@@ -1,10 +1,11 @@
-import React from 'react';
 import classes from '../../index.module.scss';
 import classesMain from 'pages/index.module.scss';
 import NewsImageBlock from 'components/NewsImageBlock';
 import TextSection from 'components/TextSection';
 import NewsText from 'components/NewsText';
+import PrevArrow from 'components/PrevArrow';
 import QuoteBlock from 'components/QuoteBlock';
+import React from 'react';
 import SocialBlock from 'components/SocialBlock';
 import BreadCrumbs from 'components/BreadCrumbs';
 import Layout from 'layouts/main';
@@ -48,6 +49,7 @@ const NewsId = () => {
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
 				<BreadCrumbs items={breadCrumbs}/>
+				<PrevArrow link='/news' btnTitle="Back to all news"/>
 					<h2 className={classesMain.title_cap}>{title}</h2>
 				</div>
 				<NewsImageBlock src="/img/newsMain.png"/>

@@ -1,11 +1,16 @@
 import BreadCrumbs from 'components/BreadCrumbs';
+import CheckListBlock from 'components/CheckListBlock';
 import classes from '../../../index.module.scss';
+import FileBlock from 'components/FileBlock';
 import ImageDetailBlock from 'components/ImageDetailBlock';
 import Layout from 'layouts/main';
+import PrevText from 'components/PrevText';
 import React from 'react';
-import StickyBox from 'components/StickyBox';
+import SocialBlock from 'components/SocialBlock';
+import TopFixedBlock from 'components/TopFixedBlock';
 
 
+const title = 'Glass cladding';
 const imgList = [
 	{
 		src: '/img/products/detail/detail1.jpg'
@@ -23,6 +28,25 @@ const imgList = [
 		src: '/img/products/detail/detail6.jpg'
 	}
 ];
+const checkList = [
+	{
+		src: '/img/products/check.svg',
+		text: 'Cladding.'
+	},{
+		src: '/img/products/check.svg',
+		text: 'Staircases.'
+	},{
+		src: '/img/products/check.svg',
+		text: 'Balustrades.'
+	},{
+		src: '/img/products/check.svg',
+		text: 'Floors.'
+	},{
+		src: '/img/products/check.svg',
+		text: 'Special constructions.'
+	},
+];
+const textBlock = 'This product range offers a broad range of  reative possibilities in glass to designers and architects for:';
 const breadCrumbs = [
 	{
 		text: 'Products',
@@ -55,7 +79,14 @@ const productsDetail = () => {
 				<div className={classes.container}>
 					<div className={classes.detail_wrap}>
 						<ImageDetailBlock imgList={imgList as any}/>
-						<StickyBox/>
+						<div className={classes.fixed_block}>
+							<TopFixedBlock link='/products' title={title}/>
+							<PrevText text1={textBlock} />
+							<CheckListBlock checkList={checkList as any}/>
+							{/*<ImgSideBar src='/img/products/det1.jpg'/>*/}
+							<FileBlock />
+							<SocialBlock customClass="leftText"/>
+						</div>
 					</div>
 				</div>
 			</main>

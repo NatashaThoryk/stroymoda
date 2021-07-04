@@ -1,5 +1,6 @@
 import classes from './header.module.scss';
 import {useRouter} from 'next/router'
+import Link from 'next/link';
 import React, {useEffect, useState} from 'react';
 
 const menu = [
@@ -64,8 +65,8 @@ const Header = () => {
 					<ul>
 						{
 							menu.map((item, index) => (
-								<li className={item.key === activeKeyItem ? classes.active_nav_item : ''} key={index}><a
-									href={`/${item.key}`}>{item.title}</a></li>
+								<li className={item.key === activeKeyItem ? classes.active_nav_item : ''} key={index}>
+									<Link href={`/${item.key}`}><a>{item.title}</a></Link></li>
 							))
 						}
 					</ul>

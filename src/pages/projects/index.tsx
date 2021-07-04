@@ -12,7 +12,7 @@ const list1 = {
 	architect: 'Internal',
 	loc: 'St. Petersburg',
 	size: '42 000 square meters',
-	link: '/products/1/2/title'
+	link: '/projects/id'
 };
 const list2 = {
 	title: 'Tetra Pak',
@@ -20,7 +20,7 @@ const list2 = {
 	architect: 'ABD Architects',
 	loc: 'Moscow',
 	size: '3000 square meters',
-	link: '/products/1/2/title'
+	link: '/projects/id'
 };
 const list3 = {
 	title: 'GAZPROM NEFT',
@@ -28,7 +28,7 @@ const list3 = {
 	architect: 'Internal',
 	loc: 'St. Petersburg',
 	size: '42 000 square meters',
-	link: '/products/1/2/title'
+	link: '/projects/id'
 };
 const list4 = {
 	title: 'GAZPROM NEFT',
@@ -36,7 +36,7 @@ const list4 = {
 	architect: 'Internal',
 	loc: 'St. Petersburg',
 	size: '42 000 square meters',
-	link: '/products/1/2/title'
+	link: '/projects/id'
 };
 const list5 = {
 	title: 'GAZPROM NEFT',
@@ -44,7 +44,7 @@ const list5 = {
 	architect: 'Internal',
 	loc: 'St. Petersburg',
 	size: '42 000 square meters',
-	link: '/products/1/2/title'
+	link: '/projects/id'
 };
 const list6 = {
 	title: 'Tetra Pak',
@@ -52,7 +52,7 @@ const list6 = {
 	architect: 'Internal',
 	loc: 'St. Petersburg',
 	size: '42 000 square meters',
-	link: '/products/1/2/title'
+	link: '/projects/id'
 };
 const list7 = {
 	title: 'GAZPROM NEFT',
@@ -60,7 +60,7 @@ const list7 = {
 	architect: 'Internal',
 	loc: 'St. Petersburg',
 	size: '42 000 square meters',
-	link: '/products/1/2/title'
+	link: '/projects/id'
 };
 const list8 = {
 	title: 'Tetra Pak',
@@ -68,7 +68,7 @@ const list8 = {
 	architect: 'Internal',
 	loc: 'St. Petersburg',
 	size: '42 000 square meters',
-	link: '/products/1/2/title'
+	link: '/projects/id'
 };
 const breadCrumbs = [
 	{
