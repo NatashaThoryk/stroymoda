@@ -61,12 +61,11 @@ const NewsId = () => {
 				<QuoteBlock text={quoteText}/>
 				<NewsText
 					text={newsText3}
-					text1={newsText4}
-				/>
+					text1={newsText4} />
 				<SocialBlock customClass="newsPage"/>
 			</main>
 		</Layout>
-	)
+	);
 };
 
 export default NewsId;
