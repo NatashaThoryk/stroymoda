@@ -2,7 +2,7 @@
 export interface IProps {
 	src:string;
 	text:string;
-	text1:string;
+	text1?:string;
 }
 
 

@@ -1,7 +1,7 @@
 
 export interface IProps {
-	title:string;
+	title?:string;
 	text:string;
-	text1:string;
+	text1?:string;
 }
 
