@@ -4,7 +4,6 @@ import Layout from 'layouts/main';
 import React from 'react';
 import SearchSocial from 'components/SearchSocial';
 
-
 const title = 'News';
 const breadCrumbs = [
 	{
