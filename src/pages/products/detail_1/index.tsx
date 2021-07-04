@@ -71,7 +71,6 @@ const breadCrumbs = [
 	}
 ];
 
-
 const productsDetail_1 = () => {
 	return (
 		<Layout footerProps={{
