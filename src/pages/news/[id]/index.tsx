@@ -10,7 +10,6 @@ import SocialBlock from 'components/SocialBlock';
 import BreadCrumbs from 'components/BreadCrumbs';
 import Layout from 'layouts/main';
 
-
 const title = 'News';
 const textSectionTitle = 'Navigating the COVID-19 situation through flexibility (AIPC COMMUNIQUÉ ARTICLE)';
 const textSectionText = 'Since the onset of the COVID-19 pandemic, the global meeting industry has been harshly affected by the cancellation of hundreds of exhibitions, conventions and conferences. Most urgently, convention centers are seeking ways to reactivate business to meet their financial obligations. This is a difficult challenge: new health and safety regulations and the fear of crowds in the minds of millions have forced venues to reconsider the traditional (face to face in tightly packed, fixed, closed auditoriums) event format.';
