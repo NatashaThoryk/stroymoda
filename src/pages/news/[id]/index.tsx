@@ -36,7 +36,7 @@ const breadCrumbs = [
 	},
 	{
 		text: 'Navigating the COVID-19...',
-		pathname: '/news/id',
+		pathname: '/news/id'
 	}
 ];
 
