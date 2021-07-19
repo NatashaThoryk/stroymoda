@@ -76,11 +76,12 @@
 	.wrapper_mob {
 		display: flex;
 		flex-wrap: nowrap;
-		overflow-x: auto;
+		overflow-x: scroll;
 
 		li {
 			width: 50%;
 			flex: 0 0 auto;
+			height: 130px;
 		}
 	}
 }
