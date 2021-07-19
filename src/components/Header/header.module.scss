@@ -232,6 +232,14 @@
 			.nav_footer_mob {
 				left: 28%;
 			}
+			.logo {
+				margin-right: 10px;
+			}
+		}
+	}
+	.search_active {
+		&::placeholder {
+			font-size: 14px;
 		}
 	}
 }

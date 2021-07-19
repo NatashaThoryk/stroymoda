@@ -1,6 +1,6 @@
 import classes from './header.module.scss';
 import Link from 'next/link';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {slide as Menu} from 'react-burger-menu'
 import toVal from '../../helpers/clsx';
 import {useAppContext} from 'context/App';
@@ -28,11 +28,13 @@ const menu = [
 	},
 ];
 
+
 const Header = (props: any) => {
 	const [isClickInput, setIsClickInput] = useState(false);
 	const {asPath} = useRouter();
 	const [activeKeyItem, setActiveKeyItem] = useState(null);
 	const {isTablet, isMobile} = useAppContext();
+	const wrapperRef:any = useRef(null);
 
 	useEffect(() => {
 		const urlStrings = asPath.split('/');
@@ -45,6 +47,17 @@ const Header = (props: any) => {
 		}
 
 	}, []);
+	useEffect(() => {
+		function handleClickOutside(event:any) {
+			if (wrapperRef && wrapperRef.current && !wrapperRef?.current?.contains(event.target)) {
+				setIsClickInput(false);
+			}
+		}
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [wrapperRef]);
 
 	return (
 
@@ -180,7 +193,7 @@ const Header = (props: any) => {
 							</ul>
 						</nav>
 						<div className={classes.nav_right}>
-							<input className={toVal(classes.search, isClickInput ? classes.search_active : '')} type="search" id="search"
+							<input ref={wrapperRef} className={toVal(classes.search, isClickInput ? classes.search_active : '')} type="search" id="search"
 								   onClick={() => setIsClickInput(true)} placeholder="Search"/>
 							<div className={classes.language}>
 								<Link href="/ru"><a>Ru</a></Link>
