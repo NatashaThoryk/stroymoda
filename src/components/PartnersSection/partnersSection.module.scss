@@ -1,6 +1,30 @@
 .wrapper {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 50px 0 85px;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.wrapper {
+		li {
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			img {
+				max-width:  170px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+	.wrapper {
+		flex-direction: column;
+	}
 }

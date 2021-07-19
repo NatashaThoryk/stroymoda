@@ -1,11 +1,12 @@
 
 .main_item {
 	margin:6px;
+	padding-bottom: 55px;
 	.image_list {
 		display: block;
 		position: relative;
-		width: 310px;
-		height: 200px;
+		max-width: 310px;
+		height: auto;
 		filter: drop-shadow(0px 6px 16px rgba(100, 102, 119, 0.2));
 		transition: .4s ease;
 		cursor: pointer;
@@ -75,8 +76,16 @@
 @media screen and (min-width: 1660px) {
 	.main_item {
 		.image_list {
-			width: 438px;
-			height: 280px;
+			max-width: 438px;
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.main_item {
+		.image_list {
+			max-width: 345px;
+			height: auto;
 		}
 	}
 }

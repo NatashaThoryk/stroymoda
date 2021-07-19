@@ -9,6 +9,7 @@ import React from 'react';
 import SocialBlock from 'components/SocialBlock';
 import BreadCrumbs from 'components/BreadCrumbs';
 import Layout from 'layouts/main';
+import {useAppContext} from '../../../context/App';
 
 const title = 'News';
 const textSectionTitle = 'Navigating the COVID-19 situation through flexibility (AIPC COMMUNIQUÉ ARTICLE)';
@@ -40,6 +41,7 @@ const breadCrumbs = [
 ];
 
 const NewsId = () => {
+	const {isMobile} = useAppContext();
 	return (
 		<Layout footerProps={{
 			isBg: true,
@@ -47,9 +49,21 @@ const NewsId = () => {
 		}}>
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
-				<BreadCrumbs items={breadCrumbs}/>
-				<PrevArrow link='/news' btnTitle="Back to all news"/>
-					<h2 className={classesMain.title_cap}>{title}</h2>
+					<BreadCrumbs items={breadCrumbs}/>
+					{isMobile
+						? (
+							<div className={classes.center}>
+								<PrevArrow arrowDesk="/img/prevArrow.svg" arrowMobile="/img/nextArrow.svg" link='/news' btnTitle="Back to all news"/>
+								<h2 className={classesMain.title_cap}>{title}</h2>
+							</div>
+						)
+						: (
+							<>
+								<PrevArrow arrowDesk="/img/prevArrow.svg" arrowMobile="/img/nextArrow.svg" link='/news' btnTitle="Back to all news"/>
+								<h2 className={classesMain.title_cap}>{title}</h2>
+							</>
+						)}
+
 				</div>
 				<NewsImageBlock src="/img/newsMain.png"/>
 				<TextSection title={textSectionTitle}
@@ -61,7 +75,7 @@ const NewsId = () => {
 				<QuoteBlock text={quoteText}/>
 				<NewsText
 					text={newsText3}
-					text1={newsText4} />
+					text1={newsText4}/>
 				<SocialBlock customClass="newsPage"/>
 			</main>
 		</Layout>

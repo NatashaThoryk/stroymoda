@@ -25,3 +25,17 @@
 	}
 
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.section_bg {
+		.advantages_detail {
+			padding: 50px 0 15px;
+			.list {
+				padding-top: 35px;
+			}
+			.item_advantages {
+				padding-bottom: 30px;
+			}
+		}
+	}
+}

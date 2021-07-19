@@ -6,6 +6,8 @@ import ContactList from 'components/ContactList';
 import Layout from 'layouts/main';
 import Map from 'components/Map';
 import React from 'react';
+import toVal from '../../helpers/clsx';
+import {useAppContext} from "../../context/App";
 
 const title = 'We’d love to hear from you';
 const contactsTitle1 = 'Stroymoda Mosow';
@@ -15,6 +17,7 @@ const contactPhone1 = '+7 (495) 246-57-41';
 const contactHrefPhone1 = 'tel:+7495465741';
 const contactHrefMail1 = 'mailto:moscow@stroymoda.ru';
 const mapImage = '/img/map.jpg';
+const mapImageMob = '/img/mapMob.jpg';
 
 const contactsTitle2 = 'Stroymoda Saint Petersburg';
 const contactPlace2 = '199406 Russia, Saint-Petersburg Nalichnaya street, 22';
@@ -30,7 +33,7 @@ const breadCrumbs = [
 ];
 
 const Contacts = () => {
-
+	const {isMobile} = useAppContext();
 	return (
 		<Layout footerProps={{
 			isBg: false,
@@ -39,16 +42,37 @@ const Contacts = () => {
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
 					<BreadCrumbs items={breadCrumbs}/>
-					<h2 className={classesMain.title_cap}>{title}</h2>
+					{isMobile
+						? (
+							<h2 className={toVal(classesMain.title_cap,classes.title_mob)}>{title}</h2>
+						)
+						: (
+							<h2 className={toVal(classesMain.title_cap)}>{title}</h2>
+
+						)}
 				</div>
 				<ContactList title={contactsTitle1} place={contactPlace1} mail={contactsMail1} phone={contactPhone1}
 							 hrefPhone={contactHrefPhone1} hrefMail={contactHrefMail1}/>
-				<Map src={mapImage}/>
+				{isMobile
+					? (
+						<Map src={mapImageMob}/>
+					)
+					: (
+						<Map src={mapImage}/>
+
+					)}
 				<div className={classes.section_bg}>
 					<div className={classes.paddingBtm}>
 						<ContactList title={contactsTitle2} place={contactPlace2} mail={contactsMail2}
 									 phone={contactPhone2} hrefPhone={contactHrefPhone2} hrefMail={contactHrefMail2}/>
-						<Map src={mapImage}/>
+						{isMobile
+							? (
+								<Map src={mapImageMob}/>
+							)
+							: (
+								<Map src={mapImage}/>
+
+							)}
 					</div>
 				</div>
 				<ContactForm/>

@@ -80,7 +80,7 @@ const productsDetail = () => {
 					<div className={classes.detail_wrap}>
 						<ImageDetailBlock imgList={imgList as any}/>
 						<div className={classes.fixed_block}>
-							<TopFixedBlock link='/products' title={title}/>
+							<TopFixedBlock arrowDesk="/img/nextArrow.svg" arrowMobile="/img/prevArrow.svg" link='/products' title={title}/>
 							<PrevText text1={textBlock} />
 							<CheckListBlock checkList={checkList as any}/>
 							{/*<ImgSideBar src='/img/products/det1.jpg'/>*/}

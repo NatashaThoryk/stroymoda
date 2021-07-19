@@ -4,6 +4,7 @@ import {IProps} from './types';
 import Link from 'next/link'
 import React from 'react';
 import Slider from 'components/Slider';
+import toVal from '../../helpers/clsx';
 
 const SectionBlockRight: React.FC<IProps> = ({title = '', text1 = '', text2 = '', link = '', btnName = '', slides = [], dotsClass= 'slideRightDots', dotsClassItem= 'slideRightDotsItem'}) => {
 	return (
@@ -14,7 +15,7 @@ const SectionBlockRight: React.FC<IProps> = ({title = '', text1 = '', text2 = ''
 						<Slider dotsClassItem={dotsClassItem} dotsClass={dotsClass} list={slides as any}/>
 					</div>
 					<div className={classes.section_text}>
-						<h3 className={classes.title}>{title}</h3>
+						<h3 className={toVal(classes.title, classes.title_mob)}>{title}</h3>
 						<p className={classes.prev_text}>{text1}</p>
 						<p className={classes.prev_text}>{text2}</p>
 						<Link href={link}>

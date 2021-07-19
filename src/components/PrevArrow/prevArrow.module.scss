@@ -1,11 +1,19 @@
-.arrow {
+.arrow, .arrow_mob {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	display: flex;
 	align-items: center;
-	svg {
+	img {
 		margin-right: 9px;
 	}
 }
+
+.arrow_mob {
+	img {
+		margin-left: 9px;
+	}
+}
+
+
 

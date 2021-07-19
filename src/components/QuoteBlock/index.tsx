@@ -3,8 +3,6 @@ import classesMain from "pages/index.module.scss";
 import { IProps } from './types';
 import React from 'react';
 
-
-
 const QuoteBlock: React.FC<IProps> = ({text = ''}) => {
 	return (
 		<div className={classes.quote}>

@@ -11,6 +11,7 @@
     "tslint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "dependencies": {
+    "@types/react-burger-menu": "^2.8.0",
     "@types/react-slick": "^0.23.4",
     "@types/react-tabs": "^2.3.2",
     "browser-or-node": "^1.2.1",
@@ -20,6 +21,7 @@
     "next": "^10.0.5",
     "nookies": "^2.2.4",
     "react": "^16.12.0",
+    "react-burger-menu": "^3.0.6",
     "react-dom": "^16.12.0",
     "react-redux": "^7.2.0",
     "react-simple-modal-provider": "^1.7.0",

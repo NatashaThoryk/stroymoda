@@ -27,5 +27,23 @@
 		.street {
 			max-width: 222px;
 		}
+		&.item_mob {
+			text-decoration: underline;
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.title_cap{
+		font-size: 18px;
+	}
+	.list {
+		flex-direction: column;
+		.item {
+			padding-bottom: 14px;
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
 	}
 }

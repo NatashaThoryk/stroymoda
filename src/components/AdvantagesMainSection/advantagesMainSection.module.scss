@@ -7,6 +7,7 @@
 		flex-direction: column;
 		padding-top: 90px;
 	}
+
 	.list {
 		display: flex;
 
@@ -57,17 +58,90 @@
 		h2 {
 			font-size: 24px;
 		}
+
 		.bottom_list {
 			padding-top: 45px;
+
 			.item_advantages {
 				&:nth-child(even) {
 					margin-left: 90px;
 				}
 			}
 		}
-		.item_advantages{
+
+		.item_advantages {
 			&:nth-child(even) {
 				margin-left: 90px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 998px) and (max-width: 1119px) {
+	.advantages, .about_wrap {
+		.list {
+			&.bottom_list {
+				padding-top: 70px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 997px) {
+	.advantages, .about_wrap {
+		padding: 70px 0 0;
+		.list_advantages {
+			padding-top: 75px;
+		}
+
+		.list {
+			.item_advantages {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				padding-bottom: 65px;
+
+				&:nth-child(even) {
+					margin-left: 0;
+				}
+				p {
+					padding-top: 44px;
+				}
+			}
+
+			&.bottom_list {
+				justify-content: space-around;
+				.item_advantages {
+					&:nth-child(even) {
+						margin-left: 0;
+					}
+				}
+			}
+			&.top_list {
+				justify-content: space-around;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 762px) {
+	.advantages, .about_wrap {
+		.list {
+			flex-direction: column;
+
+			.item_advantages {
+				text-align: center;
+				max-width: 100%;
+				p {
+					margin-left: 0;
+					padding-top: 45px;
+				}
+			}
+		}
+		&.about_wrap {
+			.bottom_list {
+				padding-top: 0;
 			}
 		}
 	}

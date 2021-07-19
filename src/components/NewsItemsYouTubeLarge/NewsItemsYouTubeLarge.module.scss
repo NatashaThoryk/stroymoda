@@ -1,6 +1,21 @@
-
 .main_item {
 	iframe {
 		height: 660px;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+	.main_item {
+		iframe {
+			height: 400px;
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	.main_item {
+		iframe {
+			height: 210px;
+		}
 	}
 }

@@ -2,8 +2,24 @@
 .images_detail {
 	max-width: 1189px;
 	width: 65%;
+
 	img {
 		width: 100%;
 		padding-bottom: 15px;
+	}
+}
+
+
+@media screen and (min-width: 1001px) and (max-width: 1244px) {
+	.images_detail {
+		width: 60%;
+	}
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.images_detail {
+		padding-top: 40px;
+		width: 100%;
 	}
 }

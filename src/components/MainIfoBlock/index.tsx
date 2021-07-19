@@ -9,7 +9,6 @@ const MainInfo: React.FC<IProps> = ({title = '', text = '', link = ''}) => {
 	return (
 		<div className={classes.info}>
 			<div className={classesMain.content_wrapper}>
-				<h3 className={classesMain.title}>{title}</h3>
 				<div className={classes.info_content}>
 					<div className={toVal(classes.in_content, classes.in_content_image)}>
 						<svg width="303" height="84" viewBox="0 0 200 62" fill="none"
@@ -29,6 +28,7 @@ const MainInfo: React.FC<IProps> = ({title = '', text = '', link = ''}) => {
 						</svg>
 					</div>
 					<div className={toVal(classes.in_content, classes.in_content_text)}>
+						<h3 className={classes.title}>{title}</h3>
 						<p>{text}</p>
 						<Link href={link}>
 							<a className={classesMain.btn_learn}>Learn more

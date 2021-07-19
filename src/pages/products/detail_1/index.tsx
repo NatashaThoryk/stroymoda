@@ -82,7 +82,7 @@ const productsDetail_1 = () => {
 					<BreadCrumbs items={breadCrumbs}/>
 					<Info title="Telescopic tribunes" link={"/img/products/jezet.svg"}/>
 				</div>
-				<MainSliderProducts imageTop="/img/products/background_detail.png" imageBottom="/img/products/bg_detail_top.png"/>
+				<MainSliderProducts imageTop="/img/products/btm1.png" imageBottom="/img/products/top1.png"/>
 				<InfoContent
 					text1={"Tribunes for spectators that are fully designed and produced in house by Jezet Seating. Each retractable tribune system is custom made and unique to the venue. Excellent stability of the tribune structure is assured by welded spectators platforms and usage of closed metal profiles only. The full tribune system is operated by a handheld control unit with a single point of entry."}
 					linkFrame={"https://www.youtube.com/embed/XBPjVzSoepo"}

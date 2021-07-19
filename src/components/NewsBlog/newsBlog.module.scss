@@ -6,10 +6,19 @@
 	.detail {
 		display: inline-flex;
 		justify-content: space-between;
+		align-items: center;
+		line-height: 30px;
 		width: 100%;
 		padding: 25px 20px 0;
 	}
 	h3 {
 		color: #404149;
+	}
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767.9px){
+	.new_blog {
+		display: none;
 	}
 }

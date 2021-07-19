@@ -71,7 +71,7 @@ const productsDetail = () => {
 					<div className={classes.detail_wrap}>
 						<ImageDetailBlock imgList={imgList as any}/>
 						<div className={classes.fixed_block}>
-							<TopFixedBlock link='/projects' title={title}/>
+							<TopFixedBlock arrowDesk="/img/nextArrow.svg" arrowMobile="/img/prevArrow.svg" link="/projects" title={title}/>
 							<ParamFixBlock list={param as any}/>
 							<SocialBlock customClass="leftText"/>
 						</div>

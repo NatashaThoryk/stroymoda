@@ -1,11 +1,11 @@
 import BreadCrumbs from 'components/BreadCrumbs';
 import classes from '../index.module.scss';
-import classesMain from 'pages/index.module.scss';
 import Layout from 'layouts/main';
 import React from 'react';
 import SustainabilityTopBlock from 'components/SustainabilityTopBlock';
 import SustainabilityMainBlock from 'components/SustainabilityMainBlock';
 import toVal from '../../helpers/clsx';
+import {useAppContext} from "../../context/App";
 
 
 const title = 'Sustainability';
@@ -48,7 +48,7 @@ const breadCrumbs = [
 ];
 
 const Sustainability = () => {
-
+	const {isMobile} = useAppContext();
 	return (
 		<Layout footerProps={{
 			isBg: true,
@@ -57,36 +57,51 @@ const Sustainability = () => {
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
 					<BreadCrumbs items={breadCrumbs}/>
-					<h2 className={classes.title_cap}>{title}</h2>
+					{isMobile
+						? (
+							<h2 className={toVal(classes.title_cap, classes.title_mob)}>{title}</h2>
+						)
+						: (
+							<h2 className={classes.title_cap}>{title}</h2>
+
+						)}
 				</div>
 				<SustainabilityTopBlock
 					customClass={topInfo.customClass}
-					text={topInfo.text} />
+					text={topInfo.text}/>
 				<div className={classes.section_bg_color}>
-					<div className={classesMain.content_wrapper}>
+					<div className={classes.content_wrapper}>
 						<SustainabilityMainBlock src={mainBlock1.src}
 												 text={mainBlock1.text}
 												 text1={mainBlock1.text1}/>
 					</div>
 				</div>
-				<SustainabilityMainBlock src={mainBlock2.src} text={mainBlock2.text}
-										 text1={mainBlock2.text1}/>
+				<div className={classes.content_wrapper}>
+					<SustainabilityMainBlock src={mainBlock2.src} text={mainBlock2.text}
+											 text1={mainBlock2.text1}/>
+				</div>
 				<div className={classes.section_bg_color}>
-					<div className={classesMain.content_wrapper}>
-						<SustainabilityMainBlock src={mainBlock3.src} text={mainBlock3.text} />
+					<div className={classes.content_wrapper}>
+						<SustainabilityMainBlock src={mainBlock3.src} text={mainBlock3.text}/>
 					</div>
 				</div>
-				<SustainabilityMainBlock src={mainBlock4.src}
-										 text={mainBlock4.text}/>
+				<div className={classes.content_wrapper}>
+
+					<SustainabilityMainBlock src={mainBlock4.src}
+											 text={mainBlock4.text}/>
+				</div>
 				<div className={toVal(classes.section_bg_color, classes.paddingBtm)}>
-					<div className={classesMain.content_wrapper}>
+					<div className={classes.content_wrapper}>
 						<SustainabilityMainBlock src={mainBlock5.src}
 												 text={mainBlock5.text}
-												 text1={mainBlock5.text1} />
+												 text1={mainBlock5.text1}/>
 					</div>
 				</div>
-				<SustainabilityMainBlock src={mainBlock6.src}
-										 text={mainBlock6.text} />
+				<div className={classes.content_wrapper}>
+
+					<SustainabilityMainBlock src={mainBlock6.src}
+											 text={mainBlock6.text}/>
+				</div>
 			</main>
 		</Layout>
 	)

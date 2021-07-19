@@ -28,3 +28,10 @@
 		}
 	}
 }
+
+
+@media screen and (max-width: 767px) {
+	.breadcrumb_nav {
+		display: none;
+	}
+}

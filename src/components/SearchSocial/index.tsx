@@ -8,9 +8,13 @@ import NewsItemsYouTube from 'components/NewsItemsYouTube';
 import NewsItemsYouTubeLarge from 'components/NewsItemsYouTubeLarge';
 import React, {useState} from 'react';
 import 'react-tabs/style/react-tabs.css';
-import Slider from 'components/Slider';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import SliderMain from 'components/Slider';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import toVal from '../../helpers/clsx';
+import {useAppContext} from '../../context/App';
 
 const titleNew = 'Navigating the COVID-19 situation through flexibility (AIPC COMMUNIQUÉ ARTICLE)';
 const itemFb1 = {
@@ -110,22 +114,62 @@ const itemBlog3 = {
 	src: '/img/news/blog3.jpg',
 	link: '/news/id',
 };
+// const list = [
+// 	{
+// 		img: '/img/news/blog.svg'
+// 	},
+// 	{
+// 		img: '/img/news/instagram.svg'
+// 	},
+// 	{
+// 		img: '/img/news/youtube.svg'
+// 	},
+// 	{
+// 		img: '/img/news/fb.svg'
+// 	}
+// ];
 
 
 const slides = ['modal.jpg', 'modal.jpg', 'modal.jpg'];
 const SearchSocial = () => {
-	const [isModal, setIsModal] = useState(false)
+	const [isModal, setIsModal] = useState(false);
+	const {isMobile} = useAppContext();
+	const settingsSlider = {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	};
 
 	return (
 		<div className={classesMain.content_wrapper}>
 			<div className={classes.section_slide}>
-				<form>
+				<form className={classes.form}>
 					<input type="search" placeholder="Search news by keywords..."/>
 					<button type="submit" className={classes.btnName}>Search</button>
 				</form>
-				<Tabs className={classes.tabs}>
-					<TabList>
-						<Tab>
+				<div className="tabsNews">
+					<Tabs className={classes.tabs}>
+						{isMobile
+							? (
+									<TabList>
+										<Slider className={classes.carousel} {...settingsSlider}>
+										<Tab>
+										<img src="/img/news/fb.svg" alt="logo"/>
+										</Tab>
+										<Tab>
+										<img src="/img/news/instagram.svg" alt="logo"/>
+										</Tab>
+										<Tab>
+										<img src="/img/news/fb.svg" alt="logo"/>
+										</Tab>
+										<Tab>
+										<img src="/img/news/instagram.svg" alt="logo"/>
+										</Tab>
+										</Slider>
+									</TabList>
+							)
+							: (
+								<TabList>
+									<Tab>
 								<span>
 									<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 										 xmlns="http://www.w3.org/2000/svg">
@@ -144,8 +188,8 @@ const SearchSocial = () => {
 								</svg>
 								Blog
 								</span>
-						</Tab>
-						<Tab>
+									</Tab>
+									<Tab>
 							<span>
 								<svg width="30" height="29" viewBox="0 0 30 29" fill="none"
 									 xmlns="http://www.w3.org/2000/svg">
@@ -169,8 +213,8 @@ const SearchSocial = () => {
 								</svg>
 								Instagram
 							</span>
-						</Tab>
-						<Tab>
+									</Tab>
+									<Tab>
 							<span>
 								<svg width="34" height="23" viewBox="0 0 34 23" fill="none"
 									 xmlns="http://www.w3.org/2000/svg">
@@ -180,8 +224,8 @@ const SearchSocial = () => {
 								</svg>
 								YouTube
 							</span>
-						</Tab>
-						<Tab>
+									</Tab>
+									<Tab>
 							<span>
 								<svg width="16" height="29" viewBox="0 0 16 29" fill="none"
 									 xmlns="http://www.w3.org/2000/svg">
@@ -191,150 +235,246 @@ const SearchSocial = () => {
 								</svg>
 								Facebook
 							</span>
-						</Tab>
-					</TabList>
-					<TabPanel>
-						<div className={toVal(classesMain.tabs, classesMain.tab1)}>
-							<NewsBlog title={titleNew} link="/news/id" src="/img/newsMain.png"/>
-							<div className={classesMain.in_list}>
-								<NewsItemsBlog link={itemBlog1.link} title={itemBlog1.title} src={itemBlog1.src}/>
-								<NewsItemsBlog link={itemBlog2.link} title={itemBlog2.title} src={itemBlog2.src}/>
-								<NewsItemsBlog link={itemBlog3.link} title={itemBlog3.title} src={itemBlog3.src}/>
+									</Tab>
+								</TabList>
+
+							)}
+						<TabPanel>
+							<div className={toVal(classesMain.tabs, classesMain.tab1)}>
+								<NewsBlog title={titleNew} link="/news/id" src="/img/newsMain.png"/>
+								<div className={classesMain.in_list}>
+									<NewsItemsBlog link={itemBlog1.link} title={itemBlog1.title} src={itemBlog1.src}/>
+									<NewsItemsBlog link={itemBlog2.link} title={itemBlog2.title} src={itemBlog2.src}/>
+									<NewsItemsBlog link={itemBlog3.link} title={itemBlog3.title} src={itemBlog3.src}/>
+									<NewsItemsBlog link={itemBlog2.link} title={itemBlog2.title} src={itemBlog2.src}/>
+									<NewsItemsBlog link={itemBlog1.link} title={itemBlog1.title} src={itemBlog1.src}/>
+									<NewsItemsBlog link={itemBlog3.link} title={itemBlog3.title} src={itemBlog3.src}/>
+									<NewsItemsBlog link={itemBlog1.link} title={itemBlog1.title} src={itemBlog1.src}/>
+									<NewsItemsBlog link={itemBlog3.link} title={itemBlog3.title} src={itemBlog3.src}/>
+									<NewsItemsBlog link={itemBlog2.link} title={itemBlog2.title} src={itemBlog2.src}/>
+								</div>
 							</div>
-							<div className={classesMain.in_list}>
-								<NewsItemsBlog link={itemBlog2.link} title={itemBlog2.title} src={itemBlog2.src}/>
-								<NewsItemsBlog link={itemBlog1.link} title={itemBlog1.title} src={itemBlog1.src}/>
-								<NewsItemsBlog link={itemBlog3.link} title={itemBlog3.title} src={itemBlog3.src}/>
+						</TabPanel>
+						<TabPanel>
+							<div className={classesMain.tabs}>
+								{isMobile
+									? (
+										<>
+											<div className={classes.in_list}>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
+															   textInside={itemIns1.textInside} count={itemIns1.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns2.src}
+															   textInside={itemIns2.textInside}
+															   count={itemIns2.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns3.src}
+															   textInside={itemIns3.textInside}
+															   count={itemIns3.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns4.src}
+															   textInside={itemIns4.textInside}
+															   count={itemIns4.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns5.src}
+															   textInside={itemIns5.textInside}
+															   count={itemIns5.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns6.src}
+															   textInside={itemIns6.textInside}
+															   count={itemIns6.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns7.src}
+															   textInside={itemIns7.textInside}
+															   count={itemIns7.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns8.src}
+															   textInside={itemIns8.textInside}
+															   count={itemIns8.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns9.src}
+															   textInside={itemIns9.textInside}
+															   count={itemIns9.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns10.src}
+															   textInside={itemIns10.textInside}
+															   count={itemIns10.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns11.src}
+															   textInside={itemIns11.textInside}
+															   count={itemIns11.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
+															   textInside={itemIns1.textInside}
+															   count={itemIns1.count}/></div>
+										</>
+									)
+									: (
+										<>
+											<div className={toVal(classes.in_list, classes.no_wrap)}>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
+															   textInside={itemIns1.textInside} count={itemIns1.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns2.src}
+															   textInside={itemIns2.textInside}
+															   count={itemIns2.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns3.src}
+															   textInside={itemIns3.textInside}
+															   count={itemIns3.count}/></div>
+											<div className={toVal(classes.in_list, classes.no_wrap)}>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns4.src}
+															   textInside={itemIns4.textInside}
+															   count={itemIns4.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns5.src}
+															   textInside={itemIns5.textInside}
+															   count={itemIns5.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns6.src}
+															   textInside={itemIns6.textInside}
+															   count={itemIns6.count}/></div>
+											<div className={toVal(classes.in_list, classes.no_wrap)}>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns7.src}
+															   textInside={itemIns7.textInside}
+															   count={itemIns7.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns8.src}
+															   textInside={itemIns8.textInside}
+															   count={itemIns8.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns9.src}
+															   textInside={itemIns9.textInside}
+															   count={itemIns9.count}/></div>
+											<div className={toVal(classes.in_list, classes.no_wrap)}>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns10.src}
+															   textInside={itemIns10.textInside}
+															   count={itemIns10.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns11.src}
+															   textInside={itemIns11.textInside}
+															   count={itemIns11.count}/>
+												<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
+															   textInside={itemIns1.textInside}
+															   count={itemIns1.count}/></div>
+										</>
+
+									)}
 							</div>
-							<div className={classesMain.in_list}>
-								<NewsItemsBlog link={itemBlog1.link} title={itemBlog1.title} src={itemBlog1.src}/>
-								<NewsItemsBlog link={itemBlog3.link} title={itemBlog3.title} src={itemBlog3.src}/>
-								<NewsItemsBlog link={itemBlog2.link} title={itemBlog2.title} src={itemBlog2.src}/>
+						</TabPanel>
+						<TabPanel>
+							<div className={classesMain.tabs}>
+								<NewsItemsYouTubeLarge link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+								<div className={classesMain.in_list_tabs}>
+									<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+									<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+									<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+									<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+									<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+									<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+								</div>
 							</div>
-						</div>
-					</TabPanel>
-					<TabPanel>
-						<div className={classesMain.tabs}>
-							<div className={classes.in_list}>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
-											   textInside={itemIns1.textInside} count={itemIns1.count}/>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns2.src}
-											   textInside={itemIns2.textInside}
-											   count={itemIns2.count}/>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns3.src}
-											   textInside={itemIns3.textInside}
-											   count={itemIns3.count}/></div>
-							<div className={classes.in_list}>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns4.src}
-											   textInside={itemIns4.textInside}
-											   count={itemIns4.count}/>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns5.src}
-											   textInside={itemIns5.textInside}
-											   count={itemIns5.count}/>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns6.src}
-											   textInside={itemIns6.textInside}
-											   count={itemIns6.count}/></div>
-							<div className={classes.in_list}>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns7.src}
-											   textInside={itemIns7.textInside}
-											   count={itemIns7.count}/>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns8.src}
-											   textInside={itemIns8.textInside}
-											   count={itemIns8.count}/>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns9.src}
-											   textInside={itemIns9.textInside}
-											   count={itemIns9.count}/></div>
-							<div className={classes.in_list}>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns10.src}
-											   textInside={itemIns10.textInside}
-											   count={itemIns10.count}/>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns11.src}
-											   textInside={itemIns11.textInside}
-											   count={itemIns11.count}/>
-								<NewsItemsInst onHandler={() => setIsModal(true)} src={itemIns1.src}
-											   textInside={itemIns1.textInside}
-											   count={itemIns1.count}/></div>
-						</div>
-					</TabPanel>
-					<TabPanel>
-						<div className={classesMain.tabs}>
-							<NewsItemsYouTubeLarge link="https://www.youtube.com/embed/XBPjVzSoepo"/>
-							<div className={classesMain.in_list_tabs}>
-								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
-								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
+						</TabPanel>
+						<TabPanel>
+							<div className={toVal(classesMain.tabs, classesMain.tab3)}>
+								<div className={classesMain.in_list}>
+									<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
+									<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
+									<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
+									<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
+									<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
+									<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
+									<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
+									<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
+									<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
+									<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
+									<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
+									<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
+								</div>
 							</div>
-							<div className={classesMain.in_list_tabs}>
-								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
-								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
-							</div>
-							<div className={classesMain.in_list_tabs}>
-								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
-								<NewsItemsYouTube link="https://www.youtube.com/embed/XBPjVzSoepo"/>
-							</div>
-						</div>
-					</TabPanel>
-					<TabPanel>
-						<div className={toVal(classesMain.tabs, classesMain.tab1)}>
-							<div className={classesMain.in_list}>
-								<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
-								<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
-								<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
-							</div>
-							<div className={classesMain.in_list}>
-								<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
-								<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
-								<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
-							</div>
-							<div className={classesMain.in_list}>
-								<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
-								<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
-								<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
-							</div>
-							<div className={classesMain.in_list}>
-								<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
-								<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
-								<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
-							</div>
-						</div>
-					</TabPanel>
-				</Tabs>
+						</TabPanel>
+					</Tabs>
+				</div>
 			</div>
 			{
 				isModal && (
 					<div className={classes.fixed_overlay}>
-						<div className={classes.modal}>
-							<div className={classes.modal_container}>
-								<div className={classes.image_wrap}>
-									<Slider dotsClass="slideDotsWhite" dotsClassItem="slideLeftDotsItem" list={slides as any}/>
-									{/*<img src="/img/modal.jpg" alt="image"/>*/}
-								</div>
-								<div className={classes.info_wrap}>
-									<div className={classes.title}>
-										<div className={classes.top}>
-											<div className={classes.wrapper}>
-												<img src="/img/modal_logo.svg" alt="logo"/>
-											</div>
-											<p className={classes.title}>stroymoda.ru</p>
-										</div>
-										<span className={classes.close} onClick={() => setIsModal(false)}><svg
-											width="23" height="22"
-											viewBox="0 0 23 22" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
+						{isMobile
+							? (
+								<div className={toVal(classes.modal,classes.modal_mob)}>
+									<div className={classes.modal_container}>
+										<div className={classes.top_info}>
+											<div className={classes.title_modal}>
+												<div className={classes.top}>
+													<div className={classes.wrapper}>
+														<img src="/img/modal_logo.svg" alt="logo"/>
+													</div>
+													<p className={classes.title}>stroymoda.ru</p>
+												</div>
+												<span className={classes.close} onClick={() => setIsModal(false)}><svg
+													width="23" height="22"
+													viewBox="0 0 23 22" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
 <rect x="1.73633" width="28.6581" height="2.45458" transform="rotate(45 1.73633 0)" fill="#BBBBC2"/>
 <rect width="28.6581" height="2.45458" transform="matrix(-0.707107 0.707107 0.707107 0.707107 20.7754 0)"
 	  fill="#BBBBC2"/>
 </svg></span>
-									</div>
-									<div className={classes.content}>
-										<p>На ответственных проектах предъявляются повышенные требования к пожарной
-											безопасности. #hpl #fundermax обеспечивает эти требования, а наше
-											оборудование и золотые руки монтажников обеспечивают качество и
-											точность.</p>
-										<p>Система облицовки #walline с рустиком 2 мм и 4 мм</p>
+											</div>
+											<div className={classes.image_wrap}>
+												<SliderMain dotsClass="slideDotsWhite" dotsClassItem="slideLeftDotsItem"
+															list={slides as any}/>
+											</div>
+										</div>
+										<div className={classes.info_wrap}>
+											<div className={classes.content}>
+												<div className={classes.text}>
+													<p>На ответственных проектах предъявляются повышенные требования к пожарной
+														безопасности. #hpl #fundermax обеспечивает эти требования, а наше
+														оборудование и золотые руки монтажников обеспечивают качество и
+														точность.</p>
+													<p>Система облицовки #walline с рустиком 2 мм и 4 мм</p>
+												</div>
+												<div className={classes.wrap}>
+													<div>
+														<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" fill="#646677"/>
+														</svg>
+														<span>256</span>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
+							)
+							: (
+								<div className={classes.modal}>
+									<div className={classes.modal_container}>
+										<div className={classes.image_wrap}>
+											<SliderMain dotsClass="slideDotsWhite" dotsClassItem="slideLeftDotsItem"
+														list={slides as any}/>
+										</div>
+										<div className={classes.info_wrap}>
+											<div className={classes.title_modal}>
+												<div className={classes.top}>
+													<div className={classes.wrapper}>
+														<img src="/img/modal_logo.svg" alt="logo"/>
+													</div>
+													<p className={classes.title}>stroymoda.ru</p>
+												</div>
+												<span className={classes.close} onClick={() => setIsModal(false)}><svg
+													width="23" height="22"
+													viewBox="0 0 23 22" fill="none"
+													xmlns="http://www.w3.org/2000/svg">
+<rect x="1.73633" width="28.6581" height="2.45458" transform="rotate(45 1.73633 0)" fill="#BBBBC2"/>
+<rect width="28.6581" height="2.45458" transform="matrix(-0.707107 0.707107 0.707107 0.707107 20.7754 0)"
+	  fill="#BBBBC2"/>
+</svg></span>
+											</div>
+											<div className={classes.content}>
+												<div className={classes.text}>
+													<p>На ответственных проектах предъявляются повышенные требования к пожарной
+														безопасности. #hpl #fundermax обеспечивает эти требования, а наше
+														оборудование и золотые руки монтажников обеспечивают качество и
+														точность.</p>
+													<p>Система облицовки #walline с рустиком 2 мм и 4 мм</p>
+											</div>
+												<div className={classes.wrap}>
+													<div>
+														<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M6.5 12L5.5575 11.1368C2.21 8.08283 0 6.06866 0 3.59673C0 1.58256 1.573 0 3.575 0C4.706 0 5.7915 0.5297 6.5 1.36676C7.2085 0.5297 8.294 0 9.425 0C11.427 0 13 1.58256 13 3.59673C13 6.06866 10.79 8.08283 7.4425 11.1433L6.5 12Z" fill="#646677"/>
+														</svg>
+														<span>256</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							)}
 					</div>
 				)
 			}

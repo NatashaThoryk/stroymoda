@@ -1,49 +1,73 @@
 .quote {
 	overflow: hidden;
-	padding-bottom: 60px;
-	.section_slide {
-		padding: 60px 0;
+	padding: 40px 0 26px;
+}
+.section_slide {
+	padding: 60px 0;
+	position: relative;
+	max-width: 1180px;
+	width: 100%;
+	&:after {
+		content: "";
+		z-index: -3;
+		background: #E8E8EA;
+		width: calc(100% + 400px);
+		height: 100%;
+		position: absolute;
+		left: 200px;
+		top: 0;
+	}
+	.quote_text {
+		font-style: italic;
+		line-height: 30px;
+		font-size: 20px;
+		letter-spacing: .1px;
+		max-width: 800px;
+		color: #292A35;
+		margin: 0 auto;
+		font-weight: 400;
+		padding-left: 100px;
 		position: relative;
-		max-width: 1180px;
-		width: 100%;
-		&:after {
-			content: "";
-			z-index: -3;
-			background: #E8E8EA;
-			width: calc(100% + 400px);
-			height: 100%;
+
+		&:before, &:after {
+			content: '';
+			background-size: cover;
+			background: url("/img/quote.svg") no-repeat;
+			width: 101px;
+			height: 84px;
 			position: absolute;
-			left: 200px;
-			top: 0;
+			z-index: 20;
+		}
+		&:before {
+			left: -40px;
+			top: -40px;
+		}
+		&:after {
+			bottom: -90px;
+			right: -100px;
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.section_slide {
+		padding: 40px 0;
+		&:after {
+			left: 50px;
 		}
 		.quote_text {
-			font-style: italic;
-			line-height: 30px;
-			font-size: 20px;
-			letter-spacing: .1px;
-			max-width: 800px;
-			color: #292A35;
-			margin: 0 auto;
-			font-weight: 400;
-			padding-left: 100px;
-			position: relative;
-
-			&:before, &:after {
-				content: '';
-				background-size: cover;
-				background: url("/img/quote.svg") no-repeat;
-				width: 101px;
-				height: 84px;
-				position: absolute;
-				z-index: 20;
-			}
 			&:before {
-				left: -40px;
-				top: -40px;
+				left: 20px;
+				top: -10px;
 			}
 			&:after {
-				bottom: -90px;
-				right: -100px;
+				right: 7px;
+				bottom: -60px;
+			}
+			&:before, &:after {
+				background: url("/img/quoteMob.svg") no-repeat;
+				width: 62px;
+				height: 49px;
 			}
 		}
 	}

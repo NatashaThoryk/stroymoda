@@ -10,6 +10,8 @@ import React from 'react';
 import SectionBlockLeft from 'components/SectionBlockLeft';
 import SliderLogo from 'components/LogoSlider';
 import TextSection from 'components/TextSection';
+import toVal from '../../helpers/clsx';
+import {useAppContext} from '../../context/App';
 
 const title = 'International partners';
 const listAdvantagesTop = [
@@ -45,11 +47,10 @@ const listPartners = [
 		src: '/img/products/poolfloor.svg'
 	}
 ];
+const textSec1 = 'Stroymoda has since then implemented complex technical stage and audience solutions into several highbrow public event spaces throughout Russia. As transformation specialist our goal is to convert large static spectator halls into efficient multipurpose spaces allowing a building to become more flexible, usable and profitable.';
 const titleSection1 = 'Stroymoda Has Been A Household Name In The Fit Out Of Construction Projects In Russia For Over 25 Year. In Our Lengthy History We Generated A Solid Track Record And An Extensive Client Portfolio.\n';
-const textSection1 = 'Having our own manufacturing plants for doors and partitions (1997) gives us the flexibility to offer project specific solutions for fulfilling most client’s wishes. An Individual approach and a dedicated project management team allows for a smooth integration of technical solutions while maintaining a high level of service. Upon the start of a project we offer full design and technical support throughout each stage of project implementation. During project execution our aim is to act environmentally aware and responsible throughout the process. We consciously decide on building materials used and find suppliers that comply with and share our working ethos.\\n"\n' +
-	'const titleSection2 = "International partners';
-const textSection2 = 'In 2015 Stroymoda joined forces with several international partners active in the field of automated venue transformation.\\n" +\n' +
-	'\t" Stroymoda has since then implemented complex technical stage and audience solutions into several highbrow public event spaces throughout Russia. As transformation specialist our goal is to convert large static spectator halls into efficient multipurpose spaces allowing a building to become more flexible, usable and profitable.';
+const textSection1 = 'Having our own manufacturing plants for doors and partitions (1997) gives us the flexibility to offer project specific solutions for fulfilling most client’s wishes. An Individual approach and a dedicated project management team allows for a smooth integration of technical solutions while maintaining a high level of service. Upon the start of a project we offer full design and technical support throughout each stage of project implementation. During project execution our aim is to act environmentally aware and responsible throughout the process. We consciously decide on building materials used and find suppliers that comply with and share our working ethos.';
+const textSection2 = 'In 2015 Stroymoda joined forces with several international partners active in the field of automated venue transformation.'
 const AdvantagesTitle = 'Advantages Of working With Stroymoda';
 const charityList = [
 	{
@@ -78,23 +79,23 @@ const slider1 = {
 const listLogo = [
 	{
 		img: '/img/logoSlider/1.svg'
-	},{
+	}, {
 		img: '/img/logoSlider/2.svg'
-	},{
+	}, {
 		img: '/img/logoSlider/3.svg'
-	},{
+	}, {
 		img: '/img/logoSlider/4.svg'
-	},{
+	}, {
 		img: '/img/logoSlider/5.svg'
-	},{
+	}, {
 		img: '/img/logoSlider/6.svg'
-	},{
+	}, {
 		img: '/img/logoSlider/7.svg'
-	},{
+	}, {
 		img: '/img/logoSlider/8.svg'
 	}, {
 		img: '/img/logoSlider/9.svg'
-	},{
+	}, {
 		img: '/img/logoSlider/2.svg'
 	}
 ];
@@ -106,6 +107,7 @@ const breadCrumbs = [
 ];
 
 const About = () => {
+	const {isMobile} = useAppContext();
 
 	return (
 		<Layout footerProps={{
@@ -116,7 +118,14 @@ const About = () => {
 			<main className={classes.main}>
 				<div className={classes.content_wrapper}>
 					<BreadCrumbs items={breadCrumbs}/>
-					<h2 className={classes.title_cap}>About Stroymoda</h2>
+					{isMobile
+						? (
+							<h2 className={toVal(classes.title_cap, classes.title_mob)}>About Stroymoda</h2>
+						)
+						: (
+							<h2 className={classes.title_cap}>About Stroymoda</h2>
+
+						)}
 					<NewsImageBlock src="/img/aboutMain.png"/>
 					<TextSection customClass="about_wrap" title={titleSection1} text={textSection1}/>
 					<Button link="/projects" customClass="center" btnName="View projects"/>
@@ -124,7 +133,16 @@ const About = () => {
 				<div className={classes.section_bg}>
 					<div className={classes.padding_wrap}>
 						<div className={classes.content_wrapper}>
-							<TextSection customClass="partners_wrap" title={title} text={textSection2}/>
+							{isMobile
+								? (
+									<TextSection isCenter={true} customClass="partners_wrap" title={title}
+												 text2={textSec1} text={textSection2}/>
+								)
+								: (
+									<TextSection isCenter={false} customClass="partners_wrap" title={title}
+												 text2={textSec1} text={textSection2}/>
+
+								)}
 							<Button link="/products" customClass="center" btnName="Learn more"/>
 						</div>
 					</div>
@@ -137,12 +155,23 @@ const About = () => {
 						<CharitySection list={charityList as any}/>
 					</div>
 				</div>
-				<SectionBlockLeft slides={slider1.slides as any} customClass="about_wrapper" title={slider1.title}
-								  text1={slider1.text1}/>
+				{isMobile
+					? (
+						<div className={classes.content_wrapper}>
+							<SectionBlockLeft slides={slider1.slides as any} customClass="about_wrapper_mob"
+											  title={slider1.title}
+											  text1={slider1.text1}/>
+						</div>
+					)
+					: (
+						<SectionBlockLeft slides={slider1.slides as any} customClass="about_wrapper"
+										  title={slider1.title}
+										  text1={slider1.text1}/>
+					)}
 				<SliderLogo list={listLogo as any} title="Trusted by"/>
 			</main>
 		</Layout>
-	)
+	);
 };
 
 export default About;
