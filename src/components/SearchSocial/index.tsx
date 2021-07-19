@@ -135,8 +135,9 @@ const SearchSocial = () => {
 	const [isModal, setIsModal] = useState(false);
 	const {isMobile} = useAppContext();
 	const settingsSlider = {
-		slidesToShow: 1,
+		slidesToShow: 2,
 		slidesToScroll: 1,
+		initialSlide: 2,
 	};
 
 	return (
@@ -150,8 +151,8 @@ const SearchSocial = () => {
 					<Tabs className={classes.tabs}>
 						{isMobile
 							? (
+								<Slider className={classes.carousel} {...settingsSlider}>
 									<TabList>
-										<Slider className={classes.carousel} {...settingsSlider}>
 										<Tab>
 										<img src="/img/news/fb.svg" alt="logo"/>
 										</Tab>
@@ -164,8 +165,8 @@ const SearchSocial = () => {
 										<Tab>
 										<img src="/img/news/instagram.svg" alt="logo"/>
 										</Tab>
-										</Slider>
 									</TabList>
+								</Slider>
 							)
 							: (
 								<TabList>

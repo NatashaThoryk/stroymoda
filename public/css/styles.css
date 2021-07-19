@@ -216,9 +216,10 @@ body {
 }
 
 .bm-burger-button {
-	left: 0;
+	left: 1px;
 	top: 20px;
 	margin-left: 10px;
+	margin-right: 30px;
 }
 
 /* Morph shape necessary with bubble or elastic */

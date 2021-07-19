@@ -119,7 +119,7 @@ const Projects = () => {
 					</div>
 				</div>
 			</div>
-			</main>/
+			</main>
 		</Layout>
 	);
 };
