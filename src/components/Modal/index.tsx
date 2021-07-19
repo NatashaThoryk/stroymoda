@@ -1,4 +1,4 @@
-import classes from './map.module.scss';
+import classes from './modal.module.scss';
 import { IProps } from './types';
 import React from 'react';
 import toVal from '../../helpers/clsx';
