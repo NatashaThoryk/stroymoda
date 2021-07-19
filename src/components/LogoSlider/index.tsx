@@ -12,7 +12,6 @@ function SampleNextArrow(props: any) {
 		<button className={classes.nextArrow} onClick={onClick}/>
 	);
 }
-
 function SamplePrevArrow(props: any) {
 	const {onClick} = props;
 	return (
@@ -20,9 +19,7 @@ function SamplePrevArrow(props: any) {
 	);
 }
 
-
 const LogoSlider: React.FC<IProps> = ({list = [], title = ''}) => {
-
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -33,6 +30,17 @@ const LogoSlider: React.FC<IProps> = ({list = [], title = ''}) => {
 		initialSlide: 0,
 		nextArrow: <SampleNextArrow/>,
 		prevArrow: <SamplePrevArrow/>,
+		responsive: [
+			{
+				breakpoint: 400,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					nextArrow: undefined,
+					prevArrow: undefined,
+				}
+			}
+		]
 	};
 	return (
 		<div className={classesMain.container}>
