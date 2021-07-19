@@ -8,7 +8,6 @@ import NewsItemsYouTube from 'components/NewsItemsYouTube';
 import NewsItemsYouTubeLarge from 'components/NewsItemsYouTubeLarge';
 import React, {useState} from 'react';
 import 'react-tabs/style/react-tabs.css';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Modal from 'components/Modal';
@@ -114,30 +113,10 @@ const itemBlog3 = {
 	src: '/img/news/blog3.jpg',
 	link: '/news/id',
 };
-// const list = [
-// 	{
-// 		img: '/img/news/blog.svg'
-// 	},
-// 	{
-// 		img: '/img/news/instagram.svg'
-// 	},
-// 	{
-// 		img: '/img/news/youtube.svg'
-// 	},
-// 	{
-// 		img: '/img/news/fb.svg'
-// 	}
-// ];
-
 
 const SearchSocial = () => {
 	const [isModal, setIsModal] = useState(false);
 	const {isMobile} = useAppContext();
-	const settingsSlider = {
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		initialSlide: 2,
-	};
 
 	return (
 		<div className={classesMain.content_wrapper}>
