@@ -28,7 +28,6 @@ const menu = [
 	},
 ];
 
-
 const Header = (props: any) => {
 	const [isClickInput, setIsClickInput] = useState(false);
 	const {asPath} = useRouter();
