@@ -379,7 +379,6 @@ const SearchSocial = () => {
 				</div>
 			</div>
 					<Modal isModal={isModal} setIsModal={setIsModal}/>
-
 		</div>
 	);
 };
