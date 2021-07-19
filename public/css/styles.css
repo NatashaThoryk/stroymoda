@@ -156,9 +156,6 @@ body {
 	padding-bottom: 30px;
 }
 
-/*.burger-wrap {*/
-	/*position: relative;*/
-/*}*/
 
 /* Change color on hover */
 .bm-item:hover {
@@ -218,8 +215,7 @@ body {
 .bm-burger-button {
 	left: 1px;
 	top: 20px;
-	margin-left: 10px;
-	margin-right: 30px;
+	margin: 0px 29px 24px 10px;
 }
 
 /* Morph shape necessary with bubble or elastic */
