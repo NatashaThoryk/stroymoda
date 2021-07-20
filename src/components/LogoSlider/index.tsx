@@ -12,6 +12,7 @@ function SampleNextArrow(props: any) {
 		<button className={classes.nextArrow} onClick={onClick}/>
 	);
 }
+
 function SamplePrevArrow(props: any) {
 	const {onClick} = props;
 	return (
@@ -20,7 +21,7 @@ function SamplePrevArrow(props: any) {
 }
 
 const LogoSlider: React.FC<IProps> = ({list = [], title = ''}) => {
-	const settings = {
+	const settings_3 = {
 		dots: false,
 		infinite: true,
 		speed: 800,
@@ -32,12 +33,26 @@ const LogoSlider: React.FC<IProps> = ({list = [], title = ''}) => {
 		prevArrow: <SamplePrevArrow/>,
 		responsive: [
 			{
-				breakpoint: 400,
+				breakpoint: 960,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
+					slidesToShow: 7,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 3,
 					nextArrow: undefined,
 					prevArrow: undefined,
+					autoplay: true,
+					infinite: true,
+					speed: 800,
 				}
 			}
 		]
@@ -46,7 +61,7 @@ const LogoSlider: React.FC<IProps> = ({list = [], title = ''}) => {
 		<div className={classesMain.container}>
 			<div className={classes.in_wrap}>
 				<h3 className={classesMain.title}>{title}</h3>
-				<Slider className={classes.carouselSlider} {...settings}>
+				<Slider className={classes.carouselSlider} {...settings_3}>
 					{list.map((item: any) => (
 						<img src={item.img} alt="logo"/>
 					))}

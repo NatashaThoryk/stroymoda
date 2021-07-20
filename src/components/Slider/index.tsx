@@ -12,7 +12,7 @@ const SliderMain: React.FC<IProps> = ({list = [], isVideo = false, dotsClass = '
 		speed: 800,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		// autoplay: true,
+		autoplay: true,
 		arrows: false,
 		dotsClass: `slick-dots ${classesMain[dotsClass]}`,
 		appendDots: (dots: any) => <ul>{dots}</ul>,

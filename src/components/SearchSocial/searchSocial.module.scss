@@ -79,9 +79,22 @@
 		overflow-x: scroll;
 		overflow-y: hidden;
 		height: 130px;
+
 		li {
 			width: 50%;
 			flex: 0 0 auto;
+			margin: 0 5px;
+			height: 84px;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			span {
+				font-size: 18px;
+				svg {
+					margin-bottom: 10px;
+				}
+			}
 		}
 	}
 }
@@ -140,6 +153,10 @@
 			right: 360px;
 		}
 	}
+
+	.tabs {
+		padding-top: 10px;
+	}
 }
 
 @media screen and (max-width: 450px) {
@@ -159,53 +176,6 @@
 	.section_slide {
 		&:after {
 			right: 145px;
-		}
-	}
-	.fixed_overlay {
-		.modal_mob {
-			margin-left: -150px;
-			margin-top: -304px;
-
-			.modal_container {
-				max-width: 300px;
-				height: 100%;
-
-				.top_info, .image_wrap {
-					width: 100%;
-				}
-
-				.title_modal {
-					padding: 10px;
-				}
-
-			}
-
-			.slick-slider {
-				ul {
-					display: none;
-				}
-			}
-		}
-
-		.info_wrap {
-			width: 100%;
-			padding: 10px;
-
-			.content {
-				padding-top: 0;
-			}
-		}
-
-		.close {
-			padding: 0;
-		}
-
-		.content {
-			padding: 0;
-		}
-
-		.wrap {
-			padding-top: 20px;
 		}
 	}
 }

@@ -18,82 +18,68 @@ import {useAppContext} from '../../context/App';
 const titleNew = 'Navigating the COVID-19 situation through flexibility (AIPC COMMUNIQUÉ ARTICLE)';
 const itemFb1 = {
 	title: 'В понедельник мы показали кабинет из новой концепции офиса, сегодня - коридор: пространство выглядит',
-	link: '/news',
 	src: '/img/newsMain.png',
 };
 const itemFb2 = {
 	title: 'Еще одна иллюстрация из конкурсного проекта, который наше бюро делало',
-	link: '/news',
 	src: '/img/newsMain.png',
 };
 const itemFb3 = {
 	title: 'Новая концепция офиса: шпонированные декоративные панели и мебель по нашим эскизам, дополненная креслами.',
-	link: '/news',
 	src: '/img/newsMain.png',
 
 };
 const itemIns1 = {
-	link: '',
 	src: '/img/news/inst/News_inst.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
 };
 const itemIns2 = {
-	link: '',
 	src: '/img/news/inst/News_inst1.jpg',
 	textInside: 'stroymoda.ru',
 	count: '312'
 };
 const itemIns3 = {
-	link: '',
 	src: '/img/news/inst/News_inst2.jpg',
 	textInside: 'stroymoda.ru',
 	count: '532'
 };
 const itemIns4 = {
-	link: '',
 	src: '/img/news/inst/News_inst3.jpg',
 	textInside: 'stroymoda.ru',
 	count: '522'
 };
 const itemIns5 = {
-	link: '',
 	src: '/img/news/inst/News_inst4.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
 };
 const itemIns6 = {
-	link: '',
 	src: '/img/news/inst/News_inst5.jpg',
 	textInside: 'stroymoda.ru',
 	count: '112'
 };
 const itemIns7 = {
-	link: '',
 	src: '/img/news/inst/News_inst6.jpg',
 	textInside: 'stroymoda.ru',
 	count: '12'
 };
 const itemIns8 = {
-	link: '',
 	src: '/img/news/inst/News_inst7.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
 };
 const itemIns9 = {
-	link: '',
 	src: '/img/news/inst/News_inst8.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
 };
 const itemIns10 = {
-	link: '',
 	src: '/img/news/inst/News_inst9.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
 };
 const itemIns11 = {
-	link: '',
 	src: '/img/news/inst/News_inst10.jpg',
 	textInside: 'stroymoda.ru',
 	count: '512'
@@ -129,8 +115,8 @@ const SearchSocial = () => {
 					<Tabs className={classes.tabs}>
 						{isMobile
 							? (
-									<TabList className={classes.wrapper_mob}>
-											<Tab>
+								<TabList className={classes.wrapper_mob}>
+									<Tab>
 								<span>
 									<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
 										 xmlns="http://www.w3.org/2000/svg">
@@ -149,8 +135,8 @@ const SearchSocial = () => {
 								</svg>
 								Blog
 								</span>
-											</Tab>
-											<Tab>
+									</Tab>
+									<Tab>
 							<span>
 								<svg width="30" height="29" viewBox="0 0 30 29" fill="none"
 									 xmlns="http://www.w3.org/2000/svg">
@@ -174,8 +160,8 @@ const SearchSocial = () => {
 								</svg>
 								Instagram
 							</span>
-											</Tab>
-											<Tab>
+									</Tab>
+									<Tab>
 							<span>
 								<svg width="34" height="23" viewBox="0 0 34 23" fill="none"
 									 xmlns="http://www.w3.org/2000/svg">
@@ -185,8 +171,8 @@ const SearchSocial = () => {
 								</svg>
 								YouTube
 							</span>
-											</Tab>
-											<Tab>
+									</Tab>
+									<Tab>
 							<span>
 								<svg width="16" height="29" viewBox="0 0 16 29" fill="none"
 									 xmlns="http://www.w3.org/2000/svg">
@@ -196,8 +182,8 @@ const SearchSocial = () => {
 								</svg>
 								Facebook
 							</span>
-											</Tab>
-									</TabList>
+									</Tab>
+								</TabList>
 							)
 							: (
 								<TabList>
@@ -392,25 +378,25 @@ const SearchSocial = () => {
 						<TabPanel>
 							<div className={toVal(classesMain.tabs, classesMain.tab3)}>
 								<div className={classesMain.in_list}>
-									<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
-									<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
-									<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
-									<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
-									<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
-									<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
-									<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
-									<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
-									<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
-									<NewsItemsFb link={itemFb1.link} title={itemFb1.title} src={itemFb1.src}/>
-									<NewsItemsFb link={itemFb2.link} title={itemFb2.title} src={itemFb2.src}/>
-									<NewsItemsFb link={itemFb3.link} title={itemFb3.title} src={itemFb3.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb1.title} src={itemFb1.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb2.title} src={itemFb2.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb3.title} src={itemFb3.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb1.title} src={itemFb1.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb2.title} src={itemFb2.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb3.title} src={itemFb3.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb1.title} src={itemFb1.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb2.title} src={itemFb2.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb3.title} src={itemFb3.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb1.title} src={itemFb1.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb2.title} src={itemFb2.src}/>
+									<NewsItemsFb onHandler={() => setIsModal(true)}  title={itemFb3.title} src={itemFb3.src}/>
 								</div>
 							</div>
 						</TabPanel>
 					</Tabs>
 				</div>
 			</div>
-					<Modal isModal={isModal} setIsModal={setIsModal}/>
+			<Modal isModal={isModal} setIsModal={setIsModal}/>
 		</div>
 	);
 };
