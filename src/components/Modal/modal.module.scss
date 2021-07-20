@@ -6,7 +6,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
-	z-index: 100;
+	z-index: 1000;
 	display: none;
 
 	.info_wrap {
@@ -58,15 +58,18 @@
 			padding-top: 20px;
 		}
 	}
+
 	.wrap {
 		svg {
 			margin-right: 5px;
 		}
 	}
 }
+
 .fixed_overlay_block {
 	display: block;
 }
+
 .modal {
 	z-index: 10000;
 	position: absolute;
@@ -119,12 +122,15 @@
 	.image_wrap {
 		width: 100%;
 	}
+
 	.close {
 		padding: 0;
 	}
+
 	.info_wrap {
 		width: 100%;
 		padding: 10px;
+
 		.content {
 			padding: 0;
 		}
@@ -134,8 +140,16 @@
 @media screen and (min-width: 768px) and (max-width: 1000px) {
 	.modal {
 		height: auto;
+
 		.modal_container {
 			height: auto;
 		}
+	}
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+	.modal {
+		top: 38%;
 	}
 }
