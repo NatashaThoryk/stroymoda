@@ -11,14 +11,13 @@ function SampleNextArrow(props: any) {
 	return (
 		<button className={classes.nextArrow} onClick={onClick}/>
 	);
-}
-
+};
 function SamplePrevArrow(props: any) {
 	const {onClick} = props;
 	return (
 		<button className={classes.prevArrow} onClick={onClick}/>
 	);
-}
+};
 
 const LogoSlider: React.FC<IProps> = ({list = [], title = ''}) => {
 	const settings_3 = {
