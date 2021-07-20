@@ -58,6 +58,7 @@
 @media screen and (min-width: 421px) and (max-width: 768px) {
 	.main_item {
 		padding-bottom: 30px;
+
 		.image_list {
 			max-width: 330px;
 			height: 200px;
@@ -66,20 +67,22 @@
 }
 
 
-	@media screen and (min-width: 320px) and (max-width: 420px) {
-		.main_item {
-			padding-bottom: 55px;
+@media screen and (min-width: 320px) and (max-width: 420px) {
+	.main_item {
+		padding-bottom: 55px;
+		margin: 0;
 
-			h3 {
-				font-size: 18px;
-			}
-
-			.image_list {
-				height: 185px;
-			}
+		h3 {
+			font-size: 18px;
 		}
-		.in_list {
-			padding: 0 0;
+
+		.image_list {
+			max-width: 100%;
+			height: auto;
 		}
 	}
+	.in_list {
+		padding: 0 0;
+	}
+}
 

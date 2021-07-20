@@ -56,8 +56,8 @@ const checkListRight = ['Electrical horizontal moving straight tribunes\n', 'Tai
 const checkListLeft = ['Symmetric look when the tribune is in closed position\n', 'Tightest radius possible for this type of tribune is 5 meters\n', 'Round tribunes with 180 degree radius possible\n', 'Platform width reduces in size from back to front\n'];
 const checkListRight1 = ["Asymmetric look when the tribune is in closed position\n", "Requires intensive engineering and a longer production time\n"]
 const slides1 = ['detail_1.jpg', 'detail_1.jpg', 'detail_1.jpg', 'detail_1.jpg'];
-const slides2 = ['2.jpg', '2.jpg', '2.jpg', '2jpg'];
-const slides3 = ['4.jpg', '4.jpg', '4jpg', '4jpg'];
+const slides2 = ['2.jpg', '2.jpg', '2.jpg'];
+const slides3 = ['4.jpg', '4.jpg', '4.jpg'];
 const slides4 = ['popUp.jpg', 'popUp.jpg', 'popUp.jpg', 'popUp.jpg'];
 const slides5 = ['public.jpg', 'public.jpg', 'public.jpg', 'public.jpg'];
 
