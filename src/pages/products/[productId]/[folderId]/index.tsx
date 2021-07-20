@@ -38,9 +38,9 @@ const productsIdItem = () => {
 						? (<>
 								<h2 className={toVal(classes.title_cap, classes.title_cap_mob)}>{title}</h2>
 									<div className={toVal(classes.in_list, classes.top_list)}>
-										<ImgBlock title="Venue Transformation Systems" img={"/img/products/columnCladding.jpg"} />
-										<ImgBlock title="Retractable Tribune Systems" img={"/img/products/smartGlass.jpg"} />
-										<ImgBlock title="Automatic Vertical Retractable Walls" img={"/img/products/shopFacade.jpg"} />
+										<ImgBlock href="/products/id/index/title/" title="Venue Transformation Systems" img={"/img/products/columnCladding.jpg"} />
+										<ImgBlock href="/products/id/index/title/" title="Retractable Tribune Systems" img={"/img/products/smartGlass.jpg"} />
+										<ImgBlock href="/products/id/index/title/" title="Automatic Vertical Retractable Walls" img={"/img/products/shopFacade.jpg"} />
 									</div>
 							</>
 						)
@@ -49,9 +49,9 @@ const productsIdItem = () => {
 									<h2 className={classes.title_cap}>{title}</h2>
 									<div className={classes.main_list}>
 										<div className={toVal(classes.in_list, classes.top_list)}>
-											<ImgBlock title="Venue Transformation Systems" img={"/img/products/columnCladding.jpg"} />
-											<ImgBlock title="Retractable Tribune Systems" img={"/img/products/smartGlass.jpg"} />
-											<ImgBlock title="Automatic Vertical Retractable Walls" img={"/img/products/shopFacade.jpg"} />
+											<ImgBlock href="/products/id/index/title/" title="Venue Transformation Systems" img={"/img/products/columnCladding.jpg"} />
+											<ImgBlock href="/products/id/index/title/" title="Retractable Tribune Systems" img={"/img/products/smartGlass.jpg"} />
+											<ImgBlock href="/products/id/index/title/" title="Automatic Vertical Retractable Walls" img={"/img/products/shopFacade.jpg"} />
 										</div>
 									</div>
 								</>

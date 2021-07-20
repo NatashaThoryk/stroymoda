@@ -285,15 +285,15 @@ const ProductItem = () => {
 									</TabPanel>
 									<TabPanel>
 										<div className={classes.in_list}>
-											<ImgBlock href="/products/list" links={imgBlock6} title="Office partitions"
+											<ImgBlock href="/products/id/index/list" links={imgBlock6} title="Office partitions"
 													  logo={"/img/Logo.svg"} img={"/img/products/office.jpg"}/>
-											<ImgBlock href="/products/list" links={imgBlock7} title="Glass Doors"
+											<ImgBlock href="/products/id/index/list" links={imgBlock7} title="Glass Doors"
 													  logo="/img/Logo.svg" img={"/img/products/doors.jpg"}/>
-											<ImgBlock href="/products/list" links={imgBlock8} title="Solid doors"
+											<ImgBlock href="/products/id/index/list" links={imgBlock8} title="Solid doors"
 													  logo="/img/Logo.svg" img={"/img/products/solid_dors.jpg"}/>
-											<ImgBlock href="/products/list" links={imgBlock9} title="Office Furniture"
+											<ImgBlock href="/products/id/" links={imgBlock9} title="Office Furniture"
 													  logo={"/img/Logo.svg"} img={"/img/products/furniture.jpg"}/>
-											<ImgBlock href="/products/list" links={imgBlock10} title="Miscellaneous"
+											<ImgBlock href="/products/id/" links={imgBlock10} title="Miscellaneous"
 													  logo="/img/Logo.svg" img={"/img/products/miscellaneous.jpg"}/>
 										</div>
 									</TabPanel>
@@ -338,9 +338,9 @@ const ProductItem = () => {
 												  logo="/img/Logo.svg" img={"/img/products/solid_dors.jpg"}/>
 									</div>
 									<div className={toVal(classes.in_list, classes.bottom_list)}>
-										<ImgBlock href="/products/id/index/list" links={imgBlock9} title="Office Furniture"
+										<ImgBlock href="/products/id/" links={imgBlock9} title="Office Furniture"
 												  logo={"/img/Logo.svg"} img={"/img/products/furniture.jpg"}/>
-										<ImgBlock href="/products/id/index/list" links={imgBlock10} title="Miscellaneous"
+										<ImgBlock href="/products/id/" links={imgBlock10} title="Miscellaneous"
 												  logo="/img/Logo.svg" img={"/img/products/miscellaneous.jpg"}/>
 									</div>
 								</div>
