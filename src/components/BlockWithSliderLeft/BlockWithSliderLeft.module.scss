@@ -128,13 +128,14 @@
 				touch-action: auto;
 				-ms-touch-action: auto;
 				&::after {
-					content: '';
-					background: transparent;
-					width: 100%;
+					content: "";
+					display: block;
 					height: 100%;
-					min-height: 1px;
 					position: absolute;
 					top: 0;
+					left: 0;
+					width: 100%;
+					background-color: rgba(255, 255, 255, .1);
 				}
 			}
 		}
