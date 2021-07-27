@@ -91,6 +91,8 @@ body {
 /* Slick Slider Style */
 .slick-slider {
 	height: 100% !important;
+	touch-action: auto;
+	-ms-touch-action: auto;
 }
 
 .slick-dots li button {
