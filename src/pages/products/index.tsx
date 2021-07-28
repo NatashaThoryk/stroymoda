@@ -303,7 +303,7 @@ const ProductItem = () => {
 							</main>
 						)
 						: (
-							<main className={classes.main}>
+							<main className={toVal(classes.main, classes.main_overlay)}>
 								<div className={classes.content_wrapper}>
 								<BreadCrumbs items={breadCrumbs}/>
 								<h2 className={classes.title_cap}>{title1}</h2>

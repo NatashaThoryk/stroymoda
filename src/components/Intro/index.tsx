@@ -16,8 +16,7 @@ const Intro = () => {
 					<div className={classes.video}>
 						<video className={classes.video_media} muted autoPlay loop height="800" width="100%" poster="/img/poster.jpg">
 							<source
-								src="https://www.decor-plywood.com/video/Manufacturing%20process%20of%20plywood%20chair%20Flow%20-%20Plycollection.mp4"
-								type="video/mp4"/>
+								src="/video/Openings_Video_Website.mp4"/>
 						</video>
 					</div>
 				)}
