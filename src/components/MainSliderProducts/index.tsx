@@ -1,7 +1,7 @@
 import classes from './mainSliderProducts.module.scss';
 import {IProps} from './types';
 import React, {useEffect, useState} from 'react';
-import {useAppContext} from "../../context/App";
+import {useAppContext} from '../../context/App';
 
 const MainSliderProducts: React.FC<IProps> = ({imageTop = '', imageBottom = ''}) => {
 	const [slideWidth, setSlideWidth] = useState(0);
@@ -20,7 +20,6 @@ const MainSliderProducts: React.FC<IProps> = ({imageTop = '', imageBottom = ''})
 		const x = e.target.clientWidth;
 		const w = e.touches[0].clientX;
 		setSlideWidth(x - w);
-		console.log(x, w, '222')
 	};
 
 	return (

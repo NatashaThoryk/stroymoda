@@ -13,7 +13,7 @@ const ContactForm = () => {
 					<input type="name" placeholder="Name"/>
 					<input type="text" placeholder="E-mail or phone number"/>
 					<input type="text" placeholder="Company or organization"/>
-					<textarea>Type your message here</textarea>
+					<textarea placeholder="Type your message here" />
 					<button type="submit" className={classes.btnName}>SEND</button>
 				</form>
 			</div>

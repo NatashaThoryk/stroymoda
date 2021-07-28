@@ -2,6 +2,8 @@
 	position: relative;
 	height: calc(100vh - 91px);
 	overflow: hidden;
+	min-height: 25rem;
+	width: 100%;
 
 	&:after {
 		content: '';
@@ -28,15 +30,22 @@
 	}
 
 	.video {
-		position: relative;
-		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
 
 		.video_media {
-			width: 100%;
-			height: auto;
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: 0;
+			transform: translateX(-50%) translateY(-50%);
 		}
 	}
 
@@ -156,9 +165,11 @@
 				text-align: center;
 			}
 		}
+
 		.video {
 			display: none;
 		}
+
 		.mob_poster {
 			background: url("/img/poster.jpg") no-repeat center;
 			background-size: cover;

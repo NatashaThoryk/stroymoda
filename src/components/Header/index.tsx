@@ -151,7 +151,6 @@ const Header = (props: any) => {
 						<div className={classes.nav_right}>
 							<input className={toVal(classes.search, isClickInput ? classes.search_active : '')} type="search" id="search"
 								   onClick={() => setIsClickInput(true)} placeholder="Search"/>
-							{/*<input className={classes.search} type="search" id="search"/>*/}
 							<div className={classes.language}>
 								<Link href="/ru"><a>Ru</a></Link>
 								<Link href="/en"><a className={classes.active}>En</a></Link>
