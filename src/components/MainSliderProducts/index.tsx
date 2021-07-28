@@ -14,7 +14,6 @@ const MainSliderProducts: React.FC<IProps> = ({imageTop = '', imageBottom = ''})
 	const handleMouseMove = (e: any) => {
 		const w = e.target.clientWidth;
 		setSlideWidth(w - e.screenX);
-		console.log(setSlideWidth, '2222')
 	};
 
 	const handleTouchEvent = (e: any) => {
