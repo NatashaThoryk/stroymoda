@@ -7,7 +7,6 @@ const Intro = () => {
 
 	return (
 		<div className={classes.intro}>
-
 			{isMobile || isTablet
 				? (
 					<div className={classes.mob_poster}></div>
@@ -20,7 +19,6 @@ const Intro = () => {
 						</video>
 					</div>
 				)}
-
 			<div className={classes.intro_content}>
 				<div className={classes.content_wrapper}>
 					<h1>Transform<br/> your vision into reality</h1>
