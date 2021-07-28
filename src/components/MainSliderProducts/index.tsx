@@ -16,12 +16,17 @@ const MainSliderProducts: React.FC<IProps> = ({imageTop = '', imageBottom = ''})
 		setSlideWidth(w - e.screenX);
 	};
 
+	const handleTouchEvent = (e: any) => {
+		const x = e.touches;
+		const w = e.touches[0].clientX;
+		setSlideWidth(x - e.clientX);
+	};
 
 	return (
 		<>
 			{isMobile
 				? (
-					<div className={classes.full_bg_slider}>
+					<div className={classes.full_bg_slider}  onTouchMove={handleTouchEvent}>
 						<div className={classes.full_bg_slider_hand} style={{right: slideWidth}}/>
 						<img src={imageBottom} alt="image" className={classes.full_bg_slider_before}/>
 						<div style={{width: slideWidth}} className={classes.full_bg_slider_after}>
