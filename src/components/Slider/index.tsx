@@ -36,7 +36,7 @@ const SliderMain: React.FC<IProps> = ({list = [], isVideo = false, dotsClass = '
 				}
 			</div>)}
 		</Slider>
-	)
+	);
 };
 
 export default SliderMain;

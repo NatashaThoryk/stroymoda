@@ -36,6 +36,14 @@
 	}
 }
 
+.about_wrapper {
+	padding: 0;
+	.section_slide {
+		padding-right: 60px;
+		overflow-x: initial;
+	}
+}
+
 .about_wrapper, .about_wrapper_mob {
 	justify-content: flex-end;
 	overflow-x: hidden;
