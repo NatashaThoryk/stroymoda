@@ -242,7 +242,6 @@ const imgBlock10 = [
 		logo: '/img/products/partitions/M_Decorative_ceilings.jpg'
 	},
 ];
-
 const breadCrumbs = [
 	{
 		text: 'Products',
