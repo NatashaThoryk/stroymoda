@@ -242,6 +242,7 @@ const imgBlock10 = [
 		logo: '/img/products/partitions/M_Decorative_ceilings.jpg'
 	},
 ];
+
 const breadCrumbs = [
 	{
 		text: 'Products',
@@ -250,6 +251,7 @@ const breadCrumbs = [
 ];
 
 const ProductItem = () => {
+
 	const {isMobile, isTablet} = useAppContext();
 
 	return (
