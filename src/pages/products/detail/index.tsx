@@ -8,7 +8,7 @@ import InfoContent from 'components/InfoContent';
 import Layout from 'layouts/main';
 import MainSliderProducts from 'components/MainSliderProducts';
 import React from 'react';
-import StepList from "components/StepList";
+import StepList from 'components/StepList';
 
 const mainTitle = 'Multipurpose hall systems';
 const itemAdvantages = [
@@ -121,7 +121,7 @@ const productsDetail = () => {
 					text2={InfoContentText2}
 					linkFrame={"https://www.youtube.com/embed/XBPjVzSoepo"} linkImage={"/img/products/galaSystems.svg"}/>
 				<AdvantagesBlock title="Advantages" items={itemAdvantages as any} items1={itemAdvantages1 as any} />
-				<div className={classes.section_slider} id={"block"}>
+				<div className={classes.section_slider} id={"rotation"}>
 					<div className={classes.content_wrapper}>
 						<h2 className={classes.title_cap}>{mainTitle}</h2>
 					</div>
@@ -130,19 +130,19 @@ const productsDetail = () => {
 						<StepList stepList={stepList as any} />
 					</div>
 				</div>
-				<div className={classes.section_bg_color}>
+				<div className={classes.section_bg_color} id={"translation"}>
 					<BlockWithSliderLeft isVideo={true} slides={slides1 as any} title="Translation system" listItem={checkListLeft as any}/>
 					<div className={classes.content_wrapper}>
 						<StepList stepList={stepList1 as any}/>
 					</div>
 				</div>
-				<div className={classes.section_slider}>
+				<div className={classes.section_slider} id={"wagon"}>
 					<BlockWidthSliderRight isVideo={true} slides={slides1 as any} title="Wagon System" listItem={checkListRight as any}/>
 					<div className={classes.content_wrapper}>
 						<StepList stepList={stepList2 as any}/>
 					</div>
 				</div>
-				<div className={classes.section_bg_color}>
+				<div className={classes.section_bg_color} id={"stage"}>
 					<BlockWithSliderLeft isVideo={true} slides={slides1 as any} title="Understage systems" listItem={checkListLeft as any}/>
 				</div>
 			</main>

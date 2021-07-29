@@ -13,45 +13,50 @@ const imgBlock1 = [
 	{
 		title: 'Rotation system',
 		link: '/products/detail',
-		hash: '/',
+		hash: '#rotation',
 		logo: '/img/products/Rotation_system.jpg'
 	}, {
 		title: 'Translation system',
-		link: '#',
-		hash: '/',
+		link: '/products/detail',
+		hash: '#translation',
 		logo: '/img/products/Translation_system.jpg'
 	}, {
 		title: 'Wagon system',
-		link: '#',
-		hash: '/',
+		link: '/products/detail',
+		hash: '#wagon',
 		logo: '/img/products/Wagon_system.jpg'
 	}, {
 		title: 'Under stage systems',
-		link: '#',
-		hash: '/',
+		link: '/products/detail',
+		hash: '#stage',
 		logo: '/img/products/Under_stage_systems.jpg'
 	},
 ];
 const imgBlock2 = [
 	{
 		title: 'Straight tribunes',
-		link: '#',
+		link: '/products/detail_1',
+		hash: '#tribunes',
 		logo: '/img/products/Straight_tribunes.jpg'
 	}, {
 		title: 'Constant curved tribunes',
-		link: '#',
+		link: '/products/detail_1',
+		hash: '#constant',
 		logo: '/img/products/Constant_curved_tribunes.jpg'
 	}, {
 		title: 'Concentric curved tribunes',
-		link: '#',
+		link: '/products/detail_1',
+		hash: '#concentric',
 		logo: '/img/products/concentric.jpg'
 	}, {
 		title: 'Pop up seating',
-		link: '#',
+		link: '/products/detail_1',
+		hash: '#popUp',
 		logo: '/img/products/pop_up_seating.jpg'
 	}, {
 		title: 'Seat models',
-		link: '#',
+		link: '/products/detail_1',
+		hash: '#armchairs',
 		logo: '/img/products/Seat_models.jpg'
 	},
 ];

@@ -30,6 +30,10 @@ body {
 	background: #FAFAFA;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 /* End General Style */
 
 /* Tabs News Page */

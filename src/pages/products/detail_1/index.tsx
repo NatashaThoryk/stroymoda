@@ -88,26 +88,28 @@ const productsDetail_1 = () => {
 					linkFrame={"https://www.youtube.com/embed/XBPjVzSoepo"}
 					linkImage={"/img/products/jezet.svg"}/>
 				<AdvantagesBlock title="Advantages" items={itemAdvantages as any} items1={itemAdvantages1 as any}/>
-				<div className={classes.section_slider}>
+				<div className={classes.section_slider} id={"tribunes"}>
 					<div className={classes.content_wrapper}>
 						<h2 className={classes.title_cap}>{mainTitle}</h2>
 					</div>
 					<BlockWidthSliderRight dotsClass="slideRightDots"  dotsClassItem= "slideRightDotsItem" customClass="padding_top" slides={slides1 as any} title="Straight tribunes" listItem={checkListRight as any}/>
 				</div>
-				<div className={toVal(classes.section_bg, classes.section_slider)}>
+				<div className={toVal(classes.section_bg, classes.section_slider)} id={"constant"}>
 					<div className={classes.content_wrapper}>
 						<h3 className={classes.title}>{titleSection}</h3>
 						<p className={classes.subtitle}>{subtitleSection}</p>
 					</div>
 					<BlockWithSliderLeft slides={slides2 as any} title="Constant curved tribunes" listItem={checkListLeft as any}/>
 				</div>
-				<div className={classes.section_slider}>
+				<div className={classes.section_slider} id={"concentric"}>
 					<BlockWidthSliderRight slides={slides3 as any} title="Concentric curved tribunes" listItem={checkListRight1 as any}/>
 				</div>
-				<div className={classes.section_bg}>
+				<div className={classes.section_bg} id={"popUp"}>
 					<SectionBlockLeft link="/products/1/2/title" slides={slides4 as any} customClass="container" btnName="Learn more" title="Pop Up seating" text1="Pop up seating is available for floor integration and for integration on retractable platforms . It creates a flat floor configuration or a flexible tribune that transforms from a pop up seating system into a rigid bleacher."/>
 				</div>
+				<div id={"armchairs"}>
 					<SectionBlockRight link="/products/1/2/id" slides={slides5 as any} btnName="View all" title="Armchairs for halls and public venues" text1="Jezet seats are used as theater armchair conference armchair and auditorium armchair. All models are available as fixed armchair and retractable armchair system for telescopic tribunes"/>
+				</div>
 			</main>
 		</Layout>
 	);

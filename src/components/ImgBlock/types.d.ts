@@ -4,6 +4,7 @@ export interface IProps {
 	logo?: string;
 	img?: string;
 	href?: string;
+	onClick?: void;
 	links?: {
 		link: string;
 		title: string;

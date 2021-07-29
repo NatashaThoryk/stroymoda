@@ -3,11 +3,11 @@ import Link from 'next/link';
 import {IProps} from './types';
 import React, {useState} from 'react';
 
-
 const ImgBlock: React.FC<IProps> = ({links = [], title = '', logo = '', img = '', href = '#'}: any) => {
 	const [isShowLogo, setIsShowLogo] = useState(false);
 	const [hoveredItemIndex, setHoveredItemIndex] = useState<number | boolean>(false);
 	const isLink = links && links.length > 0;
+
 
 	return (
 		<div className={classes.main_item}>
@@ -35,7 +35,8 @@ const ImgBlock: React.FC<IProps> = ({links = [], title = '', logo = '', img = ''
 							<li className={classes.nav_main_item}>
 								<Link
 									href={{
-										pathname: `${item.link}#${item.hash}`,
+										pathname: `${item.link}`,
+										hash: `${item.hash}`,
 									}}
 								>
 									<a
