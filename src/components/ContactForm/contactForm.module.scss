@@ -38,7 +38,7 @@
 	textarea {
 		height: 150px;
 	}
-	input[type='name'] {
+	input:focus, textarea:focus {
 		border: 1px solid #BBBBC2;
 	}
 	input::placeholder{

@@ -114,7 +114,12 @@
 			.search {
 				width: 100%;
 				background-size: 18px 18px;
+				&::-ms-clear {
+					width : 0;
+					height: 0;
+				}
 			}
+
 
 			.language {
 				a {
@@ -161,9 +166,11 @@
 	outline: none;
 	border: none;
 	cursor: pointer;
+	text-transform: uppercase;
 
 	&::placeholder {
 		color: #ffffff;
+		text-transform: capitalize;
 	}
 }
 

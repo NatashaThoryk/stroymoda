@@ -6,6 +6,7 @@ import toVal from '../../helpers/clsx';
 import {useAppContext} from 'context/App';
 import {useRouter} from 'next/router';
 
+
 const menu = [
 	{
 		title: 'About',
@@ -59,7 +60,6 @@ const Header = (props: any) => {
 	}, [wrapperRef]);
 
 	return (
-
 		<header className={classes.header}>
 			{isMobile || isTablet
 				? (
@@ -150,7 +150,7 @@ const Header = (props: any) => {
 						</div>
 						<div className={classes.nav_right}>
 							<input className={toVal(classes.search, isClickInput ? classes.search_active : '')} type="search" id="search"
-								   onClick={() => setIsClickInput(true)} placeholder="Search"/>
+								    onClick={() => setIsClickInput(true)} placeholder="Search"/>
 							<div className={classes.language}>
 								<Link href="/ru"><a>Ru</a></Link>
 								<Link href="/en"><a className={classes.active}>En</a></Link>

@@ -1,6 +1,6 @@
 import classes from './modal.module.scss';
 import { IProps } from './types';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import toVal from '../../helpers/clsx';
 import SliderMain from 'components/Slider';
 import {useAppContext} from '../../context/App';
@@ -9,6 +9,19 @@ const slides = ['modal.jpg', 'modal.jpg', 'modal.jpg'];
 
 const Modal: React.FC<IProps> = ({setIsModal, isModal}) => {
 	const {isMobile} = useAppContext();
+	const wrapperRef:any = useRef(null);
+
+	useEffect(() => {
+		function handleClickOutside(event:any) {
+			if (wrapperRef && wrapperRef.current && !wrapperRef?.current?.contains(event.target)) {
+				setIsModal(false);
+			}
+		}
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [wrapperRef]);
 
 	return (
 		<div className={toVal(classes.fixed_overlay, isModal ? classes.fixed_overlay_block: '' )}>
@@ -61,8 +74,23 @@ const Modal: React.FC<IProps> = ({setIsModal, isModal}) => {
 					</div>
 				)
 				: (
-					<div className={classes.modal}>
+					<div className={classes.modal} ref={wrapperRef}>
 						<div className={classes.modal_container}>
+							<div className={classes.arrow}>
+								<a href="#">
+									<svg className={classes.prev_arrow} width="83" height="36" viewBox="0 0 83 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M23 1L2 18L23 35" stroke="white" stroke-width="2"/>
+										<rect width="2" height="80" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 83 19)" fill="white"/>
+									</svg>
+								</a>
+								<a href="#">
+									<svg className={classes.next_arrow} width="83" height="36" viewBox="0 0 83 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M60 1L81 18L60 35" stroke="white" stroke-width="2"/>
+										<rect y="19" width="2" height="80" transform="rotate(-90 0 19)" fill="white"/>
+									</svg>
+								</a>
+
+							</div>
 							<div className={classes.image_wrap}>
 								<SliderMain dotsClass="slideDotsWhite" dotsClassItem="slideLeftDotsItem"
 											list={slides as any}/>

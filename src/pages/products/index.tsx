@@ -12,7 +12,7 @@ const title2 = 'Partitions and Doors';
 const imgBlock1 = [
 	{
 		title: 'Rotation system',
-		link: '#',
+		link: '/products/detail',
 		hash: '/',
 		logo: '/img/products/Rotation_system.jpg'
 	}, {

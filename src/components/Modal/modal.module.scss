@@ -1,6 +1,7 @@
 .fixed_overlay {
 	position: fixed;
 	overflow: auto;
+	overflow-x: hidden;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -12,6 +13,9 @@
 	.info_wrap {
 		padding: 20px;
 		width: 50%;
+		background-color: #fff;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
 
 		.title_modal {
 			display: flex;
@@ -82,18 +86,36 @@
 	padding: 0 10px;
 
 	.modal_container {
-		background-color: #fff;
-		border-radius: 4px;
 		z-index: 10000;
 		position: relative;
 		display: flex;
 		height: 500px;
+
+		.arrow {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+
+			.next_arrow, .prev_arrow {
+				position: absolute;
+			}
+
+			.prev_arrow {
+				left: -100px;
+			}
+
+			.next_arrow {
+				right: -100px;
+			}
+		}
 	}
 
 	.image_wrap {
 		overflow: hidden;
 		height: 100%;
 		width: 50%;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
 
 		img {
 			height: 100%;
@@ -137,6 +159,12 @@
 	}
 }
 
+@media screen and (min-width: 1246px) and (max-width: 1360px) {
+	.modal {
+		width: 85%;
+	}
+}
+
 @media screen and (min-width: 768px) and (max-width: 1000px) {
 	.modal {
 		height: auto;
@@ -151,5 +179,17 @@
 @media screen and (min-width: 360px) and (max-width: 480px) {
 	.modal {
 		top: 38%;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.modal {
+		.modal_container {
+			background-color: #FFFFFF;
+			border-radius: 4px;
+		}
+		.image_wrap {
+			border-radius: 0;
+		}
 	}
 }
