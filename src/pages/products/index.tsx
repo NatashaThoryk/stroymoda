@@ -251,6 +251,7 @@ const breadCrumbs = [
 
 const ProductItem = () => {
 	const {isMobile, isTablet} = useAppContext();
+
 	return (
 		<Layout footerProps={{
 			isBg: false,
