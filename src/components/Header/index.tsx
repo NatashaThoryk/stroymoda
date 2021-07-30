@@ -129,7 +129,7 @@ const Header = (props: any) => {
 								</div>
 							</Menu>
 							<Link href="/">
-								<a className={classes.logo}>
+								<a className={toVal(classes.logo, isClickInput ? classes.logo_hover: '')} >
 									<svg width="100" height="auto" viewBox="0 0 200 62" fill="none"
 										 xmlns="http://www.w3.org/2000/svg">
 										<path fillRule="evenodd" clipRule="evenodd"
