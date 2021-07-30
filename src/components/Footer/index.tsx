@@ -125,7 +125,7 @@ const Footer: React.FC<IProps> = ({isBg = false, customClass = '', isLogo = true
 					</a>
 				</div>
 				<a href="https://alterego.digital/">
-					<img src="/img/logo_atler.png" alt="logo"/>
+					<img src="/img/logo_alter.svg" alt="logo"/>
 				</a>
 			</div>
 		</div>
