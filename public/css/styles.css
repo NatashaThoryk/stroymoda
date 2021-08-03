@@ -13,8 +13,12 @@
 
 input, a {
 	color: #292A35;
+}
+
+textarea, input{
 	-webkit-appearance: none;
 	-webkit-border-radius:0;
+	-moz-border-radius: 0;
 }
 
 input[type='search']::-webkit-search-decoration,

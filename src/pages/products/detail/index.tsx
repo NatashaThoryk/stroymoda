@@ -7,8 +7,9 @@ import Info from 'components/TopInfo';
 import InfoContent from 'components/InfoContent';
 import Layout from 'layouts/main';
 import MainSliderProducts from 'components/MainSliderProducts';
-import React from 'react';
+import React, {useState} from 'react';
 import StepList from 'components/StepList';
+import Modal from 'components/Modal';
 
 const mainTitle = 'Multipurpose hall systems';
 const itemAdvantages = [
@@ -35,6 +36,16 @@ const itemAdvantages1 = [
 		text: 'Gala Systems uses Spiralift technology, the world’s most compact venue lifting system'
 	}
 ];
+// const listImg1 = [
+// 	{
+// 		item: 'st1.png'
+// 	},
+// 	{
+// 		item: 'st2.png'
+// 	},{
+// 		item: 'st3.png'
+// 	}
+// ];
 const stepList = [
 	{
 		number: '1.',
@@ -105,6 +116,8 @@ const breadCrumbs = [
 ];
 
 const productsDetail = () => {
+	const [isModal, setIsModal] = useState(false);
+
 	return (
 		<Layout footerProps={{
 			isBg: true,
@@ -127,24 +140,25 @@ const productsDetail = () => {
 					</div>
 					<BlockWidthSliderRight customClass="padding_top" isVideo={true} slides={slides1 as any} title="Rotation system" listItem={checkListRight as any}/>
 					<div className={classes.content_wrapper}>
-						<StepList stepList={stepList as any} />
+						<StepList onHandler={() => setIsModal(true)}  stepList={stepList as any} />
 					</div>
 				</div>
 				<div className={classes.section_bg_color} id={"translation"}>
 					<BlockWithSliderLeft isVideo={true} slides={slides1 as any} title="Translation system" listItem={checkListLeft as any}/>
 					<div className={classes.content_wrapper}>
-						<StepList stepList={stepList1 as any}/>
+						<StepList onHandler={() => setIsModal(true)} stepList={stepList1 as any}/>
 					</div>
 				</div>
 				<div className={classes.section_slider} id={"wagon"}>
 					<BlockWidthSliderRight isVideo={true} slides={slides1 as any} title="Wagon System" listItem={checkListRight as any}/>
 					<div className={classes.content_wrapper}>
-						<StepList stepList={stepList2 as any}/>
+						<StepList onHandler={() => setIsModal(true)} stepList={stepList2 as any}/>
 					</div>
 				</div>
 				<div className={classes.section_bg_color} id={"stage"}>
 					<BlockWithSliderLeft isVideo={true} slides={slides1 as any} title="Understage systems" listItem={checkListLeft as any}/>
 				</div>
+				<Modal isModal={isModal} setIsModal={setIsModal}/>
 			</main>
 		</Layout>
 	);
