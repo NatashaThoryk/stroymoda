@@ -262,11 +262,16 @@ html {
 	background: #ffffff !important;
 	max-width: 1140px;
 	width: 100%;
-	margin: 0 auto;
+	margin: 30px auto;
+	height: 90%;
 }
 
 .ril__toolbarRightSide .ril__toolbarItem:nth-child(1), .ril__toolbarRightSide .ril__toolbarItem:nth-child(2) {
 	display: none !important;
+}
+
+.ril__toolbarRightSide {
+	padding-top: 40px;
 }
 
 .ril__caption, .ril__toolbar {
@@ -294,11 +299,52 @@ html {
 	background: url("/img/arrow_modal_prev.svg") no-repeat center !important;
 }
 
+.ril__image, .ril__imagePrev, .ril__imageNext {
+	max-height: 600px;
+}
+
+@media screen and (min-width: 1861px) and (max-width: 2200px) {
+	.ril__navButtonNext {
+		right: 250px !important;
+	}
+
+	.ril__navButtonPrev {
+		left: 250px !important;
+	}
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1850px) {
+	.ril__navButtonNext {
+		right: 170px !important;
+	}
+
+	.ril__navButtonPrev {
+		left: 170px !important;
+	}
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1660px) {
+	.ril__navButtonNext {
+		right: 48px !important;
+	}
+
+	.ril__navButtonPrev {
+		left: 48px !important;
+	}
+}
+
 @media screen and (min-width: 1020px) and (max-width: 1140px) {
 	.ril__inner {
 		max-width: 850px;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.ril__outer {
+		display: none;
+	}
+}
+
 
 
 
