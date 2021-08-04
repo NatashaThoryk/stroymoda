@@ -23,6 +23,7 @@
     "react": "^16.12.0",
     "react-burger-menu": "^3.0.6",
     "react-dom": "^16.12.0",
+    "react-image-lightbox": "^5.1.4",
     "react-images": "^1.2.0-beta.7",
     "react-lightbox-component": "^1.2.1",
     "react-lightbox-pack": "^0.1.0",

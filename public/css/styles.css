@@ -15,9 +15,9 @@ input, a {
 	color: #292A35;
 }
 
-textarea, input{
+textarea, input {
 	-webkit-appearance: none;
-	-webkit-border-radius:0;
+	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 }
 
@@ -154,7 +154,7 @@ html {
 	max-width: 100%;
 }
 
-	/* End Slick Slider Style */
+/* End Slick Slider Style */
 
 .bm-item {
 	display: inline-block;
@@ -251,6 +251,56 @@ html {
 .bm-overlay {
 	margin-top: -5px !important;
 }
+
+/* React image modal */
+
+.ril__outer {
+	background-color: rgba(0, 0, 0, 0.10) !important;
+}
+
+.ril__inner {
+	background: #ffffff !important;
+	max-width: 1140px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.ril__toolbarRightSide .ril__toolbarItem:nth-child(1), .ril__toolbarRightSide .ril__toolbarItem:nth-child(2) {
+	display: none !important;
+}
+
+.ril__caption, .ril__toolbar {
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.ril__toolbar {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.ril__navButtons {
+	padding: 40px 45px !important;
+}
+
+.ril__closeButton {
+	background: url("/img/close.svg") no-repeat center !important;
+}
+
+.ril__navButtonNext {
+	background: url("/img/arrow_modal_next.svg") no-repeat center !important;
+}
+
+.ril__navButtonPrev {
+	background: url("/img/arrow_modal_prev.svg") no-repeat center !important;
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1140px) {
+	.ril__inner {
+		max-width: 850px;
+	}
+}
+
+
 
 
 

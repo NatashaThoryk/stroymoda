@@ -36,16 +36,6 @@ const itemAdvantages1 = [
 		text: 'Gala Systems uses Spiralift technology, the world’s most compact venue lifting system'
 	}
 ];
-// const listImg1 = [
-// 	{
-// 		item: 'st1.png'
-// 	},
-// 	{
-// 		item: 'st2.png'
-// 	},{
-// 		item: 'st3.png'
-// 	}
-// ];
 const stepList = [
 	{
 		number: '1.',
@@ -64,6 +54,10 @@ const stepList = [
 		link: '/img/products/detail/st3.png'
 	}
 ];
+const images = [ '/img/products/detail/st1Large.png', '/img/products/detail/st2Large.png', '/img/products/detail/st3Large.png'];
+const images1 = [ '/img/products/detail/st1.1.png', '/img/products/detail/st1.2.png', '/img/products/detail/st1.3.png'];
+const images2 = [ '/img/products/detail/detail2.1.png', '/img/products/detail/detail2.2.png', '/img/products/detail/detail2.3.png'];
+// const images = ['/img/products/detail/st1.png', '/img/products/detail/st2.png', '/img/products/detail/st3.png', '/img/products/detail/st1.1.png', '/img/products/detail/st1.2.png', '/img/products/detail/st1.3.png', '/img/products/detail/detail2.1.png', '/img/products/detail/detail2.2.png', '/img/products/detail/detail2.3.png'];
 const stepList1 = [
 	{
 		number: '1.',
@@ -140,19 +134,19 @@ const productsDetail = () => {
 					</div>
 					<BlockWidthSliderRight customClass="padding_top" isVideo={true} slides={slides1 as any} title="Rotation system" listItem={checkListRight as any}/>
 					<div className={classes.content_wrapper}>
-						<StepList onHandler={() => setIsModal(true)}  stepList={stepList as any} />
+						<StepList images={images} stepList={stepList as any} />
 					</div>
 				</div>
 				<div className={classes.section_bg_color} id={"translation"}>
 					<BlockWithSliderLeft isVideo={true} slides={slides1 as any} title="Translation system" listItem={checkListLeft as any}/>
 					<div className={classes.content_wrapper}>
-						<StepList onHandler={() => setIsModal(true)} stepList={stepList1 as any}/>
+						<StepList images={images1} stepList={stepList1 as any}/>
 					</div>
 				</div>
 				<div className={classes.section_slider} id={"wagon"}>
 					<BlockWidthSliderRight isVideo={true} slides={slides1 as any} title="Wagon System" listItem={checkListRight as any}/>
 					<div className={classes.content_wrapper}>
-						<StepList onHandler={() => setIsModal(true)} stepList={stepList2 as any}/>
+						<StepList images={images2} stepList={stepList2 as any}/>
 					</div>
 				</div>
 				<div className={classes.section_bg_color} id={"stage"}>

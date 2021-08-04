@@ -1,6 +1,7 @@
 
 export interface IProps {
 	stepList:IListItem[];
+	images:string[];
 }
 
 
@@ -9,6 +10,7 @@ interface IListItem {
 	title: string;
 	title1: string;
 	link: string;
+	images: string;
 }
 
 
