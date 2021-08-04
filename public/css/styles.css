@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500;700&display=swap');
 
-
 /* General Style */
 * {
 	margin: 0;
@@ -104,7 +103,6 @@ html {
 
 /* End Tabs Mobile */
 
-
 /* Slick Slider Style */
 .slick-slider {
 	height: 100% !important;
@@ -174,7 +172,6 @@ html {
 .menu-item {
 	padding-bottom: 30px;
 }
-
 
 /* Change color on hover */
 .bm-item:hover {
