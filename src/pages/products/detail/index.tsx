@@ -40,57 +40,56 @@ const stepList = [
 	{
 		number: '1.',
 		title: 'Move up front elevator',
-		link: '/img/products/detail/st1.png'
+		link: '/img/products/detail/st1.svg'
 	},
 	{
 		number: '2.',
 		title: 'Rotate FRONT ELEVATOR\'S\n' +
 			'\t\t\t\t\t\t\t\t\t\tSEAT UNDER FLOOR',
-		link: '/img/products/detail/st2.png'
+		link: '/img/products/detail/st2.svg'
 	},
 	{
 		number: '3.',
 		title: 'MOVE DOWN FRONT ELEVATOR',
-		link: '/img/products/detail/st3.png'
+		link: '/img/products/detail/st3.svg'
 	}
 ];
-const images = [ '/img/products/detail/st1Large.png', '/img/products/detail/st2Large.png', '/img/products/detail/st3Large.png'];
-const images1 = [ '/img/products/detail/st1.1.png', '/img/products/detail/st1.2.png', '/img/products/detail/st1.3.png'];
-const images2 = [ '/img/products/detail/detail2.1.png', '/img/products/detail/detail2.2.png', '/img/products/detail/detail2.3.png'];
-// const images = ['/img/products/detail/st1.png', '/img/products/detail/st2.png', '/img/products/detail/st3.png', '/img/products/detail/st1.1.png', '/img/products/detail/st1.2.png', '/img/products/detail/st1.3.png', '/img/products/detail/detail2.1.png', '/img/products/detail/detail2.2.png', '/img/products/detail/detail2.3.png'];
+const images = [ '/img/products/detail/st1Large.svg', '/img/products/detail/st2Large.svg', '/img/products/detail/st3Large.svg'];
+const images1 = [ '/img/products/detail/st1.1Large.svg', '/img/products/detail/st1.2Large.svg', '/img/products/detail/st1.3Large.svg'];
+const images2 = [ '/img/products/detail/detail1Large.svg', '/img/products/detail/detail2Large.svg', '/img/products/detail/detail3Large.svg'];
 const stepList1 = [
 	{
 		number: '1.',
 		title: 'Move up rear elevator',
-		link: '/img/products/detail/st1.1.png'
+		link: '/img/products/detail/st1.1.svg'
 	},
 	{
 		number: '2.',
 		title: "EXTEND SEAT'S MECHANISM OVER FRONT ELEVATOR",
-		link: '/img/products/detail/st1.2.png'
+		link: '/img/products/detail/st1.2.svg'
 	},
 	{
 		number: '3.',
 		title: "MOVE UP FRONT ELEVATOR TO PIN SEATS ON IT (RETRACT SEAT'S)",
-		link: '/img/products/detail/st1.3.png'
+		link: '/img/products/detail/st1.3.svg'
 	}
 ];
 const stepList2 = [
 	{
 		number: '1.',
 		title: 'WAGON ON LIFT (RAILS AND SOCKETS)',
-		link: '/img/products/detail/detail2.1.png'
+		link: '/img/products/detail/detail2.1.svg'
 	},
 	{
 		number: '2.',
 		title: "1. LOWER LIFT TO STORAGE LEVEL",
 		title1: "2. MOVE WAGON TO STORAGE AREA",
-		link: '/img/products/detail/detail2.2.png'
+		link: '/img/products/detail/detail2.2.svg'
 	},
 	{
 		number: '3.',
 		title: "RAISE LIFT TO STAGE LEVEL AND REMOVE RAILS",
-		link: '/img/products/detail/detail2.3.png'
+		link: '/img/products/detail/detail2.3.svg'
 	}
 ];
 const checkListRight = ['Automatic or semi-automatic seat wagon system\n', 'Large tiered wagons with rows of seating are stored under the stage or adjacent audience area\n', 'All seating row geometries possible\n', 'Compatible with all audience seating manufacturers\n', 'Conversion time within 30 minutes'];

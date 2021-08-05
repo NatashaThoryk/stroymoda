@@ -7,6 +7,7 @@ import 'react-image-lightbox/style.css';
 const StepList: React.FC<IProps> = ({stepList = [], images = []}) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [photoIndex, setPhotoIndex] = useState(0);
+	const [slidesLoaded, setSlidesLoaded] = useState(0);
 	const handleOpen = () => {
 		setIsOpen(true);
 	};
@@ -19,6 +20,17 @@ const StepList: React.FC<IProps> = ({stepList = [], images = []}) => {
 	const handleMoveNext = () => {
 		setPhotoIndex((photoIndex + 1) % images.length);
 	};
+
+	const checkAndShowSlider = () => {
+		// const count = images.length;
+		// const nowLoaded = slidesLoaded + 1;
+		// if (nowLoaded === count) {
+		// 	document.querySelector(".images.section").css("display", "block");
+		// }
+		setSlidesLoaded(slidesLoaded +1);
+			console.log(slidesLoaded, '2222')
+		};
+
 	return (
 		<div>
 			<ul className={classes.step_list}>
@@ -42,6 +54,7 @@ const StepList: React.FC<IProps> = ({stepList = [], images = []}) => {
 								onCloseRequest={handleClose}
 								onMovePrevRequest={handleMovePrev}
 								onMoveNextRequest={handleMoveNext}
+								onImageLoad={checkAndShowSlider}
 							/>
 						)}
 					</li>
