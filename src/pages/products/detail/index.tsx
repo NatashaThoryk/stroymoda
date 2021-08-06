@@ -96,8 +96,7 @@ const checkListRight = ['Automatic or semi-automatic seat wagon system\n', 'Larg
 const checkListLeft = ["Stage Lift Systems", "Stage Lift", "Orchestra podiums", "Orchestra Lifts", "Turntable system"]
 const InfoContentText1 = 'The Spiralift is the world its most compact lifting system. It allows hall reconfiguration by using moving floor platforms. Gala Systems solutions enables automated under the floor storage of spectators seats that are used in multi purpose halls.'
 const InfoContentText2 = 'The Spiralift is used as main component in critically acclaimed platform lift  systems such as theater lifts , orchestra lifts and piano lifts . The spiralift uses two bands of intertwining stainless steel to form a strong and stable column. The Spiralift requires relative low-power electric motor drives thanks to its very high mechanical efficiency. Spiralifts are used easily in modular designs that suits any platform geometry in order to create truly flexible hall transformations.';
-const slides1 = ['https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo',]
-
+const slides1 = ['https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo', 'https://www.youtube.com/embed/XBPjVzSoepo'];
 const breadCrumbs = [
 	{
 		text: 'Products',

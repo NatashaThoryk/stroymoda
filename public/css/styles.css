@@ -363,8 +363,21 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-	.ril__outer {
-		display: none;
+	.ril__navButtonNext {
+		background: url("/img/mob_arrownext.svg") no-repeat center !important;
+	}
+	.ril__navButtonPrev {
+		background: url("/img/mob_arrowprev.svg") no-repeat center !important;
+	}
+	.ril__inner {
+		width: 93% !important;
+	}
+	.ril__navButtons {
+		top: auto !important;
+		bottom: 25px !important;
+	}
+	.ril__image, .ril__imagePrev, .ril__imageNext {
+		padding: 40px 0 !important;
 	}
 }
 
