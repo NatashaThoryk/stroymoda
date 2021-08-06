@@ -376,7 +376,7 @@ html {
 	}
 	.ril__navButtons {
 		top: auto !important;
-		bottom: 35px !important;
+		bottom: 50px !important;
 	}
 	.ril__image, .ril__imagePrev, .ril__imageNext {
 		padding: 40px 0 !important;

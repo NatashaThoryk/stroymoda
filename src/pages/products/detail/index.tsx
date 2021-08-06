@@ -56,7 +56,7 @@ const stepList = [
 ];
 const images = [ '/img/products/detail/st1Large.svg', '/img/products/detail/st2Large.svg', '/img/products/detail/st3Large.svg'];
 const images1 = [ '/img/products/detail/st1.1Large.svg', '/img/products/detail/st1.2Large.svg', '/img/products/detail/st1.3Large.svg'];
-const images2 = [ '/img/products/detail/1.svg', '/img/products/detail/2.svg', '/img/products/detail/1.svg'];
+const images2 = [ '/img/products/detail/1.svg', '/img/products/detail/2.svg', '/img/products/detail/3.svg'];
 const stepList1 = [
 	{
 		number: '1.',
