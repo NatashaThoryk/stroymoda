@@ -380,7 +380,7 @@ html {
 	}
 	.ril__image, .ril__imagePrev, .ril__imageNext {
 		padding: 40px 0 !important;
-		left: -9px !important;
+		left: -10px !important;
 	}
 }
 
