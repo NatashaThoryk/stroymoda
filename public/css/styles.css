@@ -298,6 +298,8 @@ html {
 
 .ril__image, .ril__imagePrev, .ril__imageNext {
 	max-height: 570px;
+	max-width: 500px;
+	/*width: 100%;*/
 	padding: 15px 0;
 }
 
@@ -364,17 +366,17 @@ html {
 
 @media screen and (max-width: 768px) {
 	.ril__navButtonNext {
-		background: url("/img/mob_arrownext.svg") no-repeat center !important;
+		background: transparent url("/img/mob_arrownext.svg") no-repeat center !important;
 	}
 	.ril__navButtonPrev {
-		background: url("/img/mob_arrowprev.svg") no-repeat center !important;
+		background: transparent url("/img/mob_arrowprev.svg") no-repeat center !important;
 	}
 	.ril__inner {
-		width: 93% !important;
+		width: 98% !important;
 	}
 	.ril__navButtons {
 		top: auto !important;
-		bottom: 25px !important;
+		bottom: 35px !important;
 	}
 	.ril__image, .ril__imagePrev, .ril__imageNext {
 		padding: 40px 0 !important;
