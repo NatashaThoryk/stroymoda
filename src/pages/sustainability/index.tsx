@@ -5,7 +5,7 @@ import React from 'react';
 import SustainabilityTopBlock from 'components/SustainabilityTopBlock';
 import SustainabilityMainBlock from 'components/SustainabilityMainBlock';
 import toVal from '../../helpers/clsx';
-import {useAppContext} from "../../context/App";
+import {useAppContext} from '../../context/App';
 
 
 const title = 'Sustainability';

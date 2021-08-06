@@ -4,7 +4,7 @@ import Layout from 'layouts/main';
 import ProjectsImg from 'components/ProjectsImg';
 import React from 'react';
 import toVal from '../../helpers/clsx';
-import {useAppContext} from "../../context/App";
+import {useAppContext} from '../../context/App';
 
 const title = 'Selected Projects';
 const list1 = {

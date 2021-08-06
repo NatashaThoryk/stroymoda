@@ -7,7 +7,7 @@ import Layout from 'layouts/main';
 import Map from 'components/Map';
 import React from 'react';
 import toVal from '../../helpers/clsx';
-import {useAppContext} from "../../context/App";
+import {useAppContext} from '../../context/App';
 
 const title = 'We’d love to hear from you';
 const contactsTitle1 = 'Stroymoda Mosow';

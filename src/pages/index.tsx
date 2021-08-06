@@ -10,7 +10,6 @@ import SectionBlockLeft from 'components/SectionBlockLeft';
 import SectionBlockRight from 'components/SectionBlockRight';
 import {setTest} from 'store/test/actions';
 
-
 const listAdvantagesTop = [
 	{
 		src: './img/adva1.svg',
