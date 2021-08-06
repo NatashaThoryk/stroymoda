@@ -372,7 +372,7 @@ html {
 		background: transparent url("/img/mob_arrowprev.svg") no-repeat center !important;
 	}
 	.ril__inner {
-		width: 94% !important;
+		width: 95% !important;
 	}
 	.ril__navButtons {
 		top: auto !important;
@@ -380,7 +380,7 @@ html {
 	}
 	.ril__image, .ril__imagePrev, .ril__imageNext {
 		padding: 40px 0 !important;
-		left: -12px !important;
+		left: -9px !important;
 	}
 }
 
